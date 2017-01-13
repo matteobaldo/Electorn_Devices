@@ -109,12 +109,12 @@ In this case $V<0$ electrons and holes move for drift the total voltae drop is w
 %------------------------------------------------------------------------%
 \section{The V-I characteristic of pn }
 %------------------------------------------------------------------------%
-First we want to investigate on foward bias electrostatic but we have to make some other simplyfing assumption: the contacts of our junction are at th.eq. and looking to the n region moving closer to the contact we will enter in a region where electrons are majority carrier. Beacuse we are injecting holes in that region we will have $p=p_n0+\Delta p$ so a region of quasi-equilibrium.\\
+First we want to investigate on foward bias electrostatic but we have to make some other simplyfing assumption: the contacts of our junction are at th.eq. and looking to the n region moving closer to the contact we will enter in a region where electrons are majority carrier. Beacuse we are injecting holes in that region we will have $p=p_{n0}+\Delta p$ so a region of quasi-equilibrium.\\
 If we assume stationarity and that G and R process are negligible and so the $J_n=n\mu_n \frac{dE_{fn}}{dx}=cost$ so beacuse n isn't costant all over the space $\frac{dE_{fn}}{dx}$ will change over the space.
 The final graph is this 
 
 \centering
-\includegraphics[width=0.45\textwidth]{pn9.png}\\
+\includegraphics[width=0.6\textwidth]{pn9.png}\\
 \raggedright
 
 we have 2 region of quasi-equilibrium and a transition region that is depleted from free charges. This is the same result of electrostatic without bias so the depletion region will be
@@ -123,25 +123,24 @@ W=\sqrt{\frac{2\varepsilon}{q}(\phi_{bi}-V)(\frac{1}{N_a}+\frac{1}{N_d})}
 \end{equation}
 $E_{fn}$ remains costant until $-x_p$ but n changes beacuse $E_c$ moves upwards.\\
 For reverse bias we have to follow the same path of forward bias arriving at the graph above.\\
-Bands are flat near the contact beacuse we suppose quasi-neutral region under low level of injection with costant doping and a negligible gradient of quasi-Fermi level if one of this supposition falls the bands will no more be flat.\\
-
-
+Bands are flat near the contact beacuse we suppose (1) quasi-neutral region under (2) low level of injection with (3) costant doping and (4) negligible gradient of quasi-Fermi levels; if one of this supposition falls the bands will no more be flat.\\
+\vspace{5mm}
 
 Now we want to know the quasi-Fermi level in the minority region.
 We know that at $x=x_n$ $n\simeq N_d$ and for the law of mass action generalized $p=\frac{n_i^2}{n}e^{\frac{E_{fn}-E_{fp}}{kT}}\simeq p_{n0}e^{\frac{qV}{kT}}$ and at $x=-x_p$ with the same passages we obtain $n\simeq n_{p0}e^{\frac{qV}{kT}}$. Now we can solve the continuity equation only in the quasi-neutral region. \\
-Beacus the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ and $G-R=\frac{-\Delta n}{\tau_n}$ from this two in the coninuity equations under stationary condition we get
+Beacuse the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ and $G-R=\frac{-\Delta n}{\tau_n}$ from this two in the coninuity equations under stationary condition we get
 \begin{equation}
 \frac{d^2\Delta n}{dx^2}-\frac{\Delta n}{L_n^2}=0
 \end{equation} 
-where $L_n=\sqrt{D_n\tau_n}=$ diffusion length of electrons in the quasi neutral p-region. Introducing the system of coordinate like in figure we can solve this differential equation.
+where $L_n=\sqrt{D_n\tau_n}=$ diffusion length of electrons in the quasi neutral p-region. Introducing the system of coordinate like in figure (where $W_p$ is the end of the quasi-neutral p region) we can solve this differential equation.
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.45\textwidth]{pn10.png}
 \end{wrapfigure}
 
-Solving that as a polynomial we get $\lambda^2-\frac{1}{L_n^2}=0\leftarrow \lambda=\pm\frac{1}{\lambda}$ so we get two exponential terms that are $\Delta n(x)=Ae^{\frac{x}{L_n}}+Be^{-\frac{x}{L_n}}$ using the boundary condition $\Delta n(0)=n_{p0}(e^{\frac{qV}{kT}}-1)$ and $\Delta n(W_p)=0$ we arrive at
+Solving that as a polynomial we get $\lambda^2-\frac{1}{L_n^2}=0\leftarrow \lambda=\pm\frac{1}{L_n}$ so we get two exponential terms that are $\Delta n(x)=Ae^{\frac{x}{L_n}}+Be^{-\frac{x}{L_n}}$ using the boundary condition $\Delta n(0)=n_{p0}(e^{\frac{qV}{kT}}-1)$ and $\Delta n(W_p)=0$ we arrive at
 \begin{equation}
-\Delta x(n)=n_{p0}(e^{\frac{qV}{kT}}-1)\frac{\sinh(\frac{W_p-x}{L_n})}{\sinh(\frac{W_p}{L_n})}
+\Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)\frac{\sinh(\frac{W_p-x}{L_n})}{\sinh(\frac{W_p}{L_n})}
 \end{equation}
 Having only diffusion processes we can know the current but we are intrested only in $J_n(0)$ at the edge of the quasi-neutral region so 
 \begin{equation}
@@ -161,7 +160,7 @@ If $V>>kT/q$ we can neglect 1 and plot a log-log scale of this characteristic th
 \begin{equation}
 \log(J)=log(J_0)+\frac{qV}{kT\ln(10)}
 \end{equation}
-One important parameter of the characteristic is the slope in foward bias that is $kT/q \ln(10)=60mV/dec @RT$.\\
+One important parameter of the characteristic is the slope in foward bias that is $kT/q \ln(10)=60mV/dec \ @RT$.\\
 The dominant contribute to the current is from the zone less doped like in the electrostatic.\\
 
 %------------------------------------------------------------------------%
@@ -185,14 +184,14 @@ If we have a wide-base diode if $W_p<<L_n$ so we can approximate as follow the e
 \includegraphics[width=0.35\textwidth]{wbnb.png}
 \end{wrapfigure}
 
-In a wide base diode n(x) decrease exponentially in the p region therefore $E_fn$ will decrease linearly with a slope of $kT/L_n$ and after the intersection with $E_fn$ it will be costant as this last one.\\
-For a narrow base the decrease of $E_fn$ will be logaritmic beacuse n(x) decreases linearly.\\
-In the quasi neutral p (n) region we have less electrons (holes) than in all other zone so the highest resistivity. The limit for conduction is given by the quasi-neutral region where we have less concentration of minority carrier; this is why the pn junction is called a minority carrier device , the limit for current transport is given by minority carriers.\\
+In a wide base diode n(x) decrease exponentially in the p region therefore $E_{fn}$ will decrease linearly with a slope of $kT/L_n$ and after the intersection with $E_{fn}$ it will be costant as this last one.\\
+For a narrow base the decrease of $E_{fn}$ will be logaritmic beacuse n(x) decreases linearly.\\
+In the quasi neutral p (n) region we have less electrons (holes) than in all other zone so the highest resistivity. The limit for conduction is given by the quasi-neutral region where we have less concentration of minority carriers; this is why the pn junction is called a minority carriers device , the limit for current transport is given by minority carriers.\\
 
 \subsection{Current profile}
 %------------------------------------------------------------------------%
 {\bf Wide base forward bias}\\
-The exponential behaviour of the minority will be followed by a consequent increase of majority charges in order to mantain the region quasi-neutral. In the depletion layer a connection between the 2 region. Minority carriers moves for diffusion but majority carrier moves for drift beacuse there is a small gradient of $E_fn$ that let electrons move from right to left.
+The exponential behaviour of the minority will be followed by a consequent increase of majority charges in order to mantain the region quasi-neutral. In the depletion layer a connection between the 2 region. Minority carriers moves for diffusion but majority carrier moves for drift beacuse there is a small gradient of $E_{fn}$ that let electrons move from right to left.
 
 \centering
 \includegraphics[width=0.5\textwidth]{nxfvb.png}\\
@@ -244,7 +243,7 @@ With the same path of before we arrive at
 %------------------------------------------------------------------------%
 \section{T change}
 %------------------------------------------------------------------------%
-Let's consider a pn junction in foward bias $J=J_0(e^{\frac{qV}{kT}}-1)\simeq J_0e^{\frac{qV}{kT}}$. If we increase the T the slope of the straight part will increase for the exponential term (be careful to units in the graph the line becomes flatter) but olso $J_0=\frac{qD_nn_i^2}{N_aL_n}$ will increase for his strong dependance with temperature caused by $n_i\propto T^3e^{-\alpha/T}$.
+Let's consider a pn junction in foward bias $J=J_0(e^{\frac{qV}{kT}}-1)\simeq J_0e^{\frac{qV}{kT}}$. If we increase the T the slope of the straight part will increase for the exponential term (be careful to units in the graph the line becomes flatter) but olso $J_0=\frac{qD_nn_i^2}{N_aL_n}$ will increase for his strong dependance with temperature caused by $n_i^2\propto T^3e^{-\alpha/T}$.
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.5\textwidth]{JwithT.png}
@@ -262,12 +261,12 @@ for semplicity we can hilight $J_0$ dependences on temperature writing $J_0=aT^\
 \frac{dV}{dT}=(V-\frac{E_g}{q})\frac{1}{T}-\frac{k\gamma}{q} + \frac{1}{q}\frac{dE_g}{dT}
 \end{equation}
 
-That are all negative terms so we are in the firs zone where we find a decrease of voltage w.r.t an increase of the temperature ( at RT $dV/dT\simeq -1.9mV/K$)
+Since our typical $V\simeq0.6/0.7$ there are all negative terms so we are in the firs zone where we find a decrease of voltage w.r.t an increase of the temperature ( at RT $dV/dT\simeq -1.9mV/K$)
 
 %------------------------------------------------------------------------%
 \section{Second order effects on current}
 %------------------------------------------------------------------------%
-There are some phenomena that we have to consider in order to make more real the JV graph of a pn junction.
+There are some phenomena that we have to consider in order to make more realistic the J-V graph of a pn junction.
 %------------------------------------------------------------------------%
 \subsection{Low current regime}
 
@@ -278,14 +277,14 @@ There are some phenomena that we have to consider in order to make more real the
 We have always neglect the G-R in the depletion layer but now we have to make some considerations.\\
 Under reverse bias $E_{fn}<E_{fp}$ so there will be some generation processes, knowing the quasi-Fermi level and using the law of mass action generalized we can write the SRH R coefficient as
 \begin{equation}
-R=\frac{n_i^2(e^{(qV)/(kT)-1)}}{\tau_0(p+n+2n_i Ch((E_t-E_i)/(kT))}
+R=\frac{n_i^2(e^{(qV)/(kT)}-1)}{\tau_0(p+n+2n_i Ch((E_t-E_i)/(kT))}
 \end{equation} 
 so the sign of the voltage applied V change the sign of R.\\
 Refering to forward bias the impact of R is that from majority region there will be more electron moving to the depletion region beacuse of minority constrain of the pn junction
-So we aspect a larger current under foward bias where $R\simeq \frac{n_i^2(e^{\frac{qV}{kT}-1)}}{\tau_0[p+n]}$ to get the worst case we take p=n so R will be maximum and we get $R= \frac{n_i(e^{\frac{qV}{2kT}})}{2\tau_0}$.\\
+So we aspect a larger current under foward bias where $R\simeq \frac{n_i^2(e^{\frac{qV}{kT}}-1)}{\tau_0[p+n]}$ to get the worst case we take p=n so R will be maximum and we get $R= \frac{n_i(e^{\frac{qV}{2kT}})}{2\tau_0}$.\\
 Under forward bias so we can define 
 \begin{equation}
-J_R=R_{max}W_dq=qW_d\frac{n_i(e^{\frac{qV}{2kT}}}{2\tau_0}
+J_R=qR_{max}W_d=qW_d\frac{n_i(e^{\frac{qV}{2kT}})}{2\tau_0}
 \end{equation}
 Under reverse bias $R\simeq -\frac{n_i^2}{2n_i\tau_0}=-\frac{n_i}{2\tau_0}$ and so as for forward bias we can define
 \begin{equation}
