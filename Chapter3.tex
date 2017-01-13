@@ -6,7 +6,7 @@ Metal-semiconductor junctions can be divided in 2 categories: ohmic contacts ,th
 %------------------------------------------------------------------------%
 \section{Schottky diode}
 %------------------------------------------------------------------------%
-We will study the electrostatic of this device as we've done with diodes. We initially suppose the 2 zones isolated and under thermodinamic equilibrium. Let's olso take the semiconductor n-doped.\\
+We will study the electrostatic of this device as we've done with diodes. We initially suppose the 2 zones isolated and under thermodinamic equilibrium. Let's take the semiconductor n-doped.\\
 For the metal we're not interested in the conduction or valence band but only in the position of the Fermi level. All type of material's bands are refered to the vacuum level. The distance between the Fermi-level of the metal and the vacuum level $E_0$ is calle work-function $\phi_m$. For silicon we can define the electron affinity that is the distance between the conduction band and the vacuum level $\chi_s$. In this way we can allign the two materials like in figure.\\
 
 \begin{wrapfigure}{i}{0pt}
@@ -45,24 +45,29 @@ With reverse bias $E_{f(m)}$ becomes higher the depletion layer increases as the
 With foward bias $E_{f(m)}$ becomes lower, far from the contact we will have in the semiconductor a quasi-neutral region ,near the contact a transition zone with a depletion region. The total voltage drop decreases as the width of the depletion region.\\
 We have two major difference with the pn junction: the flow of electrons from the semiconductor to the metal  don't have a minority constrain (the metal is full of electrons) so we will expect a high current but the transport of holes from metal to semiconductor has this limitation (the semiconductor is n-doped). $J_p$ will be small, negligible with respect to electrons flow.\\
 Metal-semiconductor junction is a majority carrier device we won't deal with minority carrier in current transport phenomena. We will always neglect G-R processes beacuse are relevant only at low current regime.\\
-
+%------------------------------------------------------------------------%
 \subsection{Schottcky model}
-We don't know the behaviour of $E_{fn}$ in the depletion layer but we know that in that zone we have the lowe concetration of electrons so it can't be flat. Under stationary condition we can say that $ J_n=qn\mu_nF+qD_n \frac{dn}{dx}=$ constant and, as boundary condition, that $n(W_d)=N_d$ $n(0)=N_ce^{\frac{q\phi_{bn}}{kT}}$. F is given the only parameter we don't know is n and $\frac{dn}{dx}$ so solving this differential equation we can get that
+%------------------------------------------------------------------------%
+\centering
+\includegraphics[width=0.45\textwidth]{shk.png}\\
+\raggedright
+
+We don't know the behaviour of $E_{fn}$ in the depletion layer but we know that in that zone we have the lower concetration of electrons so it can't be flat. Under stationary condition we can say that $ J_n=qn\mu_nF+qD_n \frac{dn}{dx}=$ constant and, as boundary condition, that $n(W_d)=N_d$ $n(0)=N_ce^{\frac{q\phi_{bn}}{kT}}$. F is given the only parameter we don't know is n and $\frac{dn}{dx}$ so solving the continuity equation for electrons with this boundary conditions we can get that
 \begin{equation}
 J=J_0(e^{\frac{qV}{kT}}-1)
 \end{equation}
 that is a relation identical to the pn junction but with a different $J_0$.\\
 However this relation does not mach the experimental results. This is due to an implicit assumption that we've made using $n(0)=N_ce^{\frac{q\phi_{bn}}{kT}}$ as boundary condition; this happens only if the interface is always at thermodynamic equilibrium.\\
 This model is valid for low mobility semicondutors (not for Si, Ge and GaAs).\\
-
+%------------------------------------------------------------------------%
 \subsection{Bethe's model}
-
+%------------------------------------------------------------------------%
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.25\textwidth]{msne.png}
 \end{wrapfigure}
 
-$E_{fn}$ can arrive at the interfae higher than $E_{f(m)}$. We have a very thin interface that is of the order of fractions of nm we can't describe current transport with drift and diffusion theory beacuse they're dominated by scattering events that occurs in tens of nanometers. We have to use a thermoionc transport model.\\
-The electrons that pass from semiconductor to metal are that with an energy greater than $q(\phi_{bi}-V)$ from the potential material [?].\\
+$E_{fn}$ can arrive at the interfae higher than $E_{f(m)}$. We have a very thin interface that is of the order of fractions of nm there we can't describe current transport with drift and diffusion theory beacuse they're dominated by scattering events that occurs in tens of nanometers. We have to use a thermoionc transport model.\\
+The electrons that pass from semiconductor to metal are that with an energy greater than $q(\phi_{bi}-V)$ so an energy higher than the potential barier of the depletion layer.\\
 From energy dispersion relation $E=E_c+\frac{\hslash^2k^2}{2m_x}+\frac{\hslash^2k^2}{2m_y}+\frac{\hslash^2k^2}{2m_z}$ we define $E_x=\frac{\hslash^2k^2}{2m_x}$ the energy related to x transport and let's take into account only one ellipsoide.\\
 
 \begin{wrapfigure}{i}{0pt}
@@ -78,19 +83,23 @@ the 2 factor is a spin correction. Adding a corrective term we can transform the
 \begin{equation}
 J_{s-m}^{(1)}=\frac{1}{(\frac{2\pi}{L})^3}\int_{\overline{k_x}}^{+\infty}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\frac{q}{L^3}v_x(k_x)f(k_x,k_y,k_z)dk_xdk_ydk_z
 \end{equation}
-remembering that $\hslash k=mv$ therefore $dk=\frac{m}{\hslash}dv$, we can change integration variable as 
+remembering that $\hslash k_{x,y,z}=m_{x,y,z}v_{x,y,z}$ therefore $dk_{x,y,z}=\frac{m_{x,y,z}}{\hslash}dv_{x,y,z}$, we can change integration variable as 
 \begin{equation}
-J_{s-m}^{(1)}=\frac{2q}{(2\pi)^3}\int_{+\infty}^{v_x}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}v_x(k_x)f(k_x,k_y,k_z) \frac{m_xm_ym_z}{\hslash^3} dv_xdv_ydv_z
+J_{s-m}^{(1)}=\frac{2q}{(2\pi)^3}\int^{+\infty}_{v_x}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}v_xf(k_x,k_y,k_z) \frac{m_xm_ym_z}{\hslash^3} dv_xdv_ydv_z
 \end{equation}
-for f we can use M-B approximation and using $\hslash k=mv$ in the energy dispertion relation we get that
+for f we can use M-B approximation $f\simeq e^{-\frac{E-E_f}{kT}}$ using energy dispersion relation 
+\begin{equation}
+E=E_c+\frac{1}{2}m_xv_x+\frac{1}{2}m_yv_y+\frac{1}{2}m_zv_z
+\end{equation}
+the M-B equation becomes
 \begin{equation}
 f\simeq e^{-\frac{E_c-E_{fn}}{kT}}\cdot e^{-1/2\frac{m_xv_x^2}{kT}}\cdot e^{-1/2\frac{m_yv_y^2}{kT}}\cdot e^{-1/2\frac{m_zv_z^2}{kT}}
 \end{equation}
-so solving the 3 integral we get 
+so solving the 3 integral (the first is a gaussian $=\frac{kT}{m_x}e^{-\frac{m_xv_x^2}{kT}}$ second and third $=\sqrt{\frac{2kT\pi}{m_{y,z}}}$) we get 
 \begin{equation}
 J_{s-m}^{(1)}=\frac{4\pi q}{h^3}\sqrt{m_xm_y}(kT)^2e^{\frac{-\phi_{bn}}{kT}}e^{\frac{qV}{kT}}=A\cdot\sqrt{m_xm_y}T^2e^{\frac{-\phi_{bn}}{kT}}e^{\frac{qV}{kT}}
 \end{equation}
-where A=$120 \frac{A^2}{cm^2 K^2}$ it's called the Richardson constant.\\
+where $A=\frac{4\pi qk^2}{h^3}=120 \frac{A^2}{cm^2 K^2}$ it's called the Richardson constant.\\
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.2\textwidth]{ellips.png}
@@ -108,11 +117,11 @@ J=A^*T^2e^{\frac{-q\phi_{bn}}{kT}}(e^{\frac{qV}{kT}}-1)=J_{0,th}(e^{\frac{qV}{kT
 \end{equation}
 $\phi_{bn}$ it's a crucial parameter for current flow in metal semiconductor junction. We have a $J_{0,th}\simeq10^5 A/cm^2$ orders of magnitude higher with respect to the pn junction and a turn on voltage of 0.3-0.4 V.\\
 This model is valid for high mobility semiconductors.\\
-
+%------------------------------------------------------------------------%
 \subsection{Universal model}
-
+%------------------------------------------------------------------------%
 We can connect the two models in an universal one.\\
-Starting from Schottcky model we can use his assumption of $ J_n=qn\mu_nF+qD_n \frac{dn}{dx}=$ and $n(W_d)=N_d$ but we have to change n(0). We can say something about $J_n(0)$ as the current density without scattering.
+Starting from Schottcky model we can use his assumption of $ J_n=qn\mu_nF+qD_n \frac{dn}{dx}=const$ and $n(W_d)=N_d$ but we have to change n(0). We can say something about $J_n(0)$ as the current density without scattering.
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.2\textwidth]{generalmsmodel.png}
@@ -138,9 +147,9 @@ J_n(0)=\frac{A^*T^2 }{N_c}[n(0)-n_0]
 We are using a drift-diffusion approach with thermionic boundary condition.\\
 Solving this system we get an expression valid for all semiconductors that can be simplified in the 2 models depending on what type of semiconductor we have.\\
 If mobility is large than it's easy to move electrons but difficult to remove them form the interface that becomes the bottom neck of the system. With low mobility it's difficult to move electrons but easy to remove them form the interfece so they don't pile up there.\\
-
+%------------------------------------------------------------------------%
 \subsection{Schottky effect}
-
+%------------------------------------------------------------------------%
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.4\textwidth]{scheff.png}
 \end{wrapfigure}
@@ -170,12 +179,12 @@ and so the profile in green in the graph.\\
 \includegraphics[width=0.35\textwidth]{deltaphibn.png}\\
 \raggedright
 
-If we consider that in the vacuum there is a costant electric field (and so $E_0(x)=E_0(0)-q|F|x$ like in figure beacuse the sistem is linear we obtain that
+If we consider that in the vacuum there is a costant electric field (and so $E_0(x)=E_0(0)-q|F|x$) like in figure beacuse the sistem is linear we obtain that
 \begin{equation}
 E_0(x)=E_0(0)-q|F|x-\frac{q^2}{16 \pi \varepsilon_0 x}
 \end{equation}
 and the behaviour in red in figure. We have change of the peak and so of the barrier that block our electrons. The $\Delta$ of the barrier is called Schottky barrier lowering.\\
-We can calculate the new peak deriving by dx the $E_0(x)$ function finding the $x_max$ obtaining the energy at that point 
+We can calculate the new peak deriving by dx the $E_0(x)$ function finding the $x_{max}$ obtaining the energy at that point 
 \begin{equation}
 E_0(x_{max})=E_0(0)-\sqrt{\frac{q^3|F|}{4\pi \varepsilon_0}}
 \end{equation}
@@ -186,9 +195,9 @@ In our device we have a change of the J-V characteristic
 J=A^*T^2e^{\frac{-q(\phi_{bn}-\Delta\phi_{bn})}{kT}}(e^{\frac{qV}{kT}}-1)
 \end{equation}
 that creates an increment of $J_0$ and 2 opposit behaviour for reverse and forward bias: with $V<0$ the current increases increasing $|V|$, with $V>0$ J decrease this due to the dependance of $\Delta\phi_{bn}\propto\sqrt{F_{max}}\propto V_{rv-bias}$.\\
-
+%------------------------------------------------------------------------%
 \section{Ohmic contact}
-
+%------------------------------------------------------------------------%
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.15\textwidth]{tunnel.png}
 \end{wrapfigure}
@@ -225,7 +234,7 @@ The two figures below show how a contact is done in a device.
 
 %------------------------------------------------------------------------%
 \section{Interface states}
-
+%------------------------------------------------------------------------%
 We've always considered Si as a periodic infinite cristal but in metal-semiconductor junction we have te interface that interrupts the sequence of atoms. Some atoms of Si can't share all theyr 4 valence electrons creating some dangling bonds.\\
 
 \begin{wrapfigure}{i}{0pt}
@@ -233,7 +242,7 @@ We've always considered Si as a periodic infinite cristal but in metal-semicondu
 \end{wrapfigure}
 
 Electrons remains localize close to theyr silicon atoms this creates spurius energy level at the interface.\\ 
-In the bulk region electrons and holes are only in the conduction band or in the valenve band but at the interface can stay in a lot of states between this two bands.\\
+In the bulk region electrons and holes are only in the conduction band or in the valence band but at the interface can stay in a lot of states between this two bands.\\
 The spurious states in the upper part of the bandgap have an acceptor behaviour the others in the bottom part have a donor behaviour. The energy that divide this two type of states is the $E_{is}$.\\
 The states with a donor behaviour are neutral when filled and positivly charged when empty. Vice-versa states with acceptor behaviour are negativly charged when empty and neutral when filled. All states above $E_f$ will be filled all the other states empty. So the previous band-diagram is incoherent with the Gauss'law since we have some exposed charge and no band banding.\\ 
 
@@ -243,7 +252,7 @@ The states with a donor behaviour are neutral when filled and positivly charged 
 
 We have a negative charge so $\phi<0$ the bands band upward and the distance $E_f-E_{is}$ becomes narrower. The bands banding create a depletion region that expose a positive charge equal to the interface states' charge.\\
 The distance between $E_c-E_f$ is not set only by doping concentration but olso from interface states.\\
-We define interface state density $N_{is} = [cm^{-2}eV^{-1}$ in order to find the total charge introsuced by the interface 
+We define interface state density $N_{is} = [cm^{-2}eV^{-1}]$ in order to find the total charge introsuced by the interface 
 \begin{equation}
 |Q_{is}|=N_{is}(E_f-E_{is})q
 \end{equation}

@@ -85,7 +85,7 @@ W=\sqrt{\frac{2\varepsilon}{q}\phi_{bi}(\frac{1}{N_a}+\frac{1}{N_d})}
 
 Let's consider a junction $n^+p$ so the depletion area is almost all in the less doped material and so the electric field. We can make some approximation that the depletion area is almost in the p zone and that the Fermi level of the $n^+$ zone is almost at $E_c$ so this lead us to 
 \begin{equation}
-W\simeq x_p \ \ \ \ \ \phi_{bi}\simeq E_g/2 + kT\ln(\frac{N_a}{n_i})
+W\simeq x_p \ \ \ \ \ q\phi_{bi}\simeq E_g/2 + kT\ln(\frac{N_a}{n_i})
 \end{equation}
 
 %------------------------------------------------------------------------%
@@ -125,7 +125,7 @@ $E_{fn}$ remains costant until $-x_p$ but n changes beacuse $E_c$ moves upwards.
 For reverse bias we have to follow the same path of forward bias arriving at the graph above.\\
 Bands are flat near the contact beacuse we suppose (1) quasi-neutral region under (2) low level of injection with (3) costant doping and (4) negligible gradient of quasi-Fermi levels; if one of this supposition falls the bands will no more be flat.\\
 \vspace{5mm}
-
+\label{cont.eq}
 Now we want to know the quasi-Fermi level in the minority region.
 We know that at $x=x_n$ $n\simeq N_d$ and for the law of mass action generalized $p=\frac{n_i^2}{n}e^{\frac{E_{fn}-E_{fp}}{kT}}\simeq p_{n0}e^{\frac{qV}{kT}}$ and at $x=-x_p$ with the same passages we obtain $n\simeq n_{p0}e^{\frac{qV}{kT}}$. Now we can solve the continuity equation only in the quasi-neutral region. \\
 Beacuse the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ and $G-R=\frac{-\Delta n}{\tau_n}$ from this two in the coninuity equations under stationary condition we get
@@ -175,7 +175,7 @@ If we have a wide-base diode if $W_p>>L_n$ so we can approximate as follow the e
 \begin{equation}
 \Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)e^{\frac{-x}{L_n}} \ \ \ \ \ \ \ J_n=\frac{qD_nn_{p0}(e^{\frac{qV}{kT}}-1)}{L_n}
 \end{equation}
-If we have a wide-base diode if $W_p<<L_n$ so we can approximate as follow the expression of charge and of current density
+If we have a narrow-base diode if $W_p<<L_n$ so we can approximate as follow the expression of charge and of current density
 \begin{equation}
 \Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)\frac{W_p-x}{W_p}\ \ \ \ \ \ \ \ \ J_n=\frac{qD_nn_{p0}(e^{\frac{qV}{kT}}-1)}{W_n}
 \end{equation}
@@ -252,7 +252,7 @@ Let's consider a pn junction in foward bias $J=J_0(e^{\frac{qV}{kT}}-1)\simeq J_
 So with the increase of T we can have both an increase or a decrease of voltage corrisponding a fixed J. We have to find the typical regime of our device so from $J=J_0e^{\frac{qV}{kT}}$ we extract the voltage as $V=\frac{kT}{q}\ln(J/J_0)$ with J a fixed current. Now we cand derivate obtaining
 
 \begin{equation}
-\frac{dV}{dT}= \frac{k}{q}\ln(J/J_0)+\frac{kT}{q}J_0/J \frac{-J \frac{dJ_0}{dT}}{J_0^2}=V/T-\frac{kT}{q}\frac{dJ_0}{dT}
+\frac{dV}{dT}= \frac{k}{q}\ln(J/J_0)+\frac{kT}{q}J_0/J \frac{-J \frac{dJ_0}{dT}}{J_0^2}=V/T-\frac{kT}{q}\frac{dJ_0}{dT}\frac{1}{J_0}
 \end{equation}
 
 for semplicity we can hilight $J_0$ dependences on temperature writing $J_0=aT^\gamma e^{-E_g/kT}$ so we obtain that $\frac{dJ_0}{dT}=J_0\gamma/T+J_0[-\frac{dE_g}{dT}\frac{1}{kT}] + J_0 \frac{E_g}{kT^2}$ so coming back at voltage we obtain
@@ -280,7 +280,7 @@ Under reverse bias $E_{fn}<E_{fp}$ so there will be some generation processes, k
 R=\frac{n_i^2(e^{(qV)/(kT)}-1)}{\tau_0(p+n+2n_i Ch((E_t-E_i)/(kT))}
 \end{equation} 
 so the sign of the voltage applied V change the sign of R.\\
-Refering to forward bias the impact of R is that from majority region there will be more electron moving to the depletion region beacuse of minority constrain of the pn junction
+Refering to forward bias the impact of R is that from majority region there will be more electron moving to the depletion region beacuse of minority constrain of the pn junction. 
 So we aspect a larger current under foward bias where $R\simeq \frac{n_i^2(e^{\frac{qV}{kT}}-1)}{\tau_0[p+n]}$ to get the worst case we take p=n so R will be maximum and we get $R= \frac{n_i(e^{\frac{qV}{2kT}})}{2\tau_0}$.\\
 Under forward bias so we can define 
 \begin{equation}
@@ -288,7 +288,7 @@ J_R=qR_{max}W_d=qW_d\frac{n_i(e^{\frac{qV}{2kT}})}{2\tau_0}
 \end{equation}
 Under reverse bias $R\simeq -\frac{n_i^2}{2n_i\tau_0}=-\frac{n_i}{2\tau_0}$ and so as for forward bias we can define
 \begin{equation}
-J_G=-\frac{n_i}{2\tau_0}W_dq
+J_G=-q\frac{n_i}{2\tau_0}W_d
 \end{equation}
 In general for both cases we can define 
 \begin{equation}
@@ -310,7 +310,7 @@ With reverse bias the current is dominated by $J_{RG}$ and have a slight increas
 \subsection{High current regime}
 At high current regime there are 2 problems that create distortion in the ideal characteristic.\\
 {\bf High injection regime}\\
-At high current the hypotesis of low injection regime decades so taking p quasi-neutral region we have $n=n_0+\Delta n\simeq\Delta n$ and $p=p_0+\Delta n\simeq \Delta n$ so with the law of mass action generalized we obtain $pn=n_i^2e^{\frac{qV}{kT}}=\Delta n^2$ and so $\Delta n=n_ie^{\frac{qV}{2kT}}$ from this through continuity equation we get that 
+At high current the hypotesis of low injection regime decades so taking p quasi-neutral region we have $n=n_0+\Delta n\simeq\Delta n$ and $p=p_0+\Delta n\simeq \Delta n$ so with the law of mass action generalized we obtain $pn=n_i^2e^{\frac{qV}{kT}}=\Delta n^2$ and so $\Delta n=n_ie^{\frac{qV}{2kT}}$ from this through continuity equation (see ~\ref{cont.eq}) we get that 
 \begin{equation}
 J\propto n_ie^{\frac{qV}{2kT}}
 \end{equation}
@@ -348,7 +348,7 @@ Olso in the quasi-neutral region we have charges stored that change if $\sigma V
 \begin{equation}
 C_{diff}=\frac{\partial Q_{diff}}{\partial V}
 \end{equation} 
-we have therefore define $Q_diff$. Assuming forward bias and so neglecting $n_{p0}$ we can write $Q_diff=\int^{W_p}_0 q\Delta n(x) dx$.\\
+we have therefore define $Q_{diff}$. Assuming forward bias and so neglecting $n_{p0}$ we can write $Q_{diff}=\int^{W_p}_0 q\Delta n(x) dx$.\\
 For a wide base diode we have 
 \begin{equation}
 Q_{diff}=q\Delta n(0) \frac{L_n^2}{L_n}\frac{D_n}{D_n}=J_n\tau_n
@@ -363,7 +363,7 @@ where $t_p$ is defined as electron transit time through the quasi-neutral p regi
 \includegraphics[width=0.35\textwidth]{smallpn.png}
 \end{wrapfigure}
 
-It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_diff=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
+It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_{diff}=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
 Going back to the diffusion capacitance we have for a wide base diode
 \begin{equation}
 C_{diff}^{wide}=g_m\tau_n
