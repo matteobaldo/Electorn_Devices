@@ -35,73 +35,73 @@
 \contentsline {section}{\numberline {3.2}Ohmic contact}{31}{section.3.2}
 \contentsline {section}{\numberline {3.3}Interface states}{32}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Limit cases}{33}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}MOS capacitor}{34}{chapter.4}
-\contentsline {section}{\numberline {4.1}Working regimes}{34}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Flat band regime}{35}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Accumulation regime}{35}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Deplition regime}{36}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Weak inversion regime}{36}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Strong inversion regime}{36}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Electrosatic}{37}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Dominant terms in the solution of Poisson equation}{38}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Total charge in function of gate bias}{39}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Small signal capacitance}{39}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}in accumulation regime}{39}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}in flat band condition}{39}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}in depletion regime}{40}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}in strong inversion}{40}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Frequency regimes}{40}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Low frequency regime}{41}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}High frequency regime}{41}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Deep deplition}{42}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}MOS capacitor with ring}{43}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Split C-V curve}{43}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Electrostatic}{43}{subsection.4.5.2}
-\contentsline {subsubsection}{$\rightarrow V_r=V_g=0$}{44}{section*.2}
-\contentsline {subsubsection}{$\rightarrow V_r=0 V_g=V_t$}{44}{section*.3}
-\contentsline {subsubsection}{$\rightarrow V_r>0 V_g=0$}{45}{section*.4}
-\contentsline {section}{\numberline {4.6}Effects of non idealities}{46}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Charge in the oxide}{46}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Interface states}{47}{subsection.4.6.2}
-\contentsline {section}{\numberline {4.7}Impact of polysilicon gate}{48}{section.4.7}
-\contentsline {chapter}{\numberline {5}MOS transistor}{50}{chapter.5}
-\contentsline {subsubsection}{Working principles}{50}{section*.5}
-\contentsline {section}{\numberline {5.1}Gradual channel approximation}{51}{section.5.1}
-\contentsline {section}{\numberline {5.2}Poisson equation}{51}{section.5.2}
-\contentsline {section}{\numberline {5.3}Charge in the substrate}{52}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Charge in weak inversion}{52}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Charge in strong inversion}{52}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Current behaviour}{53}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Ohmic regime $V_{ds}<<2|\phi _b|$}{53}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Parabolic regime $V_{ds}<2|\phi _b|$}{54}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Saturation point}{54}{subsection.5.4.3}
-\contentsline {subsubsection}{Mathematical explanation of dicendent parabola}{55}{section*.6}
-\contentsline {subsubsection}{Physical explanation of dicendent parabola}{55}{section*.7}
-\contentsline {section}{\numberline {5.5}Over the saturation point}{55}{section.5.5}
-\contentsline {section}{\numberline {5.6}Transcaracteristic}{57}{section.5.6}
-\contentsline {section}{\numberline {5.7}Small signal parameters}{58}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Transonductance $g_m$}{58}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Transconductrance $g_d$}{58}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}Capacitive terms}{59}{subsection.5.7.3}
-\contentsline {subsection}{\numberline {5.7.4}Frequency responce}{60}{subsection.5.7.4}
-\contentsline {section}{\numberline {5.8}Body effect}{61}{section.5.8}
-\contentsline {section}{\numberline {5.9}Subtheshold regime}{62}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Current expression}{62}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{63}{subsection.5.9.2}
-\contentsline {subsubsection}{Improvment for MOS}{64}{section*.8}
-\contentsline {section}{\numberline {5.10}Temperature dependance}{64}{section.5.10}
-\contentsline {section}{\numberline {5.11}Effects of non idealities}{64}{section.5.11}
-\contentsline {subsection}{\numberline {5.11.1}Charge in the oxide}{64}{subsection.5.11.1}
-\contentsline {subsection}{\numberline {5.11.2}Interface states}{65}{subsection.5.11.2}
-\contentsline {subsection}{\numberline {5.11.3}Parassitic resistance of $n^+$ regions}{65}{subsection.5.11.3}
-\contentsline {subsection}{\numberline {5.11.4}Parassitic capacitances}{65}{subsection.5.11.4}
-\contentsline {section}{\numberline {5.12}Short channel devices}{65}{section.5.12}
-\contentsline {subsection}{\numberline {5.12.1}2D electrostatic in channel coming from $n^+$ regions}{65}{subsection.5.12.1}
-\contentsline {subsection}{\numberline {5.12.2}Velocity saturation}{68}{subsection.5.12.2}
-\contentsline {subsubsection}{Hot electrons}{69}{section*.9}
-\contentsline {section}{\numberline {5.13}Scaling rules}{70}{section.5.13}
-\contentsline {subsection}{\numberline {5.13.1}Constant field (Dennard)}{70}{subsection.5.13.1}
-\contentsline {subsubsection}{Device parameters changes}{71}{section*.10}
-\contentsline {subsubsection}{Circuit parameters changes}{71}{section*.11}
-\contentsline {subsection}{\numberline {5.13.2}Generalized scaling rules (Baccarjni)}{71}{subsection.5.13.2}
-\contentsline {subsubsection}{Parameters change}{72}{section*.12}
+\contentsline {chapter}{\numberline {4}MOS capacitor}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Working regimes}{35}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Flat band regime}{36}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Accumulation regime}{36}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Deplition regime}{37}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Weak inversion regime}{37}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Strong inversion regime}{37}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Electrosatic}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Dominant terms in the solution of Poisson equation}{39}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Total charge in function of gate bias}{40}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Small signal capacitance}{40}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}in accumulation regime}{40}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}in flat band condition}{40}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}in depletion regime}{41}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}in strong inversion}{41}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Frequency regimes}{41}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Low frequency regime}{42}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}High frequency regime}{42}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Deep deplition}{43}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}MOS capacitor with ring}{44}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Split C-V curve}{44}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Electrostatic}{44}{subsection.4.5.2}
+\contentsline {subsubsection}{$\rightarrow V_r=V_g=0$}{45}{section*.2}
+\contentsline {subsubsection}{$\rightarrow V_r=0 V_g=V_t$}{45}{section*.3}
+\contentsline {subsubsection}{$\rightarrow V_r>0 V_g=0$}{46}{section*.4}
+\contentsline {section}{\numberline {4.6}Effects of non idealities}{47}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Charge in the oxide}{47}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Interface states}{48}{subsection.4.6.2}
+\contentsline {section}{\numberline {4.7}Impact of polysilicon gate}{49}{section.4.7}
+\contentsline {chapter}{\numberline {5}MOS transistor}{51}{chapter.5}
+\contentsline {subsubsection}{Working principles}{51}{section*.5}
+\contentsline {section}{\numberline {5.1}Gradual channel approximation}{52}{section.5.1}
+\contentsline {section}{\numberline {5.2}Poisson equation}{52}{section.5.2}
+\contentsline {section}{\numberline {5.3}Charge in the substrate}{53}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Charge in weak inversion}{53}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Charge in strong inversion}{53}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Current behaviour}{54}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Ohmic regime $V_{ds}<<2|\phi _b|$}{54}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Parabolic regime $V_{ds}<2|\phi _b|$}{55}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Saturation point}{55}{subsection.5.4.3}
+\contentsline {subsubsection}{Mathematical explanation of dicendent parabola}{56}{section*.6}
+\contentsline {subsubsection}{Physical explanation of dicendent parabola}{56}{section*.7}
+\contentsline {section}{\numberline {5.5}Over the saturation point}{56}{section.5.5}
+\contentsline {section}{\numberline {5.6}Transcaracteristic}{58}{section.5.6}
+\contentsline {section}{\numberline {5.7}Small signal parameters}{59}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Transonductance $g_m$}{59}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Transconductrance $g_d$}{59}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Capacitive terms}{60}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Frequency responce}{61}{subsection.5.7.4}
+\contentsline {section}{\numberline {5.8}Body effect}{62}{section.5.8}
+\contentsline {section}{\numberline {5.9}Subtheshold regime}{63}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Current expression}{63}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{64}{subsection.5.9.2}
+\contentsline {subsubsection}{Improvment for MOS}{65}{section*.8}
+\contentsline {section}{\numberline {5.10}Temperature dependance}{65}{section.5.10}
+\contentsline {section}{\numberline {5.11}Effects of non idealities}{65}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Charge in the oxide}{65}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.2}Interface states}{66}{subsection.5.11.2}
+\contentsline {subsection}{\numberline {5.11.3}Parassitic resistance of $n^+$ regions}{66}{subsection.5.11.3}
+\contentsline {subsection}{\numberline {5.11.4}Parassitic capacitances}{66}{subsection.5.11.4}
+\contentsline {section}{\numberline {5.12}Short channel devices}{66}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}2D electrostatic in channel coming from $n^+$ regions}{66}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {5.12.2}Velocity saturation}{69}{subsection.5.12.2}
+\contentsline {subsubsection}{Hot electrons}{70}{section*.9}
+\contentsline {section}{\numberline {5.13}Scaling rules}{71}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Constant field (Dennard)}{71}{subsection.5.13.1}
+\contentsline {subsubsection}{Device parameters changes}{72}{section*.10}
+\contentsline {subsubsection}{Circuit parameters changes}{72}{section*.11}
+\contentsline {subsection}{\numberline {5.13.2}Generalized scaling rules (Baccarjni)}{72}{subsection.5.13.2}
+\contentsline {subsubsection}{Parameters change}{73}{section*.12}

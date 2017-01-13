@@ -203,6 +203,11 @@ that creates an increment of $J_0$ and 2 opposit behaviour for reverse and forwa
 \end{wrapfigure}
 
 In order to have an ohmic contact we need a high doped semiconductor. With $N_d$ very high the depletion layer becomes narrower and increasing the doping concentration we arrive at a condition when there is a strong factor of J due to quantum-mechanical tunneling. That process does not depend on the type of bias so we don't have anymore a rectifing behaviour.\\
+
+\centering
+\includegraphics[width=0.35\textwidth]{1tunnel.png}\\
+\raggedright
+
 Taking into account the figure as reference system from the studied pn junction we know the behaviour of $E_c(x)=\frac{q^2N_d}{2\varepsilon_{Si}}x^2$ so we can calculate T ,transparancy coefficient as 
 \begin{equation}
 T=e^{-2\int Im\{E_c(x)\}dx}=e^{-2\int \sqrt{\frac{2m^*(E_c-E)}{\hslash^2}}dx}
@@ -215,6 +220,7 @@ That substituiting $W_d$ with its expession we get
 \begin{equation}
 T=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}\frac{2\varepsilon_{Si}}{qN_d}(\phi_{bi}-V)}=e^{-q \frac{(\phi_{bi}-V)}{E_{00}}}
 \end{equation}
+where $E_{00}=\frac{q\hslash \sqrt{N_d}}{4\sqrt{2m^*\varepsilon_{si}}}$
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.3\textwidth]{contactrho.png}
