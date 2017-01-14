@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.16)  13 JAN 2017 23:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.16)  14 JAN 2017 17:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1069,31 +1069,31 @@ Package pdftex.def Info: 1tunnel.png used on input line 208.
 <contactrho.png, id=511, 553.06625pt x 399.4925pt>
 File: contactrho.png Graphic file (type png)
  <use contactrho.png>
-Package pdftex.def Info: contactrho.png used on input line 226.
+Package pdftex.def Info: contactrho.png used on input line 227.
 (pdftex.def)             Requested size: 125.47737pt x 90.6317pt.
 
 <ohmicconctact.png, id=512, 714.67pt x 277.035pt>
 File: ohmicconctact.png Graphic file (type png)
  <use ohmicconctact.png>
-Package pdftex.def Info: ohmicconctact.png used on input line 238.
+Package pdftex.def Info: ohmicconctact.png used on input line 239.
 (pdftex.def)             Requested size: 209.12683pt x 81.06517pt.
 
 <is01.png, id=513, 523.9575pt x 482.80376pt>
 File: is01.png Graphic file (type png)
  <use is01.png>
-Package pdftex.def Info: is01.png used on input line 247.
+Package pdftex.def Info: is01.png used on input line 248.
 (pdftex.def)             Requested size: 125.47737pt x 115.61742pt.
  [32 <./1tunnel.png> <./contactrho.png> <./ohmicconctact.png>]
 <is02.png, id=524, 578.16pt x 558.085pt>
 File: is02.png Graphic file (type png)
  <use is02.png>
-Package pdftex.def Info: is02.png used on input line 256.
+Package pdftex.def Info: is02.png used on input line 257.
 (pdftex.def)             Requested size: 79.46921pt x 76.70924pt.
 
 <is03.png, id=525, 758.835pt x 526.96875pt>
 File: is03.png Graphic file (type png)
  <use is03.png>
-Package pdftex.def Info: is03.png used on input line 289.
+Package pdftex.def Info: is03.png used on input line 290.
 (pdftex.def)             Requested size: 146.39133pt x 101.6609pt.
  [33 <./is01.png> <./is02.png>]) (./Chapter4.tex [34 <./is03.png>]
 Chapter 4.
@@ -1101,13 +1101,13 @@ Chapter 4.
 File: mos_separate_material.png Graphic file (type png)
 
 <use mos_separate_material.png>
-Package pdftex.def Info: mos_separate_material.png used on input line 11.
+Package pdftex.def Info: mos_separate_material.png used on input line 12.
 (pdftex.def)             Requested size: 292.77629pt x 177.49281pt.
 
 <mos_theq.png, id=539, 740.7675pt x 427.5975pt>
 File: mos_theq.png Graphic file (type png)
  <use mos_theq.png>
-Package pdftex.def Info: mos_theq.png used on input line 19.
+Package pdftex.def Info: mos_theq.png used on input line 20.
 (pdftex.def)             Requested size: 209.12683pt x 120.71169pt.
  [35
 
@@ -1115,176 +1115,176 @@ Package pdftex.def Info: mos_theq.png used on input line 19.
 File: mos_vfb.png Graphic file (type png)
 
 <use mos_vfb.png>
-Package pdftex.def Info: mos_vfb.png used on input line 34.
+Package pdftex.def Info: mos_vfb.png used on input line 35.
 (pdftex.def)             Requested size: 209.12683pt x 136.79025pt.
  <mos_accum.png, id=545, 616.3025pt x 389.455pt>
 File: mos_accum.png Graphic file (type png)
 
 <use mos_accum.png>
-Package pdftex.def Info: mos_accum.png used on input line 51.
+Package pdftex.def Info: mos_accum.png used on input line 52.
 (pdftex.def)             Requested size: 209.12683pt x 132.15146pt.
  [36 <./mos_theq.png> <./mos_vfb.png> <./mos_accum.png>]
 <mos_depl.png, id=554, 671.50874pt x 371.3875pt>
 File: mos_depl.png Graphic file (type png)
  <use mos_depl.png>
-Package pdftex.def Info: mos_depl.png used on input line 61.
+Package pdftex.def Info: mos_depl.png used on input line 62.
 (pdftex.def)             Requested size: 209.12683pt x 115.66162pt.
 
 <mos_weak.png, id=555, 681.54625pt x 401.5pt>
 File: mos_weak.png Graphic file (type png)
  <use mos_weak.png>
-Package pdftex.def Info: mos_weak.png used on input line 69.
+Package pdftex.def Info: mos_weak.png used on input line 70.
 (pdftex.def)             Requested size: 209.12683pt x 123.19554pt.
 
 <mos_electrostatic.png, id=556, 588.1975pt x 536.0025pt>
 File: mos_electrostatic.png Graphic file (type png)
 
 <use mos_electrostatic.png>
-Package pdftex.def Info: mos_electrostatic.png used on input line 82.
+Package pdftex.def Info: mos_electrostatic.png used on input line 83.
 (pdftex.def)             Requested size: 209.12683pt x 190.56438pt.
  [37 <./mos_depl.png> <./mos_weak.png>] [38 <./mos_electrostatic.png>] <logqVs.
 png, id=571, 844.15375pt x 443.6575pt>
 File: logqVs.png Graphic file (type png)
 
 <use logqVs.png>
-Package pdftex.def Info: logqVs.png used on input line 124.
+Package pdftex.def Info: logqVs.png used on input line 126.
 (pdftex.def)             Requested size: 209.12683pt x 109.90541pt.
  [39 <./logqVs.png>] [40]
 <c-g1.png, id=591, 780.9175pt x 389.455pt>
 File: c-g1.png Graphic file (type png)
  <use c-g1.png>
-Package pdftex.def Info: c-g1.png used on input line 200.
+Package pdftex.def Info: c-g1.png used on input line 207.
 (pdftex.def)             Requested size: 146.39133pt x 73.00479pt.
 
 <c-gtot.png, id=592, 784.9325pt x 388.45125pt>
 File: c-gtot.png Graphic file (type png)
  <use c-gtot.png>
-Package pdftex.def Info: c-gtot.png used on input line 207.
+Package pdftex.def Info: c-gtot.png used on input line 214.
 (pdftex.def)             Requested size: 292.77629pt x 144.89238pt.
  [41 <./c-g1.png> <./c-gtot.png>] <lfbd.png, id=599, 541.02126pt x 525.965pt>
 File: lfbd.png Graphic file (type png)
  <use lfbd.png>
-Package pdftex.def Info: lfbd.png used on input line 224.
+Package pdftex.def Info: lfbd.png used on input line 231.
 (pdftex.def)             Requested size: 167.2989pt x 162.63815pt.
 
 <hfbd.png, id=600, 507.8975pt x 531.9875pt>
 File: hfbd.png Graphic file (type png)
  <use hfbd.png>
-Package pdftex.def Info: hfbd.png used on input line 236.
+Package pdftex.def Info: hfbd.png used on input line 243.
 (pdftex.def)             Requested size: 167.2989pt x 175.23172pt.
  [42 <./lfbd.png> <./hfbd.png>] <ddcond.png, id=607, 484.81125pt x 524.96124pt>
 File: ddcond.png Graphic file (type png)
  <use ddcond.png>
-Package pdftex.def Info: ddcond.png used on input line 247.
+Package pdftex.def Info: ddcond.png used on input line 254.
 (pdftex.def)             Requested size: 167.2989pt x 181.15187pt.
 
 <qinv.png, id=608, 523.9575pt x 375.4025pt>
 File: qinv.png Graphic file (type png)
  <use qinv.png>
-Package pdftex.def Info: qinv.png used on input line 256.
+Package pdftex.def Info: qinv.png used on input line 263.
 (pdftex.def)             Requested size: 125.47737pt x 89.89795pt.
 
 <ring.png, id=609, 996.72375pt x 349.305pt>
 File: ring.png Graphic file (type png)
  <use ring.png>
-Package pdftex.def Info: ring.png used on input line 275.
+Package pdftex.def Info: ring.png used on input line 282.
 (pdftex.def)             Requested size: 292.77629pt x 102.60168pt.
  [43 <./ddcond.png> <./qinv.png>] <splitcv.png, id=617, 738.76pt x 362.35374pt>
 File: splitcv.png Graphic file (type png)
  <use splitcv.png>
-Package pdftex.def Info: splitcv.png used on input line 281.
+Package pdftex.def Info: splitcv.png used on input line 288.
 (pdftex.def)             Requested size: 209.12683pt x 102.57523pt.
 
 <sections.png, id=618, 598.235pt x 356.33125pt>
 File: sections.png Graphic file (type png)
  <use sections.png>
-Package pdftex.def Info: sections.png used on input line 290.
+Package pdftex.def Info: sections.png used on input line 297.
 (pdftex.def)             Requested size: 146.39133pt x 87.19589pt.
 
 <theqmosr.png, id=619, 625.33624pt x 398.48875pt>
 File: theqmosr.png Graphic file (type png)
  <use theqmosr.png>
-Package pdftex.def Info: theqmosr.png used on input line 299.
+Package pdftex.def Info: theqmosr.png used on input line 306.
 (pdftex.def)             Requested size: 292.77629pt x 186.57224pt.
  [44 <./ring.png> <./splitcv.png> <./sections.png>]
 <what1.png, id=624, 660.4675pt x 420.57124pt>
 File: what1.png Graphic file (type png)
  <use what1.png>
-Package pdftex.def Info: what1.png used on input line 307.
+Package pdftex.def Info: what1.png used on input line 314.
 (pdftex.def)             Requested size: 292.77629pt x 186.43808pt.
 
 <what2.png, id=625, 771.88374pt x 424.58624pt>
 File: what2.png Graphic file (type png)
  <use what2.png>
-Package pdftex.def Info: what2.png used on input line 315.
+Package pdftex.def Info: what2.png used on input line 322.
 (pdftex.def)             Requested size: 292.77629pt x 161.04643pt.
  [45 <./theqmosr.png> <./what1.png>] <what3.png, id=632, 875.27pt x 380.42125pt
 >
 File: what3.png Graphic file (type png)
 
 <use what3.png>
-Package pdftex.def Info: what3.png used on input line 328.
+Package pdftex.def Info: what3.png used on input line 335.
 (pdftex.def)             Requested size: 322.05711pt x 139.97581pt.
  <vtprimo.png, id=633, 945.5325pt x 562.1pt>
 File: vtprimo.png Graphic file (type png)
  <use vtprimo.png>
-Package pdftex.def Info: vtprimo.png used on input line 340.
+Package pdftex.def Info: vtprimo.png used on input line 347.
 (pdftex.def)             Requested size: 167.2989pt x 99.44966pt.
 
 [46 <./what2.png> <./what3.png>]
 <mbvsfdmos.png, id=641, 894.34125pt x 321.2pt>
 File: mbvsfdmos.png Graphic file (type png)
  <use mbvsfdmos.png>
-Package pdftex.def Info: mbvsfdmos.png used on input line 350.
+Package pdftex.def Info: mbvsfdmos.png used on input line 357.
 (pdftex.def)             Requested size: 250.95476pt x 90.12653pt.
 
 <qinox.png, id=642, 663.47874pt x 380.42125pt>
 File: qinox.png Graphic file (type png)
  <use qinox.png>
-Package pdftex.def Info: qinox.png used on input line 360.
+Package pdftex.def Info: qinox.png used on input line 367.
 (pdftex.def)             Requested size: 250.95476pt x 143.88821pt.
  [47 <./vtprimo.png> <./mbvsfdmos.png> <./qinox.png>]
 <istafb.png, id=648, 354.32375pt x 280.04625pt>
 File: istafb.png Graphic file (type png)
  <use istafb.png>
-Package pdftex.def Info: istafb.png used on input line 384.
+Package pdftex.def Info: istafb.png used on input line 391.
 (pdftex.def)             Requested size: 83.64944pt x 66.11426pt.
 
 <istasi.png, id=649, 411.5375pt x 358.33875pt>
 File: istasi.png Graphic file (type png)
  <use istasi.png>
-Package pdftex.def Info: istasi.png used on input line 391.
+Package pdftex.def Info: istasi.png used on input line 398.
 (pdftex.def)             Requested size: 83.64944pt x 72.83658pt.
 
 <cvis.png, id=650, 715.67375pt x 366.36874pt>
 File: cvis.png Graphic file (type png)
  <use cvis.png>
-Package pdftex.def Info: cvis.png used on input line 398.
+Package pdftex.def Info: cvis.png used on input line 405.
 (pdftex.def)             Requested size: 209.12683pt x 107.05481pt.
  [48 <./istafb.png> <./istasi.png>] <process1.png, id=659, 1097.09875pt x 161.6
 0374pt>
 File: process1.png Graphic file (type png)
 
 <use process1.png>
-Package pdftex.def Info: process1.png used on input line 406.
+Package pdftex.def Info: process1.png used on input line 413.
 (pdftex.def)             Requested size: 271.86234pt x 40.04327pt.
  <process1par.png, id=660, 472.76625pt x 184.69pt>
 File: process1par.png Graphic file (type png)
 
 <use process1par.png>
-Package pdftex.def Info: process1par.png used on input line 412.
+Package pdftex.def Info: process1par.png used on input line 419.
 (pdftex.def)             Requested size: 104.56342pt x 40.8489pt.
  <process2.png, id=661, 1096.095pt x 169.63374pt>
 File: process2.png Graphic file (type png)
 
 <use process2.png>
-Package pdftex.def Info: process2.png used on input line 418.
+Package pdftex.def Info: process2.png used on input line 425.
 (pdftex.def)             Requested size: 271.86234pt x 42.07442pt.
  <polygate.png, id=662, 252.945pt x 353.32pt>
 File: polygate.png Graphic file (type png)
 
 <use polygate.png>
-Package pdftex.def Info: polygate.png used on input line 426.
+Package pdftex.def Info: polygate.png used on input line 433.
 (pdftex.def)             Requested size: 104.56342pt x 146.05899pt.
  [49 <./cvis.png> <./process1.png> <./process1par.png> <./process2.png>]) (./Ch
 apter5.tex [50 <./polygate.png>]
@@ -1658,7 +1658,7 @@ public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msbm7.pfb>
-Output written on ED.pdf (74 pages, 3189211 bytes).
+Output written on ED.pdf (74 pages, 3189083 bytes).
 PDF statistics:
  1349 PDF objects out of 1440 (max. 8388607)
  1118 compressed objects within 12 object streams

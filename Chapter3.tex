@@ -214,13 +214,14 @@ T=e^{-2\int Im\{E_c(x)\}dx}=e^{-2\int \sqrt{\frac{2m^*(E_c-E)}{\hslash^2}}dx}
 \end{equation}
 we have to remember that in this case $m^*$ is the effective mass for tunneling process. So if we consider $E=E_f$
 \begin{equation}
-T=e^{-2\int \sqrt{\frac{2m^*E_c}{\hslash^2}}dx}=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}W_d/2}
+T=e^{-2\int \sqrt{\frac{2m^*E_c}{\hslash^2}}dx}=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}W_d^2/2}
 \end{equation}
 That substituiting $W_d$ with its expession we get
 \begin{equation}
 T=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}\frac{2\varepsilon_{Si}}{qN_d}(\phi_{bi}-V)}=e^{-q \frac{(\phi_{bi}-V)}{E_{00}}}
 \end{equation}
-where $E_{00}=\frac{q\hslash \sqrt{N_d}}{4\sqrt{2m^*\varepsilon_{si}}}$
+where $E_{00}=q\frac{\hslash \sqrt{N_d}}{2\sqrt{m^*\varepsilon_{si}}}$\\
+{\bf check this paragraph below}\\
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.3\textwidth]{contactrho.png}
@@ -249,8 +250,8 @@ We've always considered Si as a periodic infinite cristal but in metal-semicondu
 
 Electrons remains localize close to theyr silicon atoms this creates spurius energy level at the interface.\\ 
 In the bulk region electrons and holes are only in the conduction band or in the valence band but at the interface can stay in a lot of states between this two bands.\\
-The spurious states in the upper part of the bandgap have an acceptor behaviour the others in the bottom part have a donor behaviour. The energy that divide this two type of states is the $E_{is}$.\\
-The states with a donor behaviour are neutral when filled and positivly charged when empty. Vice-versa states with acceptor behaviour are negativly charged when empty and neutral when filled. All states above $E_f$ will be filled all the other states empty. So the previous band-diagram is incoherent with the Gauss'law since we have some exposed charge and no band banding.\\ 
+The spurious states in the upper part of the bandgap have an acceptor behaviour (negativly charged when empty and neutral when filled) the others in the bottom part have a donor behaviour (neutral when filled and positivly charged when empty). The energy that divide this two type of states is the $E_{is}$.\\
+All states above $E_f$ will be filled all the other states empty. So the previous band-diagram is incoherent with the Gauss'law since we have some exposed charge and no band banding.\\ 
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.19\textwidth]{is02.png}
@@ -262,13 +263,13 @@ We define interface state density $N_{is} = [cm^{-2}eV^{-1}]$ in order to find t
 \begin{equation}
 |Q_{is}|=N_{is}(E_f-E_{is})q
 \end{equation}
-The distance $E_c(0)-E_{is}\simeq E_{gap}/2$ so writing $\Delta E_{is}=E_c(0)-E_{is}$ we can say that
+The distance $E_c(0)-E_{is}\simeq E_{gap}/2$ so writing $\Delta E_{is}=E_c(0)-E_{is}\simeq E_{gap}/2$ we can say that
 \begin{equation}
-|Q_{is}|=N_{is}[\Delta E_{is}-(E_c(0)-E_{is})]q
+|Q_{is}|=N_{is}[\Delta E_{is}-(E_c(0)-E_{f})]q
 \end{equation}
 We know from the analysis of the pn junction that the charge in the depletion leyer is 
 \begin{equation}
-Q_{dep}=qN_dW_d=\sqrt{2\varepsilon_{si}qN_d}\frac{E_c(0)-E_c(W_d)}{q}
+Q_{dep}=qN_dW_d=\sqrt{2\varepsilon_{si}qN_d\frac{E_c(0)-E_c(W_d)}{q}}
 \end{equation}
 where the last term is the voltage drop in the depletion layer.\\
 For Gauss law this 2 terms have to be equal so solving the equation we get the level of the conduction band at the interface 

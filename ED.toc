@@ -40,7 +40,7 @@
 \contentsline {subsection}{\numberline {4.1.1}Flat band regime}{36}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Accumulation regime}{36}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Deplition regime}{37}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Weak inversion regime}{37}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Weak inversion condition}{37}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Strong inversion regime}{37}{subsection.4.1.5}
 \contentsline {section}{\numberline {4.2}Electrosatic}{38}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Dominant terms in the solution of Poisson equation}{39}{subsection.4.2.1}

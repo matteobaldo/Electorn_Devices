@@ -5,8 +5,9 @@ We start our analysis with a 1D device, we will consider the substrate a monocri
 We will consider for oxide $SiO_{2}$ that has a high energy gap ($\simeq$8-9eV), a low concentration of free carriers, a large resistivity, a reasonably low concentration of spurious difect ($\simeq 10^{10}cm^{-3}$) but a low dialectric constant ($\simeq 3.9$).This last propriety is the cause why recently $SiO_2$ is being substituted with high-k materials.\\
 In our analysis we will consider the dialectric ideal (this means we have to solve only the Poisson eq. for the electrostatic beacuse there will be no current flow) and as gate material a metal.\\
 
+%------------------------------------------------------------------------%
 \section{Working regimes}
-
+%------------------------------------------------------------------------%11
 \centering
 \includegraphics[width=0.7\textwidth]{mos_separate_material.png}\\
 \raggedright
@@ -23,13 +24,13 @@ We put the 3 materials in contact after a while we will have a single Fermi-leve
 $E_{f(m)}$ will move downwards toghether with $E_c^{ox}$ since the distance $E_{f(m)}-E_c^{ox}$ is constant (material dependent) as $E_{gap}^{ox}$ .
 We have discontinuity of F, for Gauss law $\varepsilon_{ox}F_{ox}=\varepsilon_{Si}F_{Si}\rightarrow F_{ox}=3F_{Si}(0)$. We have a linear $F_{ox}$ for the hp of idealty of the dialectric and a parabolic band banding (that means a linear F) in the Si.\\
 We have 2 voltage drops over the silicon and over the metal that define $V_s+V_{ox}=\phi_{bi}$.
-If we apply a V>0 at the gate we push $E_{f(m)}$ downwards creating a higher band banding both in oxide and silicon, this band banding will increase both $V_{ox}$ and $V_{s}$ so assuming that the bulk keeps th.eq we can write the following equation
+If we apply a $V>0$ at the gate we push $E_{f(m)}$ downwards creating a higher band banding both in oxide and silicon, this band banding will increase both $V_{ox}$ and $V_{s}$ so assuming that the bulk keeps th.eq we can write the following equation
 \begin{equation}
 V_{G}+\phi_{bi}=V_s+V_{ox}
 \end{equation}
-
+%------------------------------------------------------------------------%
 \subsection{Flat band regime}
-
+%------------------------------------------------------------------------%
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.5\textwidth]{mos_vfb.png}
 \end{wrapfigure}
@@ -44,9 +45,9 @@ now we can re-write the balance of voltages as
 \begin{equation}
 V_G-V_{FB}=V_s+V_{ox}
 \end{equation}
-
+%------------------------------------------------------------------------%
 \subsection{Accumulation regime}
-
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.5\textwidth]{mos_accum.png}\\
 \raggedright
@@ -54,26 +55,26 @@ V_G-V_{FB}=V_s+V_{ox}
 
 If $V_G<V_{FB}$ bands band upwards we have more holes concentration at the interface between Si-Ox than the doping concentration. \\
 This is calle the accumulation regime.
-
+%------------------------------------------------------------------------%
 \subsection{Deplition regime} 
-
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.5\textwidth]{mos_depl.png}\\
 \raggedright
 
 With $V_G>V_{FB}$ we have in silicon a depletion region so we are in the depletion regime of the mos capacitor.
-
-\subsection{Weak inversion regime}
-
+%------------------------------------------------------------------------%
+\subsection{Weak inversion condition}
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.5\textwidth]{mos_weak.png}\\
 \raggedright
 
 If we further increase $V_G>>V_{FB}$ we arrive at the condition that the intrinsic Fermi level at the surface reaches the Fermi level ($E_f=E_i$).\\
-From now on if we slightly increase the voltage we will have more electrons than holes at the interface. This is the condition for weak inversion regime.\\
-
+From now on if we slightly increase the voltage we will have more electrons than holes at the interface. This is the condition for weak inversion condition.\\
+%------------------------------------------------------------------------%
 \subsection{Strong inversion regime}
-
+%------------------------------------------------------------------------%
 If we continue to increase the voltage applied we will reach the strong inverson regime that is characterized by $(E_i-E_f)|_{interface}=-(E_i-E_f)|_{bulk}$ so the concentration of electrons at the interface is equal to the doping concentration in the bulk.
 
 \section{Electrosatic}
@@ -82,11 +83,12 @@ If we continue to increase the voltage applied we will reach the strong inverson
 \includegraphics[width=0.5\textwidth]{mos_electrostatic.png}\\
 \raggedright
 
-We have to solve the Poisson equation $\frac{d^2\phi}{dx^2}==-\frac{q}{\varepsilon_{Si}}(p-n-N_a^-)$ only in the substrate.\\
+We have to solve the Poisson equation $\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon_{Si}}(p-n-N_a^-)$ only in the substrate.\\
 We define $\phi_B$ the electrostatic potential of the bulk far away from the interface and we take $E_f$ that is costant as the reference energy level 0.\\
 We introduce olso $\Delta \phi (x)=\phi(x)-\phi_B$  that is the change of the electrostatic potential wrt the bulk;$\Delta \phi (W_d)=0$ and $\Delta \phi (0)=V_s$.\\
+\vspace{5mm}
 Now we have to write $p-n-N_a^-$ as function of $\phi(x)$.\\
-For electrons we can say that $n=n_ie^{q(E_f-E_i)/kT}$ if we multiply and divide by q we get $n=n_ie^{q\phi(x)/kT}$ same for holes as $n=n_ie^{-q\phi(x)/kT}$. Electrons and holes in the bulk are $n_0=n_ie^{q\Delta \phi/kT}$ and $p_0=n_ie^{-q\Delta \phi/kT}$. From this 4 equation we can write that 
+For electrons we can say that $n=n_ie^{(E_f-E_i)/kT}$ if we multiply and divide by q we get $n=n_ie^{q\phi(x)/kT}$ same for holes as $n=n_ie^{-q\phi(x)/kT}$. Electrons and holes in the bulk are $n_0=n_ie^{q\phi_b/kT}$ and $p_0=n_ie^{-q\phi_b/kT}$. From this 4 equation we can write that 
 \begin{equation}
 n=n_0e^{q\Delta \phi/kT} \ \ \ \ \ \ \ \ p=p_0e^{-q\Delta \phi/kt}
 \end{equation}
@@ -96,47 +98,52 @@ N_a=p_0-n_0
 \end{equation}
 Now Poisson equation becomes 
 \begin{equation}
-\frac{d^2\phi}{dx^2}==-\frac{q}{\varepsilon_{Si}}(p_0e^{-q\Delta \phi/kt}-n_0e^{q\Delta \phi/kT}-p_0+\frac{n_i^2}{p_0})
+\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon_{Si}}(p_0e^{-q\Delta \phi/kt}-n_0e^{q\Delta \phi/kT}-p_0+\frac{n_i^2}{p_0})
 \end{equation}
 Until now the only approximation we have made is the M-B. Now we consider the complete ionization approximation $p_0\simeq N_a$. And we make a change of variable 
 \begin{equation}
-\frac{d^2\phi}{dx^2}==-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})
+\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})
 \end{equation}
 \begin{equation}
-d(\frac{d\phi}{dx})==-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})dx
+d(\frac{d\phi}{dx})=-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})dx
 \end{equation}
 \begin{equation}
-\frac{d\phi}{dx}d(\frac{d\phi}{dx})==-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})dx\frac{d\phi}{dx}
+\frac{d\phi}{dx}d(\frac{d\phi}{dx})=-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})dx\frac{d\phi}{dx}
 \end{equation}
 Now we integrate one time this expression. The first member is like f(x)f'(x) so the result is $-1/2(\frac{d\phi}{dx})^2$. Integrating olso the second member and gathering the common terms the equation we get
 \begin{equation}
 (\frac{d\Delta \phi }{dx})^2=\frac{2kTN_a}{\varepsilon_{si}}\left(e^{-q\Delta \phi/kT}+\frac{q\Delta \phi}{kT}-1+\frac{n_i^2}{N_a^2}(e^{q\Delta \phi/kT}-\frac{q\Delta \phi}{kT}-1)\right)=F^2(x)
 \end{equation}
-For Gauss law $F_s=F(0)=-\frac{Q_s}{\varepsilon_{si}}$ from this relation and the previous equation we get
+For Gauss law $F_s=F(0)=-\frac{Q_s}{\varepsilon_{si}}$ (and olso that $\Delta \phi (0)=V_s$ )from this relation and the previous equation we get
 \begin{equation}
 Q_s=\pm\sqrt{2kTN_a\varepsilon_{si}}\left(e^{-qV_s/kT}+\frac{qV_s}{kT}-1+\frac{n_i^2}{N_a^2}(e^{qV_s/kT}-\frac{qV_s}{kT}-1)\right)^{1/2}
 \end{equation}
 We already know the total charge in the substrate for all working regimes.\\
-
+%------------------------------------------------------------------------%
 \subsection{Dominant terms in the solution of Poisson equation}
-
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.5\textwidth]{logqVs.png}\\
 \raggedright
 
 To better undestand this formula let's analyse all working regime separately and draw a $\log |Q_s| - V_s$ graph.\\
 
-\tab \tab In accumulation regime when $V_s<0$ we have that $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}e^{-\frac{qV_s}{2kT}}$. So in the graph we see a straight line dependence. We can say that the term
+\vspace{5mm}
+In accumulation regime when $V_s<0$ we have that $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}e^{-\frac{qV_s}{2kT}}$. So in the graph we see a straight line dependence. We can say that the term
 \begin{equation}
 e^{\frac{-qV_s}{kT}}\rightarrow h_{sub}
 \end{equation} 
 in the solution of the Poisson equation is the term that takes into account for hole concentration in the substrate.\\
-\tab \tab In the depletion regime $0<V_s<2\phi_b$ we have to consider two dominant term: $\frac{qV_s}{kT}$ and $\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}$. If we evaluate the second term at $2\phi_b$ we get 1 so it's negligible and therefore the first term is predominant. In this regime
+
+\vspace{5mm}
+In the depletion regime $0<V_s<2\phi_b$ we have to consider two dominant term: $\frac{qV_s}{kT}$ and $\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}$. If we evaluate the second term at $2\phi_b$ we get 1 so it's negligible and therefore the first term is predominant. In this regime
 \begin{equation}
 Q_s\simeq -qN_a\sqrt{\frac{2\varepsilon_{Si}}{q}\frac{1}{N_a}V_s}
 \end{equation}
 that is the charge of the depletion layer.\\
-\tab \tab In strong inversion $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{2kT}}$ so we can say that the term
+
+\vspace{5mm}
+In strong inversion $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{2kT}}$ so we can say that the term
 \begin{equation}
 \frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}\rightarrow e_{sub}
 \end{equation}
