@@ -22,7 +22,7 @@ We olso underlined in red the potential barrier created by the oxide for holes a
 
 We put the 3 materials in contact after a while we will have a single Fermi-level all over the device and we can say that far from the contact p-Si will be at equilibrium.\\
 $E_{f(m)}$ will move downwards toghether with $E_c^{ox}$ since the distance $E_{f(m)}-E_c^{ox}$ is constant (material dependent) as $E_{gap}^{ox}$ .
-We have discontinuity of F, for Gauss law $\varepsilon_{ox}F_{ox}=\varepsilon_{Si}F_{Si}\rightarrow F_{ox}=3F_{Si}(0)$. We have a linear $F_{ox}$ for the hp of idealty of the dialectric and a parabolic band banding (that means a linear F) in the Si.\\
+We have discontinuity of F, for Gauss law $\varepsilon_{ox}F_{ox}=\varepsilon_{Si}F_{Si}\rightarrow F_{ox}=3F_{Si}(0)$. We have a linear band banding in the oxide for the hp of idealty of the dialectric and a parabolic band banding (that means a linear F) in the Si.\\
 We have 2 voltage drops over the silicon and over the metal that define $V_s+V_{ox}=\phi_{bi}$.
 If we apply a $V>0$ at the gate we push $E_{f(m)}$ downwards creating a higher band banding both in oxide and silicon, this band banding will increase both $V_{ox}$ and $V_{s}$ so assuming that the bulk keeps th.eq we can write the following equation
 \begin{equation}
@@ -77,8 +77,9 @@ From now on if we slightly increase the voltage we will have more electrons than
 %------------------------------------------------------------------------%
 If we continue to increase the voltage applied we will reach the strong inverson regime that is characterized by $(E_i-E_f)|_{interface}=-(E_i-E_f)|_{bulk}$ so the concentration of electrons at the interface is equal to the doping concentration in the bulk.
 
-\section{Electrosatic}
-
+%------------------------------------------------------------------------%
+\section{Electrostatics}
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.5\textwidth]{mos_electrostatic.png}\\
 \raggedright
@@ -88,7 +89,7 @@ We define $\phi_B$ the electrostatic potential of the bulk far away from the int
 We introduce olso $\Delta \phi (x)=\phi(x)-\phi_B$  that is the change of the electrostatic potential wrt the bulk;$\Delta \phi (W_d)=0$ and $\Delta \phi (0)=V_s$.\\
 \vspace{5mm}
 Now we have to write $p-n-N_a^-$ as function of $\phi(x)$.\\
-For electrons we can say that $n=n_ie^{(E_f-E_i)/kT}$ if we multiply and divide by q we get $n=n_ie^{q\phi(x)/kT}$ same for holes as $n=n_ie^{-q\phi(x)/kT}$. Electrons and holes in the bulk are $n_0=n_ie^{q\phi_b/kT}$ and $p_0=n_ie^{-q\phi_b/kT}$. From this 4 equation we can write that 
+For electrons we can say that $n=n_ie^{(E_f-E_i)/kT}$ if we multiply and divide by q we get $n=n_ie^{q\phi(x)/kT}$ same for holes as $p=n_ie^{-q\phi(x)/kT}$. Electrons and holes in the bulk are $n_0=n_ie^{q\phi_b/kT}$ and $p_0=n_ie^{-q\phi_b/kT}$. From this 4 equation we can write that 
 \begin{equation}
 n=n_0e^{q\Delta \phi/kT} \ \ \ \ \ \ \ \ p=p_0e^{-q\Delta \phi/kt}
 \end{equation}
@@ -149,17 +150,72 @@ In strong inversion $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}\frac{n_i^2}{N_a^2}e
 \end{equation}
 in the solution of the Poisson equation is the term that takes into account electrons in the substrate.\\
 
+%------------------------------------------------------------------------%
 \subsection{Total charge in function of gate bias}
-We want $Q(V_g)$ ; to have that expression we need to remember that $V_g-V_{fb}=V_s+V_{ox}$ but we can write $V_{ox}=F_{ox}t_{ox}=Q(V_s)/C_{ox}$ using this expression and $Q(V_s)$ we can get what we want.\\
-(Di questo paragrafo non ci ho capito una bega riguardarlo sono pag 52-53 degli appunti)\\
+%------------------------------------------------------------------------%
+We want $Q(V_g)$ ; to have that expression we need to remember that $V_g-V_{fb}=V_s+V_{ox}$ but we can write $V_{ox}=F_{ox}t_{ox}=\frac{\varepsilon_{Si}F_{Si}}{\varepsilon_{ox}}t_{ox}=-Q(V_s)/C_{ox}$ so $V_g-V_{fb}=V_s-\frac{Q_s}{C_{ox}}$ using this expression and $Q_s=Q_s(V_s)$ we can get what we want.\\
+We will plot olso the 2 graphs $V_s-V_g$ and $|Q_s|-V_g$.\\
+
 \centering
-(PORCO DIO)\\
+\includegraphics[width=0.5\textwidth]{qvs.png}\\
 \raggedright
 
 
+We will take as reference point the flat band condition where $Q_s=0$ and $V_s=0$.\\
+
+\vspace{5mm}
+For $V_s<0$ we said that  $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}e^{-\frac{qV_s}{2kT}}$ so we get that
+\begin{equation}
+V_g-V_{fb}=V_s-\frac{\sqrt{2kTN_a\varepsilon_{si}}}{C_{ox}}e^{-\frac{qV_s}{2kT}}
+\end{equation} 
+we can neglect $V_s$ beacuse it's negligible wrt the exponential term so we get 
+\begin{equation}
+V_s\simeq-\frac{2kT}{q}\ln\left(\frac{C_{ox}(V_{fb}-V_g)}{\sqrt{2kTN_a\varepsilon_{si}}} \right) \ \ \ \ \ \ Q_s\simeq C_{ox}(V_{fb}-V_g)
+\end{equation}
+a small variation of $V_g$ let $V_s$ move not so much due to the exponential increase of the charge in the bulk and a consequent big field in the oxide; we are not far from a metal plate capacitor.\\
+
+\vspace{5mm}
+For $0<V_s<\phi_b$ we get that $Q_s\simeq \sqrt{2qN_a\varepsilon_{Si}V_s}$ so we get the following equation (that we don't solve)
+\begin{equation}
+V_g-V_{fb}=V_s+\frac{\sqrt{2qN_a\varepsilon_{Si}V_s}}{C_{ox}}
+\end{equation}
+
+\vspace{5mm}
+For weak inversion $\phi_b<V_s<2\phi_b$ we can consider both dominants terms 
+getting the following equation 
+\begin{equation}
+V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\left(\frac{qV_s}{kT}+\frac{n_i^2}{N_a^2}e^{qV_s/kT} \right)^{1/2}\simeq V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\sqrt{\frac{qV_s}{kT}}\left(1+\frac{n_i^2}{2N_a^2}e^{qV_s/kT}\frac{kT}{qV_s}\right)
+\end{equation}
+using Taylor expansion we get an exponential dependance on $V_g$ of the e charge (that is the second term). Form this dependace we will get the sub-th current of the mos capacitor.\\
+
+\vspace{5mm}
+For strong inversion we get 
+\begin{equation}
+V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\frac{n_i}{N_a}e^{qV_s/2kT}
+\end{equation}
+remembering that $\frac{n_i^2}{N_a^2}e^{q2|phi_b|/kT}=1$ we can say that $\frac{n_i}{N_a}=e^{-q2|\phi_b|/2kT}$ so we can write that 
+\begin{equation}
+V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}e^{\frac{q(V_s-2|\phi_b|)}{2kT}}
+\end{equation}
+So we get $V_s$ and making a rought approx of $V_s\simeq 2|\phi_b|$ olso $Q_s$
+\begin{equation}
+V_s=2|\phi_b|+\frac{2kT}{q}\ln \left(\frac{C_{ox}(V_g-V_{fb}-V_s)}{\sqrt{2\varepsilon_{si}kTN_a}} \right) \ \ \ \ \ \ Q_s=-C_{ox}(V_g-V_{fb}-2|\phi_b|)
+\end{equation}
+The approximation means that entering in storng inversion we get a maximum depletion layer and a maximum depletion charge
+\begin{equation}
+W_d^{max}=\sqrt{\frac{2\varepsilon_{si}}{qN_a}2|\phi_b|} \ \ \ \ \ \ \ \ \ Q_{dep}^{max}=-\sqrt{2\varepsilon_{si}qN_a2|\phi_b|}
+\end{equation}
+we increase the charge of electrons not that of the depletion layer.\\
+The $V_g$ at witch we enter in the strong inversion is $V_g-V_{fb}=2|\phi_b|+\frac{|Q_{dep}^{max}|}{C_{ox}}$ that is called threshold voltage of the mos capacitor that is 
+\begin{equation}
+V_t=V_{fb}+2|\phi_b|+\frac{|Q_{dep}^{max}|}{C_{ox}} \ \ \ \rightarrow Q_{inv}=Q_s-Q_{dep}^{max}=-C_{ox}(V_g-V_t)
+\end{equation}
+
+%------------------------------------------------------------------------%
 \section{Small signal capacitance}
+%------------------------------------------------------------------------%
 We want to study the small signal capacitance of the MOS capacitor that is a non linear device so we want $C_g=-\frac{dQ_s}{dV_g}$ the change of charge over the change of voltage.\\
-We can guess the behaviour of $C_g$ using the expression $V_g-V_{fb}=V_s-Q_s/C_ox$ and calculating the derivative wrt $dQ_s$ we get
+We can guess the behaviour of $C_g$ using the expression $V_g-V_{fb}=V_s-Q_s/C_ox$ and calculating the derivative wrt $d(-Q_s)$ we get
 \begin{equation}
 \frac{dV_g}{d(-Q_s)}=\frac{dV_s}{d(-Q_s)}+\frac{1}{C_ox}
 \end{equation}
@@ -167,13 +223,13 @@ that is
 \begin{equation}
 \frac{1}{C_g}=\frac{1}{C_s}+\frac{1}{C_{ox}}
 \end{equation}
-The total gate capacitance can be expressed by the series of 2 resistance one fixed the $C_{ox}$ one variable that is the substrate capacitance $C_s$. From this we know that $C_g$ has an upper limit of $C_ox$.\\
+The total gate capacitance can be expressed by the series of 2 capacitive terms one fixed ($C_{ox}$) one variable (that is the substrate capacitance $C_s$). From this we know that $C_g$ has an upper limit of $C_{ox}$.\\
 Let's analise the small signal capacitance in the various regime.\\
 
 \subsection{in accumulation regime}
 We derivate the charge of the accumulation region obtaining 
 \begin{equation}
-C_s=\sqrt{2kTN_a\varepsilon_{si}}e^{-\frac{qV_s}{2kT}\frac{q}{2kT}}=Q_s/\frac{2kT}{q}
+C_s=\sqrt{2kTN_a\varepsilon_{si}}e^{-\frac{qV_s}{2kT}}\frac{q}{2kT}=Q_s/\frac{2kT}{q}
 \end{equation}
 Knowing $Q_s(V_g)$ we get 
 \begin{equation}
@@ -215,13 +271,19 @@ Increasing $V_g$ we get a larger capacitance we reach a condition similar to a m
 \raggedright
 
 Let's look more colsely to the substrate during the different regimes when we apply a small signal to the gate.\\
+
+\vspace{5mm}
 {\bf In accumulation regime}\\
 $\overline{V_g}<V_{fb}$ if we move the gate of $\delta V_g>0$ we are removing h from the silicon surface to the substrate. Vice-versa with $\delta V_g<0$ we move h from the substrate to the silicon surface.\\
 This is a modulation of majority carriers concentration so it happens in a very short time in the order of the dialectric relaxation time.\\
+
+\vspace{5mm}
 {\bf In weak inversion}\\
 $V_{fb}<\overline{V}<V_t$ we have a depletion region with a certain voltage drop $V_s$ and an exposed negative charge at the surface.\\
 With a $\delta V_g>0$ we slightly increase the width of the depletion layer so we are removing holes from the edge of the depletion layer to the substrate. With $\delta V_g<0$ we reduce the depletion layer so we add h from the substrate to the depletion layer to neutralize the exposed charge.\\
 Olso here we modulate the majority carrier so this is a process that have as time constant the dialectric relaxation time.\\
+
+\vspace{5mm}
 {\bf Strong inversion}\\
 Depletion layer at the maximum expansion at the silicon surface we have a lot of electrons.\\ 
 Appling $\delta V_g$ we modulate e concetration this electrons cannot came from the contact that exchange only majority they have to be created by generation processes.\\
@@ -277,12 +339,16 @@ Q_{inv}(t)=[Q_s+qN_aW_d^{max}][1-e^{t/t_g}] \ \ \ \ \ \ t_g=\frac{2\tau_0N_a}{n_
 \end{equation}
 so an exponential increase of the charge with a time constant $t_g$
 
+
+%------------------------------------------------------------------------%
 \section{MOS capacitor with ring}
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.7\textwidth]{ring.png}\\
 \raggedright
 We want to modify the structure adding a contact that can provide a lot of electrons. This contact is calle ring it's $n^+$ doped. With $V_g>V_t$ $E_{fn}$ goes down but the Fermi level in the ring is higher than it so there is a flow of electrons from the ring to the substrate with a time constant similar to the transient time from the 2 zones of the electrons.\\
 
+%------------------------------------------------------------------------%
 \subsection{Split C-V curve}
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.5\textwidth]{splitcv.png}
@@ -291,8 +357,10 @@ With this structure it's possible to measure the current of e and h indipendentl
 Let's assume that in accumulation regime and weak inversion we modulate only $dQ_p$ no $dQ_n$ flow so the capacitance is only $\frac{dQ_p}{dV_g}=C_g$ beacuse $\frac{dQ_n}{dV_g}=0$.
 At stong inversion we modulate only electrons beacuse we reach the maximum width of the depletion layer so $\frac{dQ_p}{dV_g}=0$ and $\frac{dQ_n}{dV_g}=C_g$.\\ In this way we are splitting the total gate capacitance in 2 contributions due to holes and electrons.\\
 
-\subsection{Electrostatic}
 
+%------------------------------------------------------------------------%
+\subsection{Electrostatic}
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.35\textwidth]{sections.png}\\
 \raggedright
@@ -300,6 +368,8 @@ At stong inversion we modulate only electrons beacuse we reach the maximum width
 Beacuse the MOS capacitor is an intrinsic 2D device we have to study the electrostatics in the 2 directions of the graph. \\ 
 We are not intrested in polrization with $V_r<0$ beause this will make the pn junction in forward bias.\\
 
+
+%------------------------------------------------------------------------%
 \subsubsection{$\rightarrow V_r=V_g=0$}
 
 \centering
@@ -308,7 +378,9 @@ We are not intrested in polrization with $V_r<0$ beause this will make the pn ju
 
 We are under th.eq we are not perturbing the device. In crossection 1 we have weak inversion. In crossection 2 we have 1 single Fermi level for th.eq from crossection 1 we know the distance between the conduction band and $E_f$ in the substrate. The region under the gate in graph 2 is depleted
 
-\subsubsection{$\rightarrow V_r=0 V_g=V_t$}
+
+%------------------------------------------------------------------------%
+\subsubsection{$\rightarrow V_r=0 \ \ \  V_g=V_t$}
 
 \centering
 \includegraphics[width=0.7\textwidth]{what1.png}\\
@@ -316,7 +388,9 @@ We are under th.eq we are not perturbing the device. In crossection 1 we have we
 
 First graph is the one we have already seen. In crossection 2 we make the same consideration as before.
 
-\subsubsection{$\rightarrow V_r>0 V_g=0$}
+
+%------------------------------------------------------------------------%
+\subsubsection{$\rightarrow V_r>0 \ \ \ V_g=0$}
 
 \centering
 \includegraphics[width=0.7\textwidth]{what2.png}\\
@@ -327,7 +401,8 @@ For second crossection we have to set the distance $E_c-E_f$ under the gate in a
 The quasi Fermi level for electrons has to stay constant for simmetry $E_{fp}$ changes.\\
 Form this we have to modify graph 1 where $E_{fn}$ is moved downwards by an amount $qV_r$ (doing this we do not change the electrostatic beacuse the electron concetration was already negligible so no other modifications in the band banding are needed).\\
 
-subsubsection{$\rightarrow V_r>0 V_g=V_t$}
+%------------------------------------------------------------------------%
+\subsubsection{$\rightarrow V_r>0 \ \ \  V_g=V_t$}
 Crossection 1 same as the case of $V_r=0 V_g=V_t$ with the same step of before we get the separation of the quasi Fermi levels in the first graph and the same graph for crossection 2 of the previous case.\\
 In this case we are no more in strong inversion due to the shift downwards of $E_{fn}$ of $qV_r$. To gain the strong inversion regime we have to apply a stornger gate bias $V_g=V_t'$ to have $V_s=2|\phi_b|+V_r$ and of course a wider depletion layer.\\
 
@@ -357,8 +432,10 @@ In accumulation and strong inversion the MB approximation isn't valid and gives 
 \includegraphics[width=0.6\textwidth]{mbvsfdmos.png}\\
 \raggedright
 
-\section{Effects of non idealities}
 
+%------------------------------------------------------------------------%
+\section{Effects of non idealities}
+%------------------------------------------------------------------------%
 \subsection{Charge in the oxide}
 Charge in the oxide is caused due to spurious states inside the dialectric or difects that trap charges furthermore ageing increase the density of this imperfections.\\
 Let's assume a MOS capacitor at the flat band condition with a negative charge sheet at distance x from the gate.\\ 
