@@ -85,7 +85,7 @@ If we continue to increase the voltage applied we will reach the strong inverson
 \raggedright
 
 We have to solve the Poisson equation $\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon_{Si}}(p-n-N_a^-)$ only in the substrate.\\
-We define $\phi_B$ the electrostatic potential of the bulk far away from the interface and we take $E_f$ that is costant as the reference energy level 0.\\
+We define $\phi_B=E_f-E_i=[E_f=0]=-\frac{kT}{q}\ln(N_a/N_i)$ the electrostatic potential of the bulk far away from the interface and we take $E_f$ that is costant as the reference energy level 0.\\
 We introduce olso $\Delta \phi (x)=\phi(x)-\phi_B$  that is the change of the electrostatic potential wrt the bulk;$\Delta \phi (W_d)=0$ and $\Delta \phi (0)=V_s$.\\
 \vspace{5mm}
 Now we have to write $p-n-N_a^-$ as function of $\phi(x)$.\\
@@ -137,7 +137,7 @@ e^{\frac{-qV_s}{kT}}\rightarrow h_{sub}
 in the solution of the Poisson equation is the term that takes into account for hole concentration in the substrate.\\
 
 \vspace{5mm}
-In the depletion regime $0<V_s<2\phi_b$ we have to consider two dominant term: $\frac{qV_s}{kT}$ and $\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}$. If we evaluate the second term at $2\phi_b$ we get 1 so it's negligible and therefore the first term is predominant. In this regime
+In the depletion regime $0<V_s<2|\phi_b|$ we have to consider two dominant term: $\frac{qV_s}{kT}$ and $\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}$. If we evaluate the second term at $2|\phi_b|$ we get 1 so it's negligible and therefore the first term is predominant. In this regime
 \begin{equation}
 Q_s\simeq -qN_a\sqrt{\frac{2\varepsilon_{Si}}{q}\frac{1}{N_a}V_s}
 \end{equation}
@@ -193,7 +193,7 @@ For strong inversion we get
 \begin{equation}
 V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\frac{n_i}{N_a}e^{qV_s/2kT}
 \end{equation}
-remembering that $\frac{n_i^2}{N_a^2}e^{q2|phi_b|/kT}=1$ we can say that $\frac{n_i}{N_a}=e^{-q2|\phi_b|/2kT}$ so we can write that 
+remembering that $\frac{n_i^2}{N_a^2}e^{q2|\phi_b|/kT}=1$ we can say that $\frac{n_i}{N_a}=e^{-q2|\phi_b|/2kT}$ so we can write that 
 \begin{equation}
 V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}e^{\frac{q(V_s-2|\phi_b|)}{2kT}}
 \end{equation}
@@ -264,8 +264,10 @@ Increasing $V_g$ we get a larger capacitance we reach a condition similar to a m
 \raggedright
 
 
-\section{Frequency regimes}
 
+%------------------------------------------------------------------------%
+\section{Frequency regimes}
+%------------------------------------------------------------------------%
 \centering
 \includegraphics[width=0.7\textwidth]{c-gtot.png}\\
 \raggedright
@@ -288,7 +290,9 @@ Olso here we modulate the majority carrier so this is a process that have as tim
 Depletion layer at the maximum expansion at the silicon surface we have a lot of electrons.\\ 
 Appling $\delta V_g$ we modulate e concetration this electrons cannot came from the contact that exchange only majority they have to be created by generation processes.\\
 
+%------------------------------------------------------------------------%
 \subsection{Low frequency regime}
+
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.4\textwidth]{lfbd.png}
 \end{wrapfigure}
@@ -298,9 +302,12 @@ The time constant for the generation process in strong inversion can be extracte
 \end{equation}
 $\tau_g$ is technology dependent and very big in the order of seconds.\\
 Only if the signal has a frequence much lower than $\tau_g$ ($f<1Hz$) we have the ideal charachteristic seen before.\\
-Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards or downwards. With a $\delta V_g>0$ we have to increase the total voltage drop but the dependance with $V_{sub}$ is very weak so $\delta V_s\simeq 0$ and we modulate only the voltage drop over the oxide (under charge sheet approximation) $\delta V_g\simeq V_{ox}$
+Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards or downwards. With a $\delta V_g>0$ we have to increase the total voltage drop but the dependance with $V_{sub}$ is very weak so $\delta V_s\simeq 0$ and we modulate only the voltage drop over the oxide (under charge sheet approximation that we will see in next chapter) $\delta V_g\simeq V_{ox}$
 
+
+%------------------------------------------------------------------------%
 \subsection{High frequency regime}
+
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.4\textwidth]{hfbd.png}
 \end{wrapfigure}
@@ -310,6 +317,7 @@ The total capacitnace depends on the frequency of the small signal we are applin
 Here the modulation of $\delta V_g$ can't modulate the electron concentration at the surface of silicon. There is a modulation of the depletion layer so $\delta V_s$ but for the continuity of the electric field olso $\delta V_{ox}$ have to change in a comparable manner. With the downwards band banding we have to keep constant the distance with $E_{fn}$ with the conduction band so our substrate is no longer at th.eq. This triggers GR processes that tends to move the system back in the th.eq of low freqeuncy.
 $E_{fn}$ is constant over the depletion layer and merges with $E_{fp}$ in the quasi neutral region of the device. We have a flow of electrons from the substrate to the surface similar to the pn-j reverse current.\\
 
+%------------------------------------------------------------------------%
 \subsection{Deep deplition}
 
 \begin{wrapfigure}{i}{0pt}
@@ -403,7 +411,7 @@ Form this we have to modify graph 1 where $E_{fn}$ is moved downwards by an amou
 
 %------------------------------------------------------------------------%
 \subsubsection{$\rightarrow V_r>0 \ \ \  V_g=V_t$}
-Crossection 1 same as the case of $V_r=0 V_g=V_t$ with the same step of before we get the separation of the quasi Fermi levels in the first graph and the same graph for crossection 2 of the previous case.\\
+Crossection 1 same as the case of $V_r=0 \ \ V_g=V_t$ with the same step of before we get the separation of the quasi Fermi levels in the first graph and the same graph for crossection 2 of the previous case.\\
 In this case we are no more in strong inversion due to the shift downwards of $E_{fn}$ of $qV_r$. To gain the strong inversion regime we have to apply a stornger gate bias $V_g=V_t'$ to have $V_s=2|\phi_b|+V_r$ and of course a wider depletion layer.\\
 
 \centering
@@ -436,7 +444,10 @@ In accumulation and strong inversion the MB approximation isn't valid and gives 
 %------------------------------------------------------------------------%
 \section{Effects of non idealities}
 %------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------%
 \subsection{Charge in the oxide}
+
 Charge in the oxide is caused due to spurious states inside the dialectric or difects that trap charges furthermore ageing increase the density of this imperfections.\\
 Let's assume a MOS capacitor at the flat band condition with a negative charge sheet at distance x from the gate.\\ 
 
@@ -462,6 +473,7 @@ If we get a distribution of charge per unti volume of $\rho$ we get
 \Delta V_g=\int_0^{t_{ox}}\frac{x\rho}{\varepsilon_{ox}}dx
 \end{equation}
 
+%------------------------------------------------------------------------%
 \subsection{Interface states}
 
 \centering
@@ -469,7 +481,7 @@ If we get a distribution of charge per unti volume of $\rho$ we get
 \raggedright
 
 First we will consider the flat-band condition.\\
-Acceptor states are all empty so no charge as the donor states below $E_f$ that are all filled. There are some donor empty that gives us a positive charge (that make the potential higher and so decrease the bands ??). Following the results of the charge sheet in the oxide we can restore the ideal case by appling a $\Delta V_g= -Q_i/C_{ox}$.\\
+Acceptor states are all empty so no charge as the donor states below $E_f$ that are all filled. There are some donor empty that gives us a positive charge (that make the potential higher and so decrease the bands). Following the results of the charge sheet in the oxide we can restore the ideal case by appling a $\Delta V_g= -Q_i/C_{ox}$.\\
 
 \centering
 \includegraphics[width=0.2\textwidth]{istasi.png}\\
@@ -482,9 +494,11 @@ In accumulation and flat-band regime we have a negative increase so a shift left
 \includegraphics[width=0.5\textwidth]{cvis.png}\\
 \raggedright
 
+%------------------------------------------------------------------------%
 \section{Impact of polysilicon gate}
+
 The benefit of usign the polisilicon gate comes from a tecnological issues.\\
-First way to do ring-MOS was by create a p-substrate, create the $n^+$ regions, let the oxide deposit all over, deposit the gate and then remove by etching the excess of gate and oxide. This type of process is a non self allign process.\\
+First way to do ring-MOS was by create a p-substrate, create the $n^+$ regions, let the oxide deposit all over, deposit the gate and then remove by etching the excess of gate and oxide. This type of process is a non self-allign process.\\
 
 \centering
 \includegraphics[width=0.65\textwidth]{process1.png}\\
@@ -503,7 +517,7 @@ A better process is : p-substrate, deposit the oxide, deposit the gate, etching 
 \raggedright
 
 To dope we have to do a heat threatment at 800C so this process does not works with metals (melting point issues) but works with polysilicon.\\
-Olso another improvmen comes from the threshold voltage $V_t=V_{fb}+2|\phi_b|+|Q_{dep}^{max}|/C_{ox}$ that with a poly-p-doped gate is $\simeq 0$ but with a n-doped-poly is reduced to $V_t=|Q_{dep}^{max}|/C_{ox}$ {\bf check this last}.\\
+Olso another improvmen comes from the threshold voltage $V_t=V_{fb}+2|\phi_b|+|Q_{dep}^{max}|/C_{ox}$ that with a poly-p-doped gate is $\simeq 0$ but with a n-doped-poly is reduced to $V_t=|Q_{dep}^{max}|/C_{ox}$ beacuse $V_{fb}\simeq -1V$ in this case and $2|\phi_b|\simeq 1V$.\\
 The problem with this gate material is that we have to consider the charge as for unit volume not as untit area (we don't have that much electrons as in a metal) so doing we get a depletion layer olso in the gate of $W_d=\sqrt{\frac{2\varepsilon_{si}V_p}{qN_d^g}}$ and so an additional voltage drop $V_p$ and an additional capacitance.\\
 
 \centering
@@ -512,13 +526,13 @@ The problem with this gate material is that we have to consider the charge as fo
 
 The voltage ballance is now $V_g-V_{fb}=V_s+V_{ox}+V_p$ deriving wrt $-Q_s$ we get 
 \begin{equation}
-\frac{1}{C_{ox}}=\frac{1}{C_{s}}+\frac{1}{C_{ox}}+\frac{1}{C_{g}}
+\frac{1}{C_{g}}=\frac{1}{C_{s}}+\frac{1}{C_{ox}}+\frac{1}{C_{g}}
 \end{equation}
 The C-V curve doesn't change until strong inversion when this phenomena becomes dominant. We can write that 
 \begin{equation}
 \frac{1}{C_g}=\frac{2kT/q}{Q_p}+\frac{1}{C_{ox}}+\frac{Q_p}{qN_d^{g}\varepsilon_{si}}
 \end{equation}
-{\bf check expression above} the last term becomes dominant in strong inversion.\\
+the last term becomes dominant in strong inversion.\\
 This is why we now use again metal for gate (with particular mix with high melting point).\\
 
 
