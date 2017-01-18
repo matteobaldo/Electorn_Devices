@@ -1,0 +1,154 @@
+%------------------------------------------------------------------------%
+\chapter{BJT}
+%------------------------------------------------------------------------%
+
+\centering
+{\bf Figure 102}\\
+\raggedright
+
+This device is created with 2 pn junctions with a back to back connection creating a npn or a pnp device. This device can be horizontal or vertical (we will study this second approach beacuse is the most important).\\
+The n structure is the collector the $n^+$ is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the collector area.\\
+The main idea is to forward bias the EB-j and reverse bias the BC-j. Foward bias in EB-j so there will be a flow of electrons form E to B holes to B-E but if the base region is narrow we have that electrons don't recombine in the p region but travel throught it reaching the collector.\\
+We have a large flow of electrons throght a reverse biased junction (BC) beacuse the supply comes from the EB-j and not from GR processes. In the collector we have high resistivity due to low doping concentrations so we have to put the sub-collector to make a contact.\\
+\vspace{5mm}
+This device has a significant flow of both electrons and holes so it's a bipolar device (intrinsic flow of holes from base to emitter).\\
+We can minimize the base current by reducing the width of the base and olso making the emitter more doped wrt the base.\\
+\vspace{5mm}
+If the BC-j was direct biased we will have an additional component to the base current that is something we want to avoid.\\
+
+\section{Doping concentrations}
+\centering
+{\bf Figure 103}\\
+\raggedright
+Let's analyse the doping concentrations; in emitter region we have high doing concentration $N_d^E\simeq 10^{20}$ that decrease until $10^{18}$, the base from $N_a^B=10^{18}$ to $10^{17}$ and then the collector and the subcollector as in figure. The non constant doping concentration is relevant in the operation of the device.\\
+ 
+\section{Collector current}
+We can focus our analysis on the quasi-neutral p region that is the bottom-neck for conduction of the system.
+
+\centering
+{\bf Figure 107down}\\
+\raggedright
+
+We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration. Doping concentration is not constant so we have a band banding like in figure so a F due to non constant doping concentrations. This condition can be reached olso with high level of injection.\\
+Considering hole concentration $p=n_ie^{\frac{E_i-E_{fp}}{kT}}$ we get $E_i=E_{fp}+kT\ln(p/n_i)$. We want this parameter beacuse it's releted to the potential and so to the electric field
+\begin{equation}
+F=-\frac{d\phi}{dx}=-\frac{1}{q}\frac{dE_{i}}{dx}=\frac{1}{q}\frac{dE_{fp}}{dx}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
+\end{equation}
+both high injection and non constant doping concentration events are taken into account by the term $\frac{dp}{dx}$, the term $\frac{dE_{fp}}{dx}$ take into account of resistive drops.\\
+\vspace{5mm}
+The base current density is $J_B=p\mu_p \frac{dE_{fp}}{dx}$ so we get that $\frac{dE_{fp}}{dx}=J_p/(p\mu_p)$ and so putting this equation into the electric field equation we get 
+\begin{equation}
+\frac{1}{q}\frac{J_p}{p\mu_p}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
+\end{equation}
+using some reasonable values for all the parameter we get that $\Delta V_t$ is of a few fractions of mV when the total voltage applied is in the order of 0.6-0.7V. This contribution is negligible we consider the $E_{fp}$ almost constant so 
+\begin{equation}
+F=\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
+\end{equation}
+
+\vspace{5mm}
+We can recover the drift-diffusion expression for the current and using F we get
+\begin{equation}
+J_n=qn\mu_n \frac{kT}{q}\frac{1}{p}\frac{dp}{dx}+qD_n \frac{dn}{dx}
+\end{equation}
+We are in a quasi neutral region so $p(x)=N_a(x)+n(x)$ we can get 2 cases.\\
+\vspace{3mm}
+\tab {\bf Low injection}\\
+$n<<N_a$ so the expression for the current is 
+\begin{equation}
+J_n=qn\mu_n \frac{kT}{q}\frac{1}{N_a}\frac{dN_a}{dx}+qD_n \frac{dn}{dx}
+\end{equation}
+where $\frac{kT}{q}\frac{1}{N_a}\frac{dN_a}{dx}$ is the built in electric field due to non constant doping concentration.\\
+\vspace{3mm}
+\tab {\bf High injection}\\
+$n>>N_a$ so we get 
+\begin{equation}
+J_n=qn\mu_n \frac{kT}{q}\frac{1}{n}\frac{dn}{dx}+qD_n \frac{dn}{dx}=2qD_n\frac{dn}{dx}
+\end{equation}
+it's like a pure diffusion process with the double of the intesity; this is called the Webster effect.\\
+
+\subsection{Prototype BJT current}
+\centering
+{\bf Figure 105up}\\
+\raggedright
+It's a super-ideal case where we have constant doping concentrations and low level of injection.\\
+So we have that $J_n=qD_n \frac{dn}{dx}$; we can say as "boundary conditions" that $n(0)=\frac{n_i^2}{N_a}e^{qV_{BE}/kT}$ and that $n(W_b)=\frac{n_i^2}{N_a}e^{qV_{BC}/kT}$ but beacuse $V_{BC}<0$ we can say that $n(W_b)\simeq 0$.\\
+Now we can integrate the two members and since $J_n$ is a constant becuse there isn't recombination we get
+\begin{equation}
+J_n=qD_n\frac{n(W_b)-n(0)}{W_b}
+\end{equation}
+that is legit beacuse $\frac{dn}{dx}$ it's a linear profile we are considering a narrow base diod.\\
+\begin{equation}
+J_n=-\frac{qD_nn_i^2}{N_aW_b}e^{qV_{BE}/kT}
+\end{equation}
+We can now multiply for the area of the emitter $A_E$ and add a minus sign beacuse we want current positive if flows into the collector arriving at
+\begin{equation}
+I_c=A_E\frac{qn_i^2}{\frac{N_aW_b}{D_n}}e^{qV_{BE}/kT}=A_E\frac{qn_i^2}{G_B}e^{qV_{BE}/kT}
+\end{equation}
+where $G_B=\frac{N_aW_b}{D_n}$ it's the Gummel number of the base.\\
+This current it's dependent only on base parameters.
+
+\subsection{"Ideal" BJT}
+We consider now the possibility of non constant doping concentration or high injection regime so we recover the expression $J_n=qn\mu_n \frac{kT}{q}\frac{1}{p}\frac{dp}{dx}+qD_n \frac{dn}{dx}$ that we can write as
+\begin{equation}
+J_n=\frac{qD_n}{p}\left(n \frac{dp}{dx}+p \frac{dn}{dx}\right)= \frac{qD_n}{p}\frac{d(pn)}{dx}
+\end{equation}
+As before we integrate keeping $J_n$ as a constant we know that $pn(W_d)\simeq 0$ so we reach the current density as 
+\begin{equation}
+J_n=-\frac{qn_i^2}{\int^{W_b}_0 \frac{p}{D_n}dx}e^{qV_{BE}/kT}
+\end{equation}
+If we multiply for the emitter area and change sign we get the collector current as 
+\begin{equation}
+I_c=A_E\frac{qn_i^2 e^{qV_{BE}/kT}}{\int^{W_b}_0 \frac{p}{D_n}dx}=A_E\frac{qn_i^2 e^{qV_{BE}/kT}}{G_B}
+\end{equation}
+where $G_B=\int^{W_b}_0 \frac{p}{D_n}dx$ is the new Gummel number for the base that in case of constant doping and low level of injection becomes the first one.\\
+
+\subsection{Real BJT}
+The most general case we can include the non-constant bandgap in the base. We can have a non constant bandgap due to 2 causes.\\
+The first cause of bandgap narrowing is due to doping conectrations that are higher than $\simeq 10^{18}$; high doping means donor closer to each other interaction between energy levels that becomes a band of energy and some of this level can overlap the $E_c$ narrowing the band-gap. The emitter side we will have a narrower gap than the collector side.\\
+Second cause is a technological method to gradually change from Si to GeSi to narrow the bandgap ($E_{gap}^{Ge}<E_{gap}^{Si}$).
+In all the calculation we have an important role of the bangap only in $pn=n_i^2e^{(E_{fn}-E_{fp})/kT}$ in this the intrinsic carrier concentration becomes
+\begin{equation}
+n_{i,e}^2=N_vN_ce^{-E_{gap}/kT}e^{\Delta E_{gap}/kT}=n_i^2e^{\Delta E_{gap}/kT}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

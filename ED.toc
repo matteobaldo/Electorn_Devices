@@ -106,3 +106,11 @@
 \contentsline {subsubsection}{Circuit parameters changes}{73}{section*.12}
 \contentsline {subsection}{\numberline {5.13.2}Generalized scaling rules (Baccarjni)}{73}{subsection.5.13.2}
 \contentsline {subsubsection}{Parameters change}{74}{section*.13}
+\contentsline {section}{\numberline {5.14}Constraint on electrical parameters}{74}{section.5.14}
+\contentsline {section}{\numberline {5.15}Moore's Law and problems in the "too small"}{76}{section.5.15}
+\contentsline {chapter}{\numberline {6}BJT}{77}{chapter.6}
+\contentsline {section}{\numberline {6.1}Doping concentrations}{77}{section.6.1}
+\contentsline {section}{\numberline {6.2}Collector current}{78}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Prototype BJT current}{79}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}"Ideal" BJT}{79}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Real BJT}{79}{subsection.6.2.3}
