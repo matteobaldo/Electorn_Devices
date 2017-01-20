@@ -255,7 +255,7 @@ So with the increase of T we can have both an increase or a decrease of voltage 
 \frac{dV}{dT}= \frac{k}{q}\ln(J/J_0)+\frac{kT}{q}J_0/J \frac{-J \frac{dJ_0}{dT}}{J_0^2}=V/T-\frac{kT}{q}\frac{dJ_0}{dT}\frac{1}{J_0}
 \end{equation}
 
-for semplicity we can hilight $J_0$ dependences on temperature writing $J_0=aT^\gamma e^{-E_g/kT}$ so we obtain that $\frac{dJ_0}{dT}=J_0\gamma/T+J_0[-\frac{dE_g}{dT}\frac{1}{kT}] + J_0 \frac{E_g}{kT^2}$ so coming back at voltage we obtain
+for semplicity we can hilight $J_0$ dependences on temperature writing $J_0=aT^\gamma e^{-E_g/2kT}$ so we obtain that $\frac{dJ_0}{dT}=J_0\gamma/T+J_0[-\frac{dE_g}{dT}\frac{1}{kT}] + J_0 \frac{E_g}{kT^2}$ so coming back at voltage we obtain
 
 \begin{equation}
 \frac{dV}{dT}=(V-\frac{E_g}{q})\frac{1}{T}-\frac{k\gamma}{q} + \frac{1}{q}\frac{dE_g}{dT}
@@ -363,7 +363,7 @@ where $t_p$ is defined as electron transit time through the quasi-neutral p regi
 \includegraphics[width=0.35\textwidth]{smallpn.png}
 \end{wrapfigure}
 
-It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_{diff}=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
+It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_{diff}=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx $\frac{1}{v_{diff}}$ we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
 Going back to the diffusion capacitance we have for a wide base diode
 \begin{equation}
 C_{diff}^{wide}=g_m\tau_n
