@@ -89,7 +89,7 @@ J_{s-m}^{(1)}=\frac{2q}{(2\pi)^3}\int^{+\infty}_{v_x}\int_{-\infty}^{+\infty}\in
 \end{equation}
 for f we can use M-B approximation $f\simeq e^{-\frac{E-E_f}{kT}}$ using energy dispersion relation 
 \begin{equation}
-E=E_c+\frac{1}{2}m_xv_x+\frac{1}{2}m_yv_y+\frac{1}{2}m_zv_z
+E=E_c+\frac{1}{2}m_xv_x^2+\frac{1}{2}m_yv_y^2+\frac{1}{2}m_zv_z^2
 \end{equation}
 the M-B equation becomes
 \begin{equation}
@@ -210,11 +210,11 @@ In order to have an ohmic contact we need a high doped semiconductor. With $N_d$
 
 Taking into account the figure as reference system from the studied pn junction we know the behaviour of $E_c(x)=\frac{q^2N_d}{2\varepsilon_{Si}}x^2$ so we can calculate T ,transparancy coefficient as 
 \begin{equation}
-T=e^{-2\int Im\{E_c(x)\}dx}=e^{-2\int \sqrt{\frac{2m^*(E_c-E)}{\hslash^2}}dx}
+T=e^{-2\int_0^{W_d} Im\{E_c(x)\}dx}=e^{-2\int_0^{W_d} \sqrt{\frac{2m^*(E_c-E)}{\hslash^2}}dx}
 \end{equation}
-we have to remember that in this case $m^*$ is the effective mass for tunneling process. So if we consider $E=E_f$
+we have to remember that in this case $m^*$ is the effective mass for tunneling process. So if we consider $E=E_f$ (taken $E_f$ as reference the barrier is $E_c=\frac{q^2N_d}{2\varepsilon_{si}}x_n^2$)
 \begin{equation}
-T=e^{-2\int \sqrt{\frac{2m^*E_c}{\hslash^2}}dx}=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}W_d^2/2}
+T=e^{-2\int_0^{W_d} \sqrt{\frac{2m^*E_c}{\hslash^2}}dx}=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}W_d^2/2}
 \end{equation}
 That substituiting $W_d$ with its expession we get
 \begin{equation}
@@ -241,7 +241,7 @@ The two figures below show how a contact is done in a device.
 %------------------------------------------------------------------------%
 \section{Interface states}
 %------------------------------------------------------------------------%
-We've always considered Si as a periodic infinite cristal but in metal-semiconductor junction we have te interface that interrupts the sequence of atoms. Some atoms of Si can't share all theyr 4 valence electrons creating some dangling bonds.\\
+We've always considered Si as a periodic infinite cristal but in metal-semiconductor junction we have the interface that interrupts the sequence of atoms. Some atoms of Si can't share all theyr 4 valence electrons creating some dangling bonds.\\
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.3\textwidth]{is01.png}
@@ -249,8 +249,8 @@ We've always considered Si as a periodic infinite cristal but in metal-semicondu
 
 Electrons remains localize close to theyr silicon atoms this creates spurius energy level at the interface.\\ 
 In the bulk region electrons and holes are only in the conduction band or in the valence band but at the interface can stay in a lot of states between this two bands.\\
-The spurious states in the upper part of the bandgap have an acceptor behaviour (negativly charged when empty and neutral when filled) the others in the bottom part have a donor behaviour (neutral when filled and positivly charged when empty). The energy that divide this two type of states is the $E_{is}$.\\
-All states above $E_f$ will be filled all the other states empty. So the previous band-diagram is incoherent with the Gauss'law since we have some exposed charge and no band banding.\\ 
+The spurious states in the upper part of the bandgap have an acceptor behaviour (negativly charged when filled and neutral when empty) the others in the bottom part have a donor behaviour (neutral when filled and positivly charged when empty). The energy that divide this two type of states is the $E_{is}$.\\
+All states below $E_f$ will be filled all the other states empty. So the previous band-diagram is incoherent with the Gauss'law since we have some exposed charge and no band banding.\\ 
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.19\textwidth]{is02.png}
@@ -281,7 +281,7 @@ This effect changes the barrerier hight and so theflow of current throught the d
 Starting from the equation $|Q_{is}|=Q_{dep}$ we have 2 limit cases.\\
 $N_{is}=0$ in this case $E_c(0)=E_c(W_d)$ so we don't have a band banding we restore the ideal case.\\
 $N_{is}\rightarrow +\infty$ in this case we notice that the first term has to be finite and so $\Delta E_{is}-(E_c(0)-E_{is}$ has to be zero that means that $E_c(0)=E_f+\Delta E_{is}$. \\
-This case means we are moving $E_{is}$ up to $E_f$ that is totally indipendent from doping concentration but depends only from the interface states. This condition is called "Fermi level pinning at the surface".\\
+This case means we are moving $E_{f}$ up to $E_{is}$ that is totally indipendent from doping concentration but depends only from the interface states. This condition is called "Fermi level pinning at the surface".\\
 
 The plot of $E_c(0)-\log(N_{is})$ make a transition between $10^{12}-10^{13}$ as order of magnitude.
 

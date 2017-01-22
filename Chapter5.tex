@@ -30,7 +30,11 @@ V=-\frac{E_{fn}(y)}{q}=V(y)
 \end{equation}
 V goes from 0 at the source to $V_{ds}$ at the drain.\\
 
+
+%------------------------------------------------------------------------%
 \section{Poisson equation}
+%------------------------------------------------------------------------%
+
 Looking at the last band diagram we plotted the poisson equation it's very similar to the one of an MOS capacitor the only difference is in the n term that now is 
 \begin{equation}
 n=\frac{n_i^2}{N_a}e^{q\Delta \phi /kT}e^{-qV/kT}
@@ -43,7 +47,7 @@ If $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$ we ge
 {\bf check all up passage}.\\
 Repeating all calcualtion done for the expression we get is similar to the one with the mos capacitor
 \begin{equation}
-\left(\frac{d\Delta\phi}{dx}\right)=\frac{2kTN_a}{\varepsilon_{si}}[e^{-q\Delta\phi/kT}+\frac{q\Delta\phi}{kT}-1+\frac{n_i^2}{N_a^2}\left(e^{-qV/kT}(e^{q\Delta\phi/kT}-1)-\frac{q\Delta\phi}{kT}\right)]
+\left(\frac{d\Delta\phi}{dx}\right)^2=\frac{2kTN_a}{\varepsilon_{si}}[e^{-q\Delta\phi/kT}+\frac{q\Delta\phi}{kT}-1+\frac{n_i^2}{N_a^2}\left(e^{-qV/kT}(e^{q\Delta\phi/kT}-1)-\frac{q\Delta\phi}{kT}\right)]
 \end{equation}
 we change the term that takes into account the electron concentration.\\
 With this result we know $F_x^2=\left(\frac{d\Delta\phi}{dx}\right)^2$ and that $F_x(x,y)=F_x(\Delta\phi,V)$.\\
