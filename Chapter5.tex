@@ -40,7 +40,7 @@ Looking at the last band diagram we plotted the poisson equation it's very simil
 n=\frac{n_i^2}{N_a}e^{q\Delta \phi /kT}e^{-qV/kT}
 \end{equation}
 The last exponential takes into account the decrease of the quasi-Fermi level for electrons that is far from the conduction band wrt the MOS capacitor case.\\
-If $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$ we get $e^{-2|\phi_b|/kT}e^{-qV/kT}e^{qV_s/kT}=1$ and so
+If $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$ [storng inverision?] we get $e^{-2|\phi_b|/kT}e^{-qV/kT}e^{qV_s/kT}=1$ and so
 \begin{equation}
 -2|\phi_b|-V_s+V=0 \ \ \ \ V_s=2|\phi_b|+V
 \end{equation}
@@ -52,19 +52,23 @@ Repeating all calcualtion done for the expression we get is similar to the one w
 we change the term that takes into account the electron concentration.\\
 With this result we know $F_x^2=\left(\frac{d\Delta\phi}{dx}\right)^2$ and that $F_x(x,y)=F_x(\Delta\phi,V)$.\\
 
+%------------------------------------------------------------------------%
 \section{Charge in the substrate}
-At the silicon surface the field is $F_s=F(0,y)=F(V_s,V)$ from this with the Gauss law we can say that the charge in the substrate is 
+At the silicon surface the field is $F_s=F(0,y)=F(V_s,V)$ from this with the Gauss law we can say that the charge in the substrate (in weak and strong inversion that are the intresting regimes) is 
 \begin{equation}
 Q_s\simeq-\sqrt{2\varepsilon_{si}kTN_a}\left(\frac{qV_s}{kT}+\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}\right)^{1/2}
 \end{equation}
 Now to divide the contribution coming from the inversion charge and from the depletion layer we have to refer to the different regimes.\\
 
+%------------------------------------------------------------------------%
 \subsection{Charge in weak inversion}
-In weak inversion we have that 
+In weak inversion we have that $Q_s=Q_{inv}+Q_{dep}$  using Taylor expansion of the exponential term we arrive at the following results
 \begin{equation}
-Q_{inv}=-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}\ \ \ \ \ \ \ \ \ \ Q_{dep}=-\sqrt{2\varepsilon_{si}qN_aV_s}
+Q_{dep}=-\sqrt{2\varepsilon_{si}qN_aV_s}\ \ \ \ \ \ \ \ \ \   Q_{inv}=-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}
 \end{equation}
 In the y axes $E_c, E_v$ are flat and $F_y^{weak.i}\simeq0$ so current transport is a diffusion process and the flow of holes is negligible.
+
+%------------------------------------------------------------------------%
 \subsection{Charge in strong inversion}
 The expression seen before for the depletion charge is no longer valid in strong inversion becuse the concentration of electrons isn't negligible and the inversion layer charge chanege the F profile \\
 
@@ -76,11 +80,17 @@ The expression seen before for the depletion charge is no longer valid in strong
 To recover that expression we can make a charge sheet approximation that is considering the thikness of the inversion layer so small to be negligible to have a graph like in figure above.\\
 Making this approximation we conclude that
 \begin{equation}
-Q_{dep}-\sqrt{2\varepsilon_{si}qN_aV_s} \ \ \ \ \ \ \ \ Q_{inv}=Q_s-\sqrt{2\varepsilon_{si}qN_aV_s}
+Q_{dep}=-\sqrt{2\varepsilon_{si}qN_aV_s} \ \ \ \ \ \ \ \ Q_{inv}=Q_s-\sqrt{2\varepsilon_{si}qN_aV_s}
 \end{equation}
 In stong inversion the electrons concentration is no more negligible and at the drain $E_{fn}<E_{fp}$ and bands move downwards form source to drain as the quasi-Fermi level for electrons so there will be a drift flow of electrons and a relevan electric fiels in the y direction.
 
+{\bf add figure at page 72 up}
+
+%------------------------------------------------------------------------%
 \section{Current behaviour}
+%------------------------------------------------------------------------%
+
+{\bf add figure at page 72 middle}
 
 In order to arrive to $V_s(V_{gd},V_{ds})$ we have to use not only $V_{gs}+V_{fb}=V_{s}+V_{ox}=V_{s}-Q_s/C_{ox}$ but olso the continuity equation for electrons beacuse the substrate isn't at th.eq.\\
 We assume the device stationary and the GR processes negligible so $J_n$ is constant in the channel region. From the interface with the oxide to the substrate the current will decrease due to the decrease of electron concentration but form S-D J will remains constant beacuse the direction is parallel to the current flow so we can say that
@@ -101,14 +111,23 @@ This is the differential form of the drain current in MOS transistor and making 
 I_{ds}=-\mu_n\frac{W}{L}\int^{V_{ds}}_0Q_{inv}dV
 \end{equation}
 the integral form for drain current. This expression are general.\\
+\vspace{5mm}
+
 Let's now foucs on storng inversion regime.\\
-In this regime we've seen that using the charge sheet approximation $Q_{inv}=Q_s-\sqrt{2\varepsilon_{si}qN_aV_s}$ if we combine this equation with $Q_{dep}-\sqrt{2\varepsilon_{si}qN_aV_s}$ and with $V_{gs}+V_{fb}=V_{s}-Q_s/C_{ox}$ we get that $V_s\simeq2|\phi_b|+V$ and $Q_s=-C_{ox}(V_{gs}-V_{fb}-V_{s})$ if we use this two equation with the first one (inversion charge) we get that
+In this regime we've seen that using the charge sheet approximation $Q_{inv}=Q_s+\sqrt{2\varepsilon_{si}qN_aV_s}$ if we combine this equation with 
+\begin{equation}
+Q_s=-\sqrt{2\varepsilon_{si}kTN_a}\left(\frac{qV_s}{kT}+\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}\right)^{1/2}
+\end{equation}
+ and with $V_{gs}+V_{fb}=V_{s}-Q_s/C_{ox}$ we get that $V_s\simeq2|\phi_b|+V$ and $Q_s=-C_{ox}(V_{gs}-V_{fb}-V_{s})$ if we use this two equation with the first one (inversion charge) we get that
 \begin{equation}
 Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+\sqrt{2\varepsilon_{si}qN_a(2|\phi_b|+V)}
 \end{equation}
 we will not solve this equation but we will consider some different regimes
 
+
+%------------------------------------------------------------------------%
 \subsection{Ohmic regime $V_{ds}<<2|\phi_b|$}
+
 If $V_{ds}$ is small olso V will be small so we can neglect that contribution 
 \begin{equation}
 Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-\frac{Q_{dep}^{max}}{C_{ox}})\simeq -C_{ox}(V_{gs}-V_t)
@@ -160,7 +179,7 @@ V_{ds}^{sat}=\frac{V_{gs}-v_t}{m}\ \ \ \ \ \ \ \ I_{ds}^{sat}=\mu_nC_{ox}\frac{W
 \end{equation}
 Increasing $V_{ds}$ we increase the electric field and decrease the charge (so we get a more resistive channel). At $V_{ds}^{sat}$ the charge at the drain is 
 \begin{equation}
-Q(y=L)=-C_{ox}(V_{gs}-V_t-m \frac{V_{gs}-V_t}{m})=0
+Q_{inv}(y=L)=-C_{ox}(V_{gs}-V_t-m \frac{V_{gs}-V_t}{m})=0
 \end{equation}
 this is called the pinch off conditon of the transistor. If from the saturation point on we keep using the previous equation we get a reduction of the current that has no sense.\\
 
@@ -173,12 +192,18 @@ this is called the pinch off conditon of the transistor. If from the saturation 
 Let's consider $-Q_{inv}(V_{ds})$ we calculated the area of this expression to find the current so the area under the rect in the graph is proportional to the current. When $V_{ds}=V_{ds}^{sat}$ we are at the vertex of the parabola and so the current is proportional to the area of the triangle.\\
 From there on we add negative area contribution that has no sense it's like accumuling holes in the inversion layer. At the drain we were at the limit of strong inversion regime if we increase $V_{ds}$ over the saturation point we enter at the drain at weak inversion regime where electrons concentration can be apporoximated as negligible $Q_{inv}$. The real graph of the inversion charge becomes zero over the saturation voltage so from the vertex on the current remains constant.\\
 
+%------------------------------------------------------------------------%
 \subsubsection{Physical explanation of dicendent parabola}
 {\bf pag 75 tutta riguardare non ho capito}\\
 
 The parameter $m=1+\frac{C_{dep}}{C_{ox}}$ involves doping concentration and oxide thikness and express how much of $V_g$ drops over the substrate; for a good mos m=1,1-1,4.\\
 
+
+
+%------------------------------------------------------------------------%
 \section{Over the saturation point}
+%------------------------------------------------------------------------%
+
 We still don't know $E_{fn}$ along the channel or the voltage drop in function of y.\\
 From the differential from of the drain current we have $I_{ds}=-\mu_nW \frac{dV}{dy}Q_{inv}$ we can integrate this expression up to a potential V in a point y
 \begin{equation}
@@ -199,14 +224,14 @@ V(y)\simeq\frac{V_{gs}-V_{t}}{m}-\frac{V_{gs}-V_{t}}{m}\sqrt{1-\frac{2y}{L}V_{ds
 \begin{equation}
 V\simeq \frac{V_{ds}}{L}y
 \end{equation}
-resonable result when the channel is uniform and we said that $\frac{dV}{dy}$ has to be constan so V linear function of y. We get a constant drift contribution over the channel {\bf Drift?}.\\
+resonable result when the channel is uniform and we said that $\frac{dV}{dy}$ has to be constan so V linear function of y. We get a constant drift contribution over the channel.\\
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.2\textwidth]{g1.png}
 \end{wrapfigure}
 
 
-Increasing the drain voltage we enter in the parabolic regime and the charge decrease beacuse the differential form of the current must be always valid $\frac{dV}{dy}$ must increase we need higher electric field. We increase the slope of the rect form source to drain.\\
+Increasing the drain voltage we enter in the parabolic regime and the charge will decrease and ,beacuse the differential form of the current must be always valid , $\frac{dV}{dy}$ must increase (we need higher electric field). We increase the slope of the rect form source to drain.\\
 At pinch off point we have no charge in L so at $V_{ds}^{sat}$ we reach L with vertical tangent. This condition means infinite electric field in y direction so $F_y$ is no more negligible and the gradual channel approximation is no longer valid.\\
 We have to study the 2D Poisson equation. We will not study it mathematically but let's see the results.\\
 
