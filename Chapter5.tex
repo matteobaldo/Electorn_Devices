@@ -250,7 +250,9 @@ In the x axis the band diagram is purely 2D band-diagram; the maximum electron c
 \includegraphics[width=0.6\textwidth]{2delectro.png}\\
 \raggedright
 
+%------------------------------------------------------------------------%
 \section{Transcaracteristic}
+%------------------------------------------------------------------------%
 
 \centering
 \includegraphics[width=0.35\textwidth]{transcaracteristic.png}\\
@@ -261,8 +263,11 @@ First region we get $V_{gs}<V_{t}$ so we are in accumulation or weak inversion r
 When we reach $V_{gs}=V_t$ we enter in the on-state regime we are at saturation beacuse we have $V_{t}$ at the source but going to the drain the thrashold voltage increase so we don't have threshold there. $I_{ds}^{sat}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{gs}-V_t)^2}{2m}$ so we have a parabolic dependance.\\
 We increase $V_{gs}$ until we reach the threshold condition also at the drain at the voltage $V_t'=V_t+m V_{ds}=\overline{V_{gs}}$  in this case the current is $I_{ds}=\mu_nC_{ox}\frac{W}{L}[(V_{gs}-V_t)V_{ds}-\frac{mV_{ds}^2}{2}]$ so a linear dependance.\\
 
+%------------------------------------------------------------------------%
 \section{Small signal parameters}
+%------------------------------------------------------------------------%
 
+%------------------------------------------------------------------------%
 \subsection{Transonductance $g_m$}
 If we slightly move $V_{gs}$ we change the current flow so we can define a small signal transconductance as $g_m=\left(\frac{\partial I_{ds}}{\partial V_{gs}}\right)_{V_{ds}}$ that in ohmic-parabolic and saturation regime is
 \begin{equation}
@@ -273,6 +278,7 @@ g_m^{ohmic}=\mu_nC_{ox}\frac{W}{L}V_{ds} \ \ \ \ \ \ \ \ \ \ \  g_m^{sat}=\frac{
 \includegraphics[width=0.35\textwidth]{gmmos.png}\\
 \raggedright
 
+%------------------------------------------------------------------------%
 \subsection{Transconductrance $g_d$}
 We can define also $g_d=\left(\frac{\partial I_{ds}}{\partial V_{ds}}\right)_{V_{gs}}$ that for ohmic and parabolic regime is
 \begin{equation}
@@ -295,7 +301,7 @@ I_{ds}=I_{ds}^{sat}\frac{L}{L-\Delta L }=I_{ds}^{sat}\frac{1}{1-\frac{\Delta L}{
 \end{equation}
 refering to a long channel device $\Delta L$ is very small compared to L so we can make a Taylor expansion obtaining 
 \begin{equation}
-I_{ds}=I_{ds}^{sat}(1+\frac{\Delta L}{L})=I_{ds}^{sat}(1+\frac{V_{ds}-V_{ds}^{sat}}{LF_p}
+I_{ds}=I_{ds}^{sat}(1+\frac{\Delta L}{L})=I_{ds}^{sat}(1+\frac{V_{ds}-V_{ds}^{sat}}{LF_p})
 \end{equation}
 we get a linear increase of the current increasing $V_{ds}$ and olso a larger slope ot the rect with higher currents.\\
 So the real output resistance is 
@@ -308,7 +314,7 @@ that is a strong function of L.\\
 \includegraphics[width=0.45\textwidth]{early1.png}\\
 \raggedright
 
-
+%------------------------------------------------------------------------%
 \subsection{Capacitive terms}
 In this section we will introduce only intrinsic capacitive terms.\\
 We define $Q_c$ total charge in the inversion layer as 
@@ -323,7 +329,7 @@ from the differential form of the drain current we know that $I_{ds}=-\mu_nW \fr
 \begin{equation}
 Q_c=-\mu_n \frac{W^2}{I_{ds}}\int^{V_{ds}}_0 C_{ox}^2(V_{gs}-V_t-mV)^2dV
 \end{equation}
-solving the integral and unsing the expression fro the current we get the final result
+solving the integral and unsing the expression for the current we get the final result
 \begin{equation}
 Q_c=-WLC_{ox}'\frac{2}{3} \frac{m^2V_{ds}^2 + 3(V_{gs}-V_t)^2 -3mV_{ds}(V_{gs}-V_t)}{2(V_{gs}-V_t)-mV_{ds}}
 \end{equation}
@@ -339,7 +345,7 @@ With this two expressions we can derive the gate and the drain capacitance as
 C_g=-\frac{\partial Q_c}{\partial V_{gs}}|_{V_{ds}}=WLC_{ox}[1-\frac{m^2V_{ds}^2}{3(2(V_{gs}-V_t)-mV_{ds})^2}]
 \end{equation}
 \begin{equation}
-C_d=\frac{\partial Q_c}{\partial V_{ds}}|_{V_{gs}}=2/3W/LC_{ox}[1-\frac{)V_{gs}-V_{t})^2}{[2(V_{gs}-V_t)-mV_{ds}]^2}]
+C_d=\frac{\partial Q_c}{\partial V_{ds}}|_{V_{gs}}=2/3W/LC_{ox}[1-\frac{(V_{gs}-V_{t})^2}{[2(V_{gs}-V_t)-mV_{ds}]^2}]
 \end{equation}
 With this parameter we can complete the small signal model of the MOS transistor\\
 
@@ -353,8 +359,9 @@ C_g=C_{gs}+C_{gd} \ \ \ \ \ \ C_d=C_{gd}
 \end{equation}
 In ohmic regime we get that $C_{gs}=C_{gd}=1/2WLC_{ox}$ while in saturation regime $C_d=C_{gd}\simeq 0$ ,$C_{gs}=2/3WLC_{ox}$ ; the phisical reason of this is that the drain loses control of the inversion charge only source provides electrons at the channel.\\
 
+%------------------------------------------------------------------------%
 \subsection{Frequency responce} 
-The frequqncy responce is related to the transit time of the electrons in the channel so eh can define it as 
+The frequqncy responce is related to the transit time of the electrons in the channel so we can define it as 
 \begin{equation}
 \tau_t=\int_0^L \frac{dy}{v_d}
 \end{equation}
@@ -372,6 +379,7 @@ Using the cutting frequency of the transistor we find that
 f_t=\frac{g_m}{2\pi (C_{gs}+C_{gd})}=\frac{g_m}{2\pi C_g}=\frac{1}{2\pi \tau_t}
 \end{equation}
 
+%------------------------------------------------------------------------%
 \section{Body effect}
 Until now we've always considered the bulk grounded now we consider the situation if we apply a $V_{bs}<0$ (with a positive voltage we will have the 2 junction forward biased). Total voltage under the channel is now $V_{gs}-V_{bs}$. We can restore the initial condition of substrate grounded if we add at all the other pins a voltage of $-V_{bs}$ like in figure\\
 
@@ -393,7 +401,7 @@ making a little bit of calculation we get that in ohmic regime
 \begin{equation}
 Q_{inv}-C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-\frac{\sqrt{2\varepsilon_{si}qN_a(2|\phi_b|-V_{bs})}}{C_{ox}})=-C_{ox}(V_{gs}-V_t')
 \end{equation}
-$V_t'$ is the new threshold voltage of the system and we get $I_{ds}=\mu_nC_{ox}\frac{W}{L}(V_{gs}-V-t')V_{ds}$ this expression is equal to the one with the bulk grounded but with another $V_t$. For the other regimes we get the same resuslts of bulk grounded with $V_t'$ and for the parabolic regime m is modified.\\
+$V_t'$ is the new threshold voltage of the system and we get $I_{ds}=\mu_nC_{ox}\frac{W}{L}(V_{gs}-V_t')V_{ds}$ this expression is equal to the one with the bulk grounded but with another $V_t$. For the other regimes we get the same resuslts of bulk grounded with $V_t'$ and for the parabolic regime m is modified.\\
 
 \centering
 \includegraphics[width=0.2\textwidth]{body3.png}\\
@@ -404,15 +412,18 @@ For better undestand the behaviour of $V_t'(-V_{bs})$ we can study
 \frac{d V_t}{dV_{bs}}|_{V_{bs}=0}=[\frac{\sqrt{2\varepsilon_{si}qN_a}}{C_{ox}}\frac{1}{2}\frac{1}{\sqrt{2|\phi_b|-V_{bs}}}]|_{V_{bs}=0}=\frac{C_{dep}}{C_{ox}}=m-1
 \end{equation}
 
+%------------------------------------------------------------------------%
 \section{Subtheshold regime}
+%------------------------------------------------------------------------%
 
+%------------------------------------------------------------------------%
 \subsection{Current expression}
 
 \centering
 \includegraphics[width=0.35\textwidth]{subth.png}\\
 \raggedright
 
-In this regime $V_{gs} \lesssim V_t$ so we don't have strong inversion anywhere in the channel, the electron concentration is negligible for electrostatics that is dominated by the depletion charge. Bands are almost flat in the channel (also if electorn concentation change beacuse it's neglibile).\\
+In this regime $V_{gs} \lesssim V_t$ so we don't have strong inversion anywhere in the channel, the electron concentration is negligible for electrostatics that is dominated by the depletion charge. Bands are almost flat in the channel (also if electorn concentation change beacuse it's a neglibile contribution).\\
 We get a diffusion current of electrons the drift flow is negligible. Solving the poisson equation we got that $Q_{inv}=\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}$ we can use this expression to derive the current in this regime so 
 \begin{equation}
 I_{ds}=-\mu_n \frac{W}{L}\int^{V_{ds}}_0-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}dV
@@ -423,7 +434,7 @@ I_{ds}=\mu_n \frac{W}{L}\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\fra
 \end{equation}
 Solving the integral we get the following expression
 \begin{equation}
-I_{ds}=\mu_n \frac{W}{L}\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{qV_s/kT}\left(1-e^{-qV_{ds}/kT}\right)
+I_{ds}=\mu_n \frac{W}{L}\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\left(\frac{kT}{q}\right)^2\frac{n_i^2}{N_a^2}e^{qV_s/kT}\left(1-e^{-qV_{ds}/kT}\right)
 \end{equation}
 we want a dependance on $V_{gs}$ not on $V_s$.\\
 As done for the MOS capacitor we use $V_{gs}-V_{fb}=V_s+\sqrt{2\varepsilon_{si}qN_aV_s}/C_{ox}$ we can assume that $V_s \lesssim 2|\phi_b|$ so we can make a Taylor expansion of $\sqrt{V_s}$ over $2|\phi_b|$ getting 
@@ -436,7 +447,7 @@ V_{gs}=V_{fb}+V_s+\sqrt{2\varepsilon_{si}qN_a2|\phi_b|}/C_{ox}+\frac{1}{2}\frac{
 \end{equation}
 adding and removing $2|\phi_b|$ we can write that expression as 
 \begin{equation}
-V_{gs}=V_t+(V_s-2|\phi_b|)m\ \ \ \ \ \ \ \rightarrow \ \ \ \ \ V_{s}=2|\phi_b2|\phi_b|+\frac{V_{gs}-V_t}{m}
+V_{gs}=V_t+(V_s-2|\phi_b|)m\ \ \ \ \ \ \ \rightarrow \ \ \ \ \ V_{s}=2|\phi_b|+\frac{V_{gs}-V_t}{m}
 \end{equation}
 The physical meaning of this can be explained considering a system like in fiure\\
 
@@ -444,7 +455,7 @@ The physical meaning of this can be explained considering a system like in fiure
 \includegraphics[width=0.2\textwidth]{subth2.png}\\
 \raggedright
 
-where we can say that $V_s=2|\phi_b|+\delta \frac{C_{ox}}{C_{ox}+C_{dep}}=2|\phi_b|+\frac{\delta}{m}$.\\
+where we can say that $V_s=2|\phi_b|+\delta V \frac{C_{ox}}{C_{ox}+C_{dep}}=2|\phi_b|+\frac{\delta V}{m}$.\\
 Turning back the the expression for the current we can write it in this way now
 \begin{equation}
 I_{ds}=\mu_nC_{ox}(m-1)\frac{W}{L}(\frac{kT}{q})^2 e^{q(V_{gs}-V_t)/kT}\left(1-e^{-qV_{ds}/kT}\right)
@@ -460,7 +471,11 @@ I_{ds}=-WD_n \frac{Q_{inv}(0)-Q_{inv}(L)}{L}
 \end{equation}
 Since the change of tha charge is linear $E_{fn}$ must drop logaritmically.\\
 
+
+%------------------------------------------------------------------------%
 \subsection{Transcaracteristics}
+%------------------------------------------------------------------------%
+
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.35\textwidth]{tranclog.png}
 \end{wrapfigure}
@@ -471,21 +486,27 @@ STS=\left(\frac{\partial \log(I_{ds})}{\partial V_{gs}}\right)^{-1}=\frac{kT}{q}
 \end{equation} 
 At room temperature STS=(60 mV/dec)m.\\ 
 Form $V_t$ on the diffusion contribution to the current saturates and the drift becomes dominant.\\
-If we move to low current we break the assumption of flat band condition $V_s$ becomes indipendent on $V_{gs}$ so our expression is no more valid and the current will saturate to a lower value.\\
+If we move to low current we break the assumption of flat band condition $V_s$ becomes indipendent on $V_{gs}$ (near and below the FB condition) so our expression is no more valid and the current will saturate to a lower value.\\
 At low current we have to take also in account the GR processes in the channel. We have a net generation process beacuse $E_{fn}<E_{fp}$ and olso form the reversed bias junctions form drain-bulk. Generated electrons will assist the current flow. Tipically before breaking the assumption of flat-band the current saturate due to the G process.\\
 
 \centering
 \includegraphics[width=0.4\textwidth]{noisefloor.png}\\
 \raggedright
 
+%------------------------------------------------------------------------%
 \subsubsection{Improvment for MOS}
 If we reduce $t_{ox}$ the gate will have better control of the substrate and better $STS=\frac{kT}{q}\ln(10)(1+(\varepsilon_{si}t_{ox})/(\varepsilon_{ox}W_d^{max}))$ and olso lower $V_t\propto|Q_{dep}^{max}|/(\varepsilon_{si}/t_{ox})$.\\
 It's olso good to decrease $N_a$ to better deplete the substrate getting better STS and lower $V_t$
+
+
 
 \section{Temperature dependance}
 [da fare che non ho sbatti ora diocane]
 \section{Effects of non idealities}
 
+
+
+%------------------------------------------------------------------------%
 \subsection{Charge in the oxide}
 
 \centering
@@ -504,6 +525,8 @@ Depending at the charge given at a certain $\overline{V}$ we get different value
 \includegraphics[width=0.9\textwidth]{flatinggate.png}\\
 \raggedright
 
+
+%------------------------------------------------------------------------%
 \subsection{Interface states}
 We get the same consideration of the MOS-capacitor.\\
 Now the change of charge at the surface is modulating the slope of the sub-threshold slope. It's like having another capacitance in parallel with $C_dep$ so
@@ -519,20 +542,25 @@ We don't have a strech of the characteristic when $E_f=E_{i,s}$
 \subsection{Parassitic resistance of $n^+$ regions}
 \subsection{Parassitic capacitances}
 
+
+%------------------------------------------------------------------------%
 \section{Short channel devices}
+%------------------------------------------------------------------------%
+
 Reducing L we can increase the number of components per unit area and so decrease the costs per component and logic function. Furthermore
 \begin{equation}
 I_{ds}\propto \frac{W}{L} \ \ \ \ \ C\propto WL \ \ \ \ \rightarrow \ \ \ \ \ \frac{I_{ds}}{C}=\frac{dV}{dt}\propto \frac{1}{L^2}
 \end{equation}
 If we start reducing L leaving all the other parameters unchanged (like the oxide thikness or the doping concentrations) at the beginning the performance will increase but after a while they will become worst; this beacuse some secondary effects of the long channel MOS becomes dominants degrading the good performance of the transistor.
 
+%------------------------------------------------------------------------%
 \subsection{2D electrostatic in channel coming from $n^+$ regions}
 In a long channel device with drain bias equal to 0 and $V_{gs} \lesssim V_t$ bands are flat in the channel and the electron concentration is negligible.\\
-%------------------------------------------------------------------------%
+
 \centering
 \includegraphics[width=0.5\textwidth]{longch.png}\\
 \raggedright
-%------------------------------------------------------------------------%
+
 In our analysis we've always neglected the presence of the source and drain regions (that untill now only setted the value of $E_{fn}$ at the boundary of the channel). We have 2 transition regions that we have neglected beacuse L is long and the thikness of this 2 region is negligible wrt L so they had a negligible impact.\\
 If we reduce only L the electrostatics of the channel changes ; $E_c$ rises but not as much as before beacuse there is the influence of the drain transition region. We have everywhere an impact of the electrostatic of the source and drain regions we don't have a zone that can be controlled only by the gate.\\
 
@@ -547,18 +575,21 @@ The distance $E_{fn}-E_c$ is narrower than before so we have more electrons that
 \includegraphics[width=0.35\textwidth]{shortcheff.png}\\
 \raggedright
 
-If now we increase $V_{ds}$ in short channel we change the electrostatic and the band banding moving $E_c^{max}$ to a lower value and near to the source as in figure.
+If now we increase $V_{ds}$ in short channel we change the electrostatic and the band banding moving $E_c^{max}$ to a lower value and near to the source as in figure.\\
 
 \centering
 \includegraphics[width=0.5\textwidth]{dibl.png}\\
 \raggedright
 
 We are further reducing the $V_t$ of the transistor; this phenomena is called drain induced barrier lowering or DIBL. The effect is a decrease of the output resistance in the saturation regime.\\
-In the transcharacteristic changing $V_{ds}$ we change $V_t$ increasing the on-state current exponentially and we have olso a worstening of the STS that has a flatter dependance beacuse increasing $V_{ds}$ we decrease the barrier and $F_x$ becomes negligible wrt $F_y$.
+In the transcharacteristic changing $V_{ds}$ we change $V_t$ increasing the on-state current exponentially and we have olso a worstening of the STS that has a flatter dependance beacuse increasing $V_{ds}$ we decrease the barrier and $F_x$ becomes negligible wrt $F_y$.\\
+
 \centering
 \includegraphics[width=0.5\textwidth]{shorttc.png}\\
 \raggedright
+
 This goes on until we have no barrier at all the gate is no more able to turn off the device; this condition is called punch-throught regime.\\
+\vspace{5mm}
 From the 2D Poisson equation we get that the difference of $V_t$ wrt a long channel device is 
 \begin{equation}
 \Delta V_t= \frac{24t_{ox}}{W_d^{max}}[\sqrt{\phi_b(\phi_b-V_{ds})}-0.4\cdot 2|\phi_b|]e^{-\pi L/2(W_d^{max}+3t_{ox})}
@@ -571,6 +602,7 @@ L>2(W_d^{max}+3t_{ox})
 if this condition is respected we have a long channel device if not a short channel. So we don't have an absolute value but a dependance con $t_{ox},N_a$ to separate long and short channel mosfets.\\
 Reducing $t_{ox}$ we get a better control of the gate on the substate. With higher doping concentration the transitions regions are smaller but we get olso a worst STS.\\
 
+%------------------------------------------------------------------------%
 \subsection{Velocity saturation}
 Now let's forget about previous effects seen for short channel devices (we're making a sort of sovrapposition of effects).\\
 Reducing L we are increasing F but at very high F we the relation between the electric field and the drift velocity isn't linear ; at fields of $10^4 V/cm$ the velocity of electrons saturates at a value of $10^7 cm/s$.\\
@@ -592,9 +624,9 @@ The term $\mu_{eff}$ it's an effective mobility and depends on $F_x$; since the 
 
 Now for the sake of semplicity we will consider n=1 in n-mos. We want to introduce velocity saturation expression in the current $I_{ds}=-\mu_nWQ_{inv}dV/dy$. Taking into account only the on-state regime we know that $V_s=2|\phi_b|+V$ and so that $dV_s/dy=dV/dy=-F_{y}$ in strong inversion regime so we arrive at 
 \begin{equation}
-\mu_n \frac{d_V}{dy}=-\mu_nF_y=-v_d \ \ \ \ \ \rightarrow  \ \ \ \ \ \ \ I_{ds}=WQ_{inv}v_d
+\mu_n \frac{dV}{dy}=-\mu_nF_y=-v_d \ \ \ \ \ \rightarrow  \ \ \ \ \ \ \ I_{ds}=WQ_{inv}v_d
 \end{equation}
-So now we can introduce the velocity saturation equation in the expression (attention at the denominator we want a positive number so we take |F|)
+So now we can introduce the velocity saturation equation in the expression (attention at the denominator we want a positive number so we take $|F|$)
 \begin{equation}
 I_{ds}=-WQ_{inv}\frac{\mu_{eff}\frac{dV}{dy}}{1+\frac{1}{F_{sat}}\frac{dV}{dy}}
 \end{equation}
@@ -602,7 +634,7 @@ making some simple calculations we can write this equation like
 \begin{equation}
 I_{ds}=-[\mu_{eff}WQ_{inv}+\frac{I_{ds}}{F_{sat}}]\frac{dV}{dy}
 \end{equation}
-We can take dy to the first member and integrate from 0-L and form 0-$V_{ds}$; by assuming the quasi-1D model the only term that we really have to integrate is $Q_{inv}$ that we can write like $Q_{inv}=-C_{ox}(V_{gs}-V_t-mV)$ {\bf check this formula}.\\
+We can take dy to the first member and integrate from 0-L and form 0-$V_{ds}$; by assuming the quasi-1D model the only term that we really have to integrate is $Q_{inv}$ that we can write like $Q_{inv}=-C_{ox}(V_{gs}-V_t-mV)$ .\\
 Solving the integral we get
 \begin{equation}
 I_{ds}=\frac{\mu_nC_{ox}\frac{W}{L}[(V_{gs}-V_t)V_{ds}-\frac{mV_{ds}^2}{2}]}{1+\frac{1}{F_{sat}}\frac{V_{ds}}{L}}
@@ -613,7 +645,7 @@ This relation has got a maximum at
 \begin{equation}
 V_{ds}^{sat}=\frac{2(V_{gs}-V_t)/m}{1+\sqrt{1+\frac{2(V_{gs}-V_t)}{F_{sat}mL}}}
 \end{equation}
-so we are reaching the saturation regime before than a long channel device and we get a higer slope of the rect after that point (this is olso caused by the DIBLE). With a short L we get lower saturation voltage and saturation current.\\
+so we are reaching the saturation regime before than a long channel device and we get a higer slope of the rect after that point (Early's rect, this is olso caused by the DIBLE). With a short L we get lower saturation voltage and saturation current.\\
 
 \centering
 \includegraphics[width=0.35\textwidth]{ls.png}\\ %93up
@@ -636,9 +668,14 @@ The saturation velocity $v_{sat}$ is the maximum average velocity in a drift-dif
 Electrons that before scattering reaches a lot of kinetics energy (2-3eV) are called hot electrons. This electrons are so full of energy that can create impact ionization with atoms and so GR processes.\\
 They can olso inteact with silicon atoms at the surface breaking bonds and so creating some interface states. They are able to overcome the barrier of the oxide and reach the gate or remain trapped in the oxide ( they are used for floating gates charge processes).\\
 
+
+
+%------------------------------------------------------------------------%
 \section{Scaling rules}
+%------------------------------------------------------------------------%
 There are some sets of scaling rules that we can take as guideline to scale our devices.
 
+%------------------------------------------------------------------------%
 \subsection{Constant field (Dennard)}
 Main idea is to avoid the 2D electrostatic regime keeping the ratio between the vertical and the horizontal fields constant $F_x/F_y=const.$\\
 In order to do this we need to scale all vertical and horizontal dimensions of the same factor as the voltages.\\ 
@@ -648,7 +685,7 @@ For the doping concentrations we can say form the 2D Poisson equation in sub-thr
 \end{equation}
 and so scaling all dimension by a factor k we get that to have the same electrostatic conditions
 \begin{equation}
-\frac{qN_a'}{\varepsilon_{si}}=-\frac{\partial F_x/k}{\partial x}-\frac{\partial F_y}{\partial y/k}=-k\frac{\partial F_x}{\partial x}-k\frac{\partial F_y}{\partial y}
+\frac{qN_a'}{\varepsilon_{si}}=-\frac{\partial F_x}{\partial x/k}-\frac{\partial F_y}{\partial y/k}=-k\frac{\partial F_x}{\partial x}-k\frac{\partial F_y}{\partial y}
 \end{equation}
 from wch we get that $N_a'=kN_a$ so the doping concentrations must increase by a factor k.\\
 So the rules for constant fields scaling are 
