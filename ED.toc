@@ -118,7 +118,7 @@
 \contentsline {subsection}{\numberline {6.3.1}Shallow emitter}{81}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Deep emitter}{82}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}$\beta $ dependance on $I_C$}{82}{section.6.4}
-\contentsline {section}{\numberline {6.5}Kirk effect}{82}{section.6.5}
+\contentsline {section}{\numberline {6.5}Kirk effect}{83}{section.6.5}
 \contentsline {section}{\numberline {6.6}Early effect}{84}{section.6.6}
 \contentsline {section}{\numberline {6.7}Small signal model}{85}{section.6.7}
 \contentsline {subsection}{\numberline {6.7.1}Trasconductance}{85}{subsection.6.7.1}

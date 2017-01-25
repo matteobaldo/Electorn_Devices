@@ -64,7 +64,7 @@ n=\int^{+\infty}_{E_c} g_c(E)f(E)dE
 \end{equation}
 Making a change of variable as $x=(E-E_c)/kT$ and $\eta=(E_f-E_c)/kT$ we can write
 \begin{equation}
-n=\left[\frac{4\cdot 2\cdot deg \cdot \pi}{h^3}(kT)^{3/2}\frac{\sqrt{\pi}}{2}\right]\frac{2}{\sqrt{\pi}}\int^{+\infty}_0 \frac{\sqrt{x}}{1+e^{x-\eta}}dx=N_c\cdot F_{1/2}(\eta)
+n=\left[\frac{4\cdot 2\cdot deg \cdot \pi}{h^3}(kT)^{3/2}\frac{\sqrt{\pi}}{2}\right]\frac{2}{\sqrt{\pi}}\int^{+\infty}_0 \frac{\sqrt{x}}{1+e^{x-\eta}}dx=N_c \frac{2}{\sqrt{\pi}}\cdot F_{1/2}(\eta)
 \end{equation}  
 where $N_c$ is the density of states $F_{1/2}(\eta)$ is the Fermi-Dirac integral of order 1/2.\\
 Assuming $x-\eta>>1$ (that is the M-B approximation) we arrive at 
@@ -119,7 +119,7 @@ We can introduce the law of mass action as
 \begin{equation}
 pn=n_i^2
 \end{equation}
-For estrinsic semiconductors ,in the band diagram ,there is another band near to CB $(E_d)$ (or near to VB $(E_a)$ depending on the type of dope).\\
+For estrinsic semiconductors ,in the band diagram ,there is another band near to CB $(E_d)$ (or near to VB $E_a$ depending on the type of dope).\\
 We want to extimate the position of $E_f$ in n-doped Si. We can write that $n=p+N_d^+$ where $N_d^+$ are the ionized donor concentration so
 \begin{equation}
 n=p+N_d(1-\frac{1}{1+\frac{1}{2} e^{(E_d-E_f)/kT}})=p+\frac{N_d}{1+2e^{-(E_d-E_f)/kT}}
@@ -156,7 +156,7 @@ that multiplying and dividing the risult by $(kT)^{3/2}\sqrt{\pi}/2$ we obtain
 \begin{equation}
 n=N_c 2/3 \frac{2}{\sqrt{\pi}}\left(\frac{E_f-E_c}{kT}\right)^{3/2}=N_c 2/3 \frac{2}{\sqrt{\pi}}\eta^{3/2}
 \end{equation}
-In the graph below we can notice the difference between F-D and M-B distribution over $\eta$.\\
+In the graph above we can notice the difference between F-D and M-B distribution over $\eta$.\\
 %------------------------------------------------------------------------%
 \section{Current transport}
 There are 2 most important mechanisms that generates current: drift and diffusion process.\\
@@ -248,7 +248,7 @@ the solution of this equation give us an exponential decrease of the potential w
 L_D=\sqrt{\frac{\varepsilon_{Si}kT}{q^2N_d}}
 \end{equation}
 this will cause a net charge (both negative and positive near the discontinuity).\\
-$[Look \ at \ exercitation \ there \ is \ the \ demonstration \ of \ this formula \ pag \ 18-19]$
+
 %------------------------------------------------------------------------%
 \section{Quasi-Fermi levels}
 
@@ -373,13 +373,17 @@ The best position fot the difect is on the middle of the gap.\\
 Maximum G is when p=n=0 so $G=-n_i/2\tau_0$.\\
 
 
+
+%------------------------------------------------------------------------%
 \section{Quasi-neutral condition}
+%------------------------------------------------------------------------%
+
 Under quasi-neutral condition $\Delta n +n_0=n$ and $\Delta p +p_0=p$ assuming low injection level ($\Delta n<<p_0+n_0$) we can neglect in the eq of R all the terms with "$\Delta$" so we obtain
 \begin{equation}
-R=\frac{\Delta n}{\tau_n}=\frac{(p_0+n_0)\Delta n}{\tau\left[p_0+n_0+2n_iCosh(\frac{E_T-E_i}{kT})\right]}
+R=\frac{\Delta n}{\tau_n}=\frac{(p_0+n_0)\Delta n}{\tau\left[p_0+n_0+2n_iCosh(\frac{E_T-E_i}{kT})\right]}=\frac{\Delta n}{\tau_n}
 \end{equation}
 if we suppose $E_T-E_i=0$ $\tau_n\simeq \tau_0=1/(N_Tv_{th}\delta)$\\
-So the continuity equation for electrons becomes
+So the continuity equation for electrons becomes \footnote{Minus sign in the expression comes form G-R we are considering -R}
 \begin{equation}
 -\frac{d\Delta n}{dt}=R \rightarrow \Delta n \propto e^{-t/\tau_n}
 \end{equation} 

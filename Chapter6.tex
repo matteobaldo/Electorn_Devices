@@ -35,7 +35,7 @@ We can focus our analysis on the quasi-neutral p region that is the bottom-neck 
 We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration. Doping concentration is not constant so we have a band banding like in figure so a F due to non constant doping concentrations. This condition can be reached olso with high level of injection.\\
 Considering hole concentration $p=n_ie^{\frac{E_i-E_{fp}}{kT}}$ we get $E_i=E_{fp}+kT\ln(p/n_i)$. We want this parameter beacuse it's releted to the potential and so to the electric field
 \begin{equation}
-F=-\frac{d\phi}{dx}=-\frac{1}{q}\frac{dE_{i}}{dx}=\frac{1}{q}\frac{dE_{fp}}{dx}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
+F=-\frac{d\phi}{dx}=\frac{1}{q}\frac{dE_{i}}{dx}=\frac{1}{q}\frac{dE_{fp}}{dx}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
 \end{equation}
 both high injection and non constant doping concentration events are taken into account by the term $\frac{dp}{dx}$, the term $\frac{dE_{fp}}{dx}$ take into account of resistive drops.\\
 \vspace{5mm}
@@ -69,6 +69,8 @@ J_n=qn\mu_n \frac{kT}{q}\frac{1}{n}\frac{dn}{dx}+qD_n \frac{dn}{dx}=2qD_n\frac{d
 \end{equation}
 it's like a pure diffusion process with the double of the intesity; this is called the Webster effect.\\
 
+
+%------------------------------------------------------------------------%
 \subsection{Prototype BJT current}
 
 \centering
@@ -92,7 +94,9 @@ I_c=A_E\frac{qn_i^2}{\frac{N_aW_b}{D_n}}e^{qV_{BE}/kT}=A_E\frac{qn_i^2}{G_B}e^{q
 where $G_B=\frac{N_aW_b}{D_n}$ it's the Gummel number of the base.\\
 This current it's dependent only on base parameters.
 
+%------------------------------------------------------------------------%
 \subsection{"Ideal" BJT}
+
 We consider now the possibility of non constant doping concentration or high injection regime so we recover the expression $J_n=qn\mu_n \frac{kT}{q}\frac{1}{p}\frac{dp}{dx}+qD_n \frac{dn}{dx}$ that we can write as
 \begin{equation}
 J_n=\frac{qD_n}{p}\left(n \frac{dp}{dx}+p \frac{dn}{dx}\right)= \frac{qD_n}{p}\frac{d(pn)}{dx}
@@ -107,7 +111,9 @@ I_c=A_E\frac{qn_i^2 e^{qV_{BE}/kT}}{\int^{W_b}_0 \frac{p}{D_n}dx}=A_E\frac{qn_i^
 \end{equation}
 where $G_B=\int^{W_b}_0 \frac{p}{D_n}dx$ is the new Gummel number for the base that in case of constant doping and low level of injection becomes the first one.\\
 
+%------------------------------------------------------------------------%
 \subsection{Real BJT}
+
 The most general case we can include the non-constant bandgap in the base. We can have a non constant bandgap due to 2 causes.\\
 The first cause of bandgap narrowing is due to doping conectrations that are higher than $\simeq 10^{18}$; high doping means donor closer to each other interaction between energy levels that becomes a band of energy and some of this level can overlap the $E_c$ narrowing the band-gap. The emitter side we will have a narrower gap than the collector side.\\
 
@@ -132,7 +138,7 @@ E_{fn}=E_{fp}+kT\ln(\frac{pn}{n_{i,e}})
 \end{equation}
 considering $E_{fp}$ constant as usual we get that the current density is 
 \begin{equation}
-J_n=qD_n \frac{n_{i,e}^2}{p}\frac{d(pn)}{dx}
+J_n=qD_n \frac{n_{i,e}^2}{p}\frac{d(pn/n_{i,e}^2)}{dx}
 \end{equation}
 as the previous case now we integrate this expression 
 \begin{equation}
@@ -140,7 +146,7 @@ J_n=-\frac{qe^{qV_{BE}/kT}}{\int^{W_b}_0 \frac{p}{D_nn_{i,e}^2}}dx
 \end{equation}
 Multiplying the result for the emitter area and changing the sign we get the collector current as 
 \begin{equation}
-I_c=A_E \frac{qn_i^2 e^{qV_{BE}/kT}}{\int^{W_{b}}_0} \frac{n_i^2p}{n_{i,e}^2D_n}dx=A_E \frac{qn_i^2 e^{qV_{BE}/kT}}{G_B}
+I_c=A_E \frac{qn_i^2 e^{qV_{BE}/kT}}{\int^{W_{b}}_0\frac{n_i^2p}{n_{i,e}^2D_n}dx}=A_E \frac{qn_i^2 e^{qV_{BE}/kT}}{G_B}
 \end{equation}
 
 
@@ -174,15 +180,15 @@ G_E= \frac{N_d^En_i^2}{n_{i,e}^2D_n}W_B
 
 %------------------------------------------------------------------------%
 \subsection{Deep emitter}
-In the case of constant doping an low level of injection from pn-j results we get
+In the case of constant doping an low level of injection from pn-j results neglecting -1 we get
 \begin{equation}
-J_p={bho}
+J_p=-{\frac{qD_pn_i^2}{N_d^EL_p\tanh(W_e/L_p)}e^{\frac{qV_{BE}}{kT}}}
 \end{equation}
 and so the base current as
 \begin{equation}
-I_B=A_E \frac{qn_i^2}{\frac{N_d^EL_p Tgh(W_E/L_p)}{D_p}}e^{qV_{BE}/kT}=A_E \frac{qn_i^2}{G_E}
+I_B=A_E \frac{qn_i^2}{\frac{N_d^E L_p \tanh(W_e/L_p)}{D_p}}e^{qV_{BE}/kT}=A_E \frac{qn_i^2}{G_E}
 \end{equation}
-where $G_E=\frac{N_d^EL_p Tgh(W_E/L_p)}{D_p}$ it's the new Gummel number of the emitter. \\111
+where $G_E=\frac{N_d^EL_p \tanh(W_e/L_p)}{D_p}$ it's the new Gummel number of the emitter. \\
 Now we can calculate the beta of the transistor as
 \begin{equation}
 \beta=\frac{I_C}{I_B}=\frac{G_E}{G_B}
@@ -254,7 +260,10 @@ The onset of this event can be found at current $J_n=qnv_{sat}=qN_d^C v_{sat}$
 \includegraphics[width=0.35\textwidth]{bjt11.png}\\
 \raggedright
 
+
+%------------------------------------------------------------------------%
 \section{Early effect}
+%------------------------------------------------------------------------%
 
 \centering
 \includegraphics[width=0.15\textwidth]{bjt12.png}\\
@@ -263,13 +272,17 @@ The onset of this event can be found at current $J_n=qnv_{sat}=qN_d^C v_{sat}$
 Now we want to investigate the dependances of $I_C$ on $V_{CE}$ so we focus on the qn base region and we keep $V_{BC}$ not big and negative.\\
 If $V_{CE}=0$ than $V_{BE}=V_{BC}$ so constant electron concentration and no diffusion current (accounting for base current it isn't really zero but slightly negative).
 Increasing $V_{CE}$ we reduce forward bias on BC decrease electron concentration at the BC depletion region so the current increase and we enter in the forward active mode leaving the saturation regime.
+
 \centering
 {\bf Figure 111}\\
 \raggedright
+
 In the forward active mode we have a slight increase of the current the physical reason for this comes from the qn region of the base; increasing $V_{CE}$ at constant $V_{BE}$ we are moving the width of the depletion layer in the base increasing F profile and so the diffusion current. This is the Early effect of the BJT.\\
+
 \centering
 {\bf Figure 112mancante}\\
 \raggedright
+
 We follow the rect until the interception with the x axes where we find $-V_A$ the Early voltage.\\
 The slope of the rect is $\frac{\partial I_C}{\partial V_{CE}}$ given a certain $\hat{I_C},\hat{V_{CE}}$ we can say that $\frac{\partial I_C}{\partial V_{CE}}=\hat{I_C}/(V_A+\hat{V_{CE}})$ and so neglecting $\hat{V_{CE}}$ that is small
 \begin{equation}
@@ -278,7 +291,7 @@ V_A=\frac{\hat{I_C}}{\frac{\partial I_C}{\partial V_{CE}}}
 we can say that $\frac{\partial I_C}{\partial V_{CE}}|_{V_{BE}}=\frac{\partial I_C}{\partial V_{CB}}$ and so
 \begin{equation}
 \frac{\partial I_C}{\partial V_{CB}}=-\frac{-\hat{I}}{W_B}\frac{\partial W_B }{\partial V_{CB}}
-\end{equation}
+\end{equation}  
 where
 \begin{equation}
 \frac{\partial W_B }{\partial V_{CB}}=-\frac{\partial x_{p0}}{\partial V_{CB}}\frac{qN_a^B}{qN_a^B}=-\frac{C_{dep}^{BC}}{qN_a^B}
@@ -289,25 +302,28 @@ Finally we get
 V_A=\frac{qN_a^BW_B}{C_{dep}^{BC}}=\frac{Q_p}{C_{dep}^{BC}}
 \end{equation}
 $Q_p$ total base charge of holes.\\
-To increase $V_A$ it's better to act on $C_{dep}^{BC}$
+To increase $V_A$ it's better to act on $C_{dep}^{BC}$.
 The lower limit for the width of the base is to avoid the punch-throught regime that is when the entire base is depleted.\\
 
 %------------------------------------------------------------------------%
 \section{Small signal model}
 %------------------------------------------------------------------------%
 
+%------------------------------------------------------------------------%
 \subsection{Trasconductance}
 Variation of $I_C$ with a small variation of $V_{BE}$ at constant $V_{CE}$ 
 \begin{equation}
 g_m=\frac{\partial I_C}{\partial V_{BE}}|_{V_{CE}}=\frac{I_C}{kT/q}
 \end{equation}
 
+%------------------------------------------------------------------------%
 \subsection{Output resistance}
 Variation of $I_C$ with variation of $V_{CE}$ at constant $V_{BE}$ to the minus one 
 \begin{equation}
 r_0=\left(\frac{\partial I_C}{\partial V_{CE}}|_{V_{BE}}\right)^{-1}=\frac{V_A}{I_C}
 \end{equation}
 
+%------------------------------------------------------------------------%
 \subsection{Base resistance}
 How $I_B$ change with small change of $V_{BE}$ at constant $V_{CE}$
 \begin{equation}
@@ -315,12 +331,15 @@ r_{\pi}=\left(\frac{\partial I_B}{\partial V_{BE}}|_{V_{CE}}\right)^{-1}=\frac{\
 \end{equation}
 Note that $\frac{\partial I_B}{\partial V_{CE}}|_{V_{BE}}=0$.\\
 
+%------------------------------------------------------------------------%
 \subsection{Capacitive effects}
 We have 2 capacitance $C_\pi=C_{dep}^{BE}+C_{diff}$ ,where $C_{diff}$ comes from the modulation of free carrier charge inside the device, and $C_\mu=C_{diff}^{BC}$.\\
 We only miss the value of $C_{diff}$. We can analyse first $Q_{diff}=Q_B+Q_E+Q_{BC}+Q_{BE}$ where $Q_{BC}$ is for the Kirk effect $Q_B,Q_E$ come from the quasi neutral region of the base and collector.\\
 \vspace{5mm}
 $\rightarrow$ $Q_B=I_Ct_b$ where $t_b$ is the transit time of minority carriers. From pn junction's results we get that $t_b=W_b^2/2D_n$.\\
+\vspace{2mm}
 $\rightarrow$ Considering a deep emitter we get $Q_E=I_B\tau_p=I_C \frac{\tau_p}{\beta}=I_Ct_e$ where $t_e$ time related to emitter region (not transit time of course). \\
+\vspace{2mm}
 $\rightarrow$ $Q_{BC}$ free charge stored in BC depletion region that is
 \begin{equation}
 Q_{BC}=q \frac{J_n}{qv_{sat}}W_d^{BC}A_E=I_C \frac{W_d^{BC}}{v_{sat}}=I_C t_{BC}
@@ -336,16 +355,19 @@ C_{diff}=\frac{\partial Q_{diff}}{\partial V_{BE}}=g_m\tau
 \includegraphics[width=0.35\textwidth]{bjt13.png}\\
 \raggedright
 
+
+%------------------------------------------------------------------------%
 \section{Frequency responce}
+%------------------------------------------------------------------------%
+
 The cut off frequancy is
 \begin{equation}
 f_t=\frac{g_m}{2\pi(C_\pi+C_\mu)}
 \end{equation}
 having $g_m$ means dependance on the collector current so we can make the invers of the equation and plot a graph to better undestand the frequancy responce
 \begin{equation}
-\frac{1}{f_t}=\frac{2\pi(C_{dep}^{BE}+C_{dep}^{BC}}{I_C}\frac{kT}{q}+2\pi\tau
+\frac{1}{f_t}=\frac{2\pi(C_{dep}^{BE}+C_{dep}^{BC})}{I_C}\frac{kT}{q}+2\pi\tau
 \end{equation}
-
 
 \centering
 \includegraphics[width=0.35\textwidth]{bjt14.png}\\
@@ -353,7 +375,12 @@ having $g_m$ means dependance on the collector current so we can make the invers
 
 At too high current we enter in high current regime triggering base widening and Kirk effect that decrease our frequency responce.\\
 
+
+
+%------------------------------------------------------------------------%
 \section{Considerations}
+%------------------------------------------------------------------------%
+
 If we want to increase $I_C$ we have to increase $N_d^C$ to avoid Kirk and work at higher frequency but to not worst the Early effect we have to increase olso $N_d^B$ but at this point olso $N_d^E$ to not decrease $\beta$.\\
 \vspace{5mm}
 We want low variability of $\beta$ so a deep emitter with the consequents strange process technology as in figure.\\
@@ -367,7 +394,7 @@ With this technology we can arrive at $f_t\simeq 100GHz$.\\
 
 \vspace{5mm}
 With C-mos technology we have to trade the maximum gain with high frequency regimes but in bjt technology no; this is why bjt's are still used for analog circuits.\\
-In a simple amplifier with a BJT the maximum gain is $G_{max}=g_m r_0=V_a/(\frac{kT}{q}\simeq 1000$ that is indipendent on the working current. In a MOS amplifier we have $G_{max}=V_a/\left(\frac{V_{gs}-V_t}{m}\right)\simeq100$ that is lower but we can olso write that as 
+In a simple amplifier with a BJT the maximum gain is $G_{max}=g_m r_0=V_a/(\frac{kT}{q})\simeq 1000$ that is indipendent on the working current. In a MOS amplifier we have $G_{max}=V_a/\left(\frac{V_{gs}-V_t}{m}\right)\simeq100$ that is lower but we can olso write that as 
 \begin{equation}
 G_{max}=\sqrt{\mu_nC_{ox}WL2/m}\frac{F_P}{\sqrt{I_{ds}^{sat}}}
 \end{equation}
