@@ -499,11 +499,154 @@ If we reduce $t_{ox}$ the gate will have better control of the substrate and bet
 It's olso good to decrease $N_a$ to better deplete the substrate getting better STS and lower $V_t$
 
 
-
+%------------------------------------------------------------------------%
 \section{Temperature dependance}
-[da fare che non ho sbatti ora diocane]
-\section{Effects of non idealities}
+%------------------------------------------------------------------------%
+In sub-threshold regime the STS with high temperatures becomes higher and so we have a curve less steeper (rect more flat).\\
 
+
+\centering
+\includegraphics[width=0.35\textwidth]{tchange.png}\\
+\raggedright
+
+We have a change olso of the $V_t$; $\phi_b$ change, with T also $E_f$ change ans so the flat band voltage and also $E_{f(m)}$ change depending on what metal we are using.\\
+
+
+\centering
+\includegraphics[width=0.15\textwidth]{1tchange.png}\\
+\raggedright
+
+
+Using a polysilicon gate as in figure we can say that $V_{fb}=-(\frac{E_{gap}}{2q}+|\phi_b|)$ so we can write 
+\begin{equation}
+V_t=-\frac{E_{gap}}{2q}+|\phi_b|+\frac{\sqrt{2\varepsilon_{Si}qN_a2|\phi_b|}}{C_{ox}}
+\end{equation}
+so we can study the derivative of this wrt T
+\begin{equation}
+\frac{dV_t}{dT}=-\frac{1}{2q}\frac{dE_{gap}}{dT}+\frac{d|\phi_b|}{dT}+\frac{\sqrt{2\varepsilon_{Si}qN_a2}}{C_{ox}}\frac{1}{2\sqrt{|\phi_b|}}\frac{d|\phi_b|}{dT}=-\frac{1}{2q}\frac{dE_{gap}}{dT}+\frac{d|\phi_b|}{dT}(2m-1)
+\end{equation}
+Inside $|\phi_b|=\frac{kT}{q}\ln(N_a/n_i)$ we have temperature dependances with T and $n_i$ so 
+\begin{equation}
+\frac{d|\phi_b|}{dT}=\frac{k}{q}\ln(N_a/n_i)-\frac{kT}{q}\frac{1}{n_i}\frac{dn_i}{dT}
+\end{equation}
+as last term we have to consider that $n_i=\sqrt{N_cN_v}e^{-E_{gap}/2kT}$ is strongly dependent on temperature so 
+\begin{equation}
+\frac{dn_i}{dT}=\frac{3}{2}aT^{1/2}e^{-E_{gap}/2kT}+aT^{3/2}e^{-E_{gap}/2kT}\left(\frac{-\frac{dE_{gap}}{dT}2kT+E_{gap}2k}{(2kT)^2}\right)
+\end{equation}
+Putting all this results in the first expression we get the final expression
+\begin{equation}
+\frac{dV}{dT}=-(2m-1)\frac{k}{q}\left(\ln(\frac{\sqrt{N_cN_v}}{N_a}+\frac{3}{2}\right) +\frac{m-1}{q}\frac{dE_{gap}}{dT}
+\end{equation}
+That is negative $\simeq -1mV/K$.\\
+This phenomena have the effect to increase the offstate current.\\
+With higher T also the mobility decrease and so also the current.\\
+
+
+%------------------------------------------------------------------------%
+\section{Effects of non idealities}
+%------------------------------------------------------------------------%
+
+%------------------------------------------------------------------------%
+\subsection{Parasitic resistance of $n^+$ regions}
+
+
+\centering
+\includegraphics[width=0.35\textwidth]{parasR1.png}\\
+\raggedright
+
+Since $n^+$ regions are subjected to a flow of current they will show a resistance (that we suppose small since they are highly doped).\\
+We computed the resistivity as $R=\rho_{sh}\frac{L}{W}$ putting some reasonable results we get a $\rho_{sh}=125 \Omega/sq$ that is reasonably higher than that of a metal so we have to consider it.\\
+
+
+\centering
+\includegraphics[width=0.45\textwidth]{parasR2.png}\\
+\raggedright
+
+
+We have other 2 contributions over $\rho_{sh}$ due to this parasitic resistances; vertical spreading of the electrons beacuse they are no more subjected by an electric field and the contact resistivity.\\
+We can study this effects supposing an ideal case where we have a step-like increase in thikness from $t_{inv}$ to $X_j$ as in figure.\\
+\vspace{5mm}
+The contribution due to the vertical spread is 
+\begin{equation}
+R_{sp}=\frac{2\rho_{n^+}}{\pi W}\ln(0.75 \frac{X_j}{t_{inv}})
+\end{equation}
+\vspace{5mm}
+The contribution due to the finite resistance is as we said 
+\begin{equation}
+R_{sh}=\rho_{sh}\frac{\sigma}{W}
+\end{equation}
+\vspace{5mm}
+The third contribution is 
+\begin{equation}
+R_{co}=\frac{\sqrt{\rho_{sh}\rho_c}}{W}\coth(L_c\sqrt{\frac{\rho_{sh}}{\rho_c}})
+\end{equation}
+where $\rho_c=(\frac{\partial J}{\partial V})^{-1}$ is the contact resistivity.\\
+This shows a different behaviour depending on $L_c$; with $L_c$ short the resistance incease in the "short contact" regime.\\
+\vspace{5mm}
+The average resistance is $R=R_{sp}+R_{sh}+R_{co}\simeq 302 \Omega\mu m/W$.\\
+This can be modeled as resistance in series with source and drain that has the effects of reducing the actual $V_{ds}$; they have a relevant importance if the current is higher. If $V_{gs}$ is increased too much the channel resistance becomes too low and the current is setted by $R_s \ \ R_{d}$.\\
+\vspace{5mm}
+In scaling process $R_{ch}=\rho_{ch}\frac{W}{L}$ reducing L we arrive at $R_{ch}<<R_{s,d}$ at lower gate voltages this limiting the device.\\
+In order to avoid this problems we deposit composit material like $TiSi_2$ over the contact; this has a small resistance and already act as a contact with silicon. This treatment is also applied to the gate to avoid parasitic resistance that will decrease f responce.\\
+
+%------------------------------------------------------------------------%
+\subsection{Parasitic capacitance}
+
+
+\centering
+\includegraphics[width=0.5\textwidth]{parC.png}\\
+\raggedright
+
+
+We can identify $n^+-p$ junctions capacitance and gate coupling capacitnace.
+The latter one can be divided in finge and direct overlapped capacitance that are
+\begin{equation}
+C_{1f}=\frac{2\varepsilon_{ox}W}{\pi}\ln(1+\frac{t_g}{t_{ox}})
+\end{equation}
+\begin{equation}
+C_{2f}=\frac{2\varepsilon_{si}W}{\pi}\ln(1+\frac{X_j}{2t_{ox}})
+\end{equation}
+\begin{equation}
+C_{do}=\frac{\varepsilon_{ox}}{t_{ox}}\rho_{ov}W
+\end{equation}
+that are in the order of fraction of fF ($C_{g}\simeq 1 fF$).
+
+%------------------------------------------------------------------------%
+\subsection{Leakage current}
+
+
+\centering
+\includegraphics[width=0.25\textwidth]{leak1.png}\\
+\raggedright
+
+
+Considering the band diagram of a mos; electrons tend to move form substrate to the gate and they can reach this goal in three diffent methods. Thermionic transport is the first (1) which is difficult at room temperature due to the high barrier created by the oxide. The other 2 processes are quantum-mechanical tunneling indipendently (2) or with the help of a difect in the $SiO_2$ (3),or trap-assisted tunneling.\\
+At RT with a low density of difect the most important contribution comes from the simple tunneling whose relevance grows as the oxide thikness is reduced.\\
+Refering to the k space we are interested only in the right part of the parabola (electrons form Si to oxide) the current density is given by each electron ($\frac{q}{L^3}v_x(k_x)$) the barrier transparancy ($T(E_x)$) the probability of a state to be filled ($f(k_x,k_y,k_z)$) and the spin degeneracy (2) so we get 
+\begin{equation}
+J_{s-ox}=\sum_{k_x>0}2 \frac{q}{L^3}v_x(k_x)T(E_x)f(k_x,k_y,k_z)
+\end{equation}
+that becomes 
+\begin{equation}
+J_{s-ox}=\frac{1}{(\frac{2\pi}{L})^3}\int_{0}^{+\infty}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\frac{q}{L^3}T(E_x)v_x(k_x)f(k_x,k_y,k_z)dk_xdk_ydk_z
+\end{equation}
+the integrals can be computed by considering $dk_{x,y,z}=\frac{m_{x,y,z}}{\hslash}dv_{x,y,z}$.\\
+The difference wrt the metal-semiconductor junction is that here we have to use the Fermi-Dirac distribution for f beacuse we are intrested in stats near $E_f$.\\
+We can obtain that the current density is 
+\begin{equation}
+J=\frac{q\sqrt{m_ym_z}kT}{2\pi^2\hslash^3}\int^{+\infty}_0T(E_x)\ln(1+e^{-(E_x-E_f)/kT})dx
+\end{equation}
+where $T(E_x)$ can be computed using the WKB approximation.\\
+In particular under Fouler-Nordheim tunneling 
+\begin{equation}
+J=AF_{ox}^2e^{-B/F_{ox}}
+\end{equation}
+Increasing the field in the oxide we enter in the direct tunneling regime being the boundary condition $\hat{F_{ox}}=\frac{q\xi_s}{t_{ox}}$. Typical values are arount J=1 A/$cm^2$.
+
+
+\centering
+\includegraphics[width=0.35\textwidth]{fndt.png}\\
+\raggedright
 
 
 %------------------------------------------------------------------------%
@@ -538,9 +681,6 @@ We don't have a strech of the characteristic when $E_f=E_{i,s}$
 \centering
 \includegraphics[width=0.7\textwidth]{interfacest.png}\\
 \raggedright
-
-\subsection{Parassitic resistance of $n^+$ regions}
-\subsection{Parassitic capacitances}
 
 
 %------------------------------------------------------------------------%
