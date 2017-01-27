@@ -78,53 +78,53 @@
 \contentsline {subsection}{\numberline {5.4.3}Saturation point}{58}{subsection.5.4.3}
 \contentsline {subsubsection}{Mathematical explanation of dicendent parabola}{58}{section*.7}
 \contentsline {subsubsection}{Physical explanation of dicendent parabola}{58}{section*.8}
-\contentsline {section}{\numberline {5.5}Over the saturation point}{58}{section.5.5}
-\contentsline {section}{\numberline {5.6}Transcaracteristic}{60}{section.5.6}
+\contentsline {section}{\numberline {5.5}Over the saturation point}{59}{section.5.5}
+\contentsline {section}{\numberline {5.6}Transcaracteristic}{61}{section.5.6}
 \contentsline {section}{\numberline {5.7}Small signal parameters}{61}{section.5.7}
 \contentsline {subsection}{\numberline {5.7.1}Transonductance $g_m$}{61}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Transconductrance $g_d$}{61}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}Capacitive terms}{62}{subsection.5.7.3}
-\contentsline {subsection}{\numberline {5.7.4}Frequency responce}{63}{subsection.5.7.4}
+\contentsline {subsection}{\numberline {5.7.2}Transconductrance $g_d$}{62}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Capacitive terms}{63}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Frequency responce}{64}{subsection.5.7.4}
 \contentsline {section}{\numberline {5.8}Body effect}{64}{section.5.8}
-\contentsline {section}{\numberline {5.9}Subtheshold regime}{65}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Current expression}{65}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{66}{subsection.5.9.2}
-\contentsline {subsubsection}{Improvment for MOS}{67}{section*.9}
-\contentsline {section}{\numberline {5.10}Temperature dependance}{67}{section.5.10}
-\contentsline {section}{\numberline {5.11}Effects of non idealities}{68}{section.5.11}
-\contentsline {subsection}{\numberline {5.11.1}Parasitic resistance of $n^+$ regions}{68}{subsection.5.11.1}
-\contentsline {subsection}{\numberline {5.11.2}Parasitic capacitance}{69}{subsection.5.11.2}
-\contentsline {subsection}{\numberline {5.11.3}Leakage current}{70}{subsection.5.11.3}
-\contentsline {subsection}{\numberline {5.11.4}Charge in the oxide}{71}{subsection.5.11.4}
-\contentsline {subsection}{\numberline {5.11.5}Interface states}{71}{subsection.5.11.5}
-\contentsline {section}{\numberline {5.12}Short channel devices}{72}{section.5.12}
-\contentsline {subsection}{\numberline {5.12.1}2D electrostatic in channel coming from $n^+$ regions}{72}{subsection.5.12.1}
-\contentsline {subsection}{\numberline {5.12.2}Velocity saturation}{74}{subsection.5.12.2}
-\contentsline {subsubsection}{Hot electrons}{76}{section*.10}
-\contentsline {section}{\numberline {5.13}Scaling rules}{77}{section.5.13}
-\contentsline {subsection}{\numberline {5.13.1}Constant field (Dennard)}{77}{subsection.5.13.1}
-\contentsline {subsubsection}{Device parameters changes}{77}{section*.11}
-\contentsline {subsubsection}{Circuit parameters changes}{78}{section*.12}
-\contentsline {subsection}{\numberline {5.13.2}Generalized scaling rules (Baccarjni)}{78}{subsection.5.13.2}
-\contentsline {subsubsection}{Parameters change}{78}{section*.13}
-\contentsline {section}{\numberline {5.14}Constraint on electrical parameters}{79}{section.5.14}
-\contentsline {section}{\numberline {5.15}Moore's Law and problems in the "too small"}{81}{section.5.15}
-\contentsline {chapter}{\numberline {6}BJT}{82}{chapter.6}
-\contentsline {section}{\numberline {6.1}Doping concentrations}{83}{section.6.1}
-\contentsline {section}{\numberline {6.2}Collector current}{83}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Prototype BJT current}{84}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}"Ideal" BJT}{85}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Real BJT}{85}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}Base current}{86}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Shallow emitter}{86}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Deep emitter}{87}{subsection.6.3.2}
-\contentsline {section}{\numberline {6.4}$\beta $ dependance on $I_C$}{87}{section.6.4}
-\contentsline {section}{\numberline {6.5}Kirk effect}{88}{section.6.5}
-\contentsline {section}{\numberline {6.6}Early effect}{89}{section.6.6}
-\contentsline {section}{\numberline {6.7}Small signal model}{90}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Trasconductance}{90}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Output resistance}{90}{subsection.6.7.2}
-\contentsline {subsection}{\numberline {6.7.3}Base resistance}{90}{subsection.6.7.3}
-\contentsline {subsection}{\numberline {6.7.4}Capacitive effects}{90}{subsection.6.7.4}
-\contentsline {section}{\numberline {6.8}Frequency responce}{91}{section.6.8}
-\contentsline {section}{\numberline {6.9}Considerations}{91}{section.6.9}
+\contentsline {section}{\numberline {5.9}Subtheshold regime}{66}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Current expression}{66}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{67}{subsection.5.9.2}
+\contentsline {subsubsection}{Improvment for MOS}{68}{section*.9}
+\contentsline {section}{\numberline {5.10}Temperature dependance}{68}{section.5.10}
+\contentsline {section}{\numberline {5.11}Effects of non idealities}{69}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Parasitic resistance of $n^+$ regions}{69}{subsection.5.11.1}
+\contentsline {subsection}{\numberline {5.11.2}Parasitic capacitance}{70}{subsection.5.11.2}
+\contentsline {subsection}{\numberline {5.11.3}Leakage current}{71}{subsection.5.11.3}
+\contentsline {subsection}{\numberline {5.11.4}Charge in the oxide}{72}{subsection.5.11.4}
+\contentsline {subsection}{\numberline {5.11.5}Interface states}{72}{subsection.5.11.5}
+\contentsline {section}{\numberline {5.12}Short channel devices}{73}{section.5.12}
+\contentsline {subsection}{\numberline {5.12.1}2D electrostatic in channel coming from $n^+$ regions}{73}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {5.12.2}Velocity saturation}{75}{subsection.5.12.2}
+\contentsline {subsubsection}{Hot electrons}{77}{section*.10}
+\contentsline {section}{\numberline {5.13}Scaling rules}{78}{section.5.13}
+\contentsline {subsection}{\numberline {5.13.1}Constant field (Dennard)}{78}{subsection.5.13.1}
+\contentsline {subsubsection}{Device parameters changes}{78}{section*.11}
+\contentsline {subsubsection}{Circuit parameters changes}{79}{section*.12}
+\contentsline {subsection}{\numberline {5.13.2}Generalized scaling rules (Baccarjni)}{79}{subsection.5.13.2}
+\contentsline {subsubsection}{Parameters change}{79}{section*.13}
+\contentsline {section}{\numberline {5.14}Constraint on electrical parameters}{80}{section.5.14}
+\contentsline {section}{\numberline {5.15}Moore's Law and problems in the "too small"}{82}{section.5.15}
+\contentsline {chapter}{\numberline {6}BJT}{83}{chapter.6}
+\contentsline {section}{\numberline {6.1}Doping concentrations}{84}{section.6.1}
+\contentsline {section}{\numberline {6.2}Collector current}{84}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Prototype BJT current}{85}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}"Ideal" BJT}{86}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Real BJT}{86}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}Base current}{87}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Shallow emitter}{87}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Deep emitter}{88}{subsection.6.3.2}
+\contentsline {section}{\numberline {6.4}$\beta $ dependance on $I_C$}{88}{section.6.4}
+\contentsline {section}{\numberline {6.5}Kirk effect}{89}{section.6.5}
+\contentsline {section}{\numberline {6.6}Early effect}{90}{section.6.6}
+\contentsline {section}{\numberline {6.7}Small signal model}{91}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Trasconductance}{91}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Output resistance}{91}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.3}Base resistance}{92}{subsection.6.7.3}
+\contentsline {subsection}{\numberline {6.7.4}Capacitive effects}{92}{subsection.6.7.4}
+\contentsline {section}{\numberline {6.8}Frequency responce}{92}{section.6.8}
+\contentsline {section}{\numberline {6.9}Considerations}{93}{section.6.9}
