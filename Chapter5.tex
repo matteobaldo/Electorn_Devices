@@ -84,13 +84,21 @@ Q_{dep}=-\sqrt{2\varepsilon_{si}qN_aV_s} \ \ \ \ \ \ \ \ Q_{inv}=Q_s-\sqrt{2\var
 \end{equation}
 In stong inversion the electrons concentration is no more negligible and at the drain $E_{fn}<E_{fp}$ and bands move downwards form source to drain as the quasi-Fermi level for electrons so there will be a drift flow of electrons and a relevan electric fiels in the y direction.
 
-{\bf add figure at page 72 up}
+
+\centering
+\includegraphics[width=0.35\textwidth]{a1.png}\\
+\raggedright
+
 
 %------------------------------------------------------------------------%
 \section{Current behaviour}
 %------------------------------------------------------------------------%
 
-{\bf add figure at page 72 middle}
+
+\centering
+\includegraphics[width=0.5\textwidth]{a2.png}\\
+\raggedright
+
 
 In order to arrive to $V_s(V_{gd},V_{ds})$ we have to use not only $V_{gs}+V_{fb}=V_{s}+V_{ox}=V_{s}-Q_s/C_{ox}$ but olso the continuity equation for electrons beacuse the substrate isn't at th.eq.\\
 We assume the device stationary and the GR processes negligible so $J_n$ is constant in the channel region. From the interface with the oxide to the substrate the current will decrease due to the decrease of electron concentration but form S-D J will remains constant beacuse the direction is parallel to the current flow so we can say that
@@ -175,7 +183,7 @@ we have a parabolic behaviour of the current. If $V_{ds}$ is small we can neglec
 \subsection{Saturation point}
 We can call the current and voltage of the vertex of the parabola saturation's one 
 \begin{equation}
-V_{ds}^{sat}=\frac{V_{gs}-v_t}{m}\ \ \ \ \ \ \ \ I_{ds}^{sat}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{gs}-V_t)^2}{m}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{ds}^{sat})^2}{m}
+V_{ds}^{sat}=\frac{V_{gs}-V_t}{m}\ \ \ \ \ \ \ \ I_{ds}^{sat}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{gs}-V_t)^2}{m}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{ds}^{sat})^2}{m}
 \end{equation}
 Increasing $V_{ds}$ we increase the electric field and decrease the charge (so we get a more resistive channel). At $V_{ds}^{sat}$ the charge at the drain is 
 \begin{equation}
@@ -555,7 +563,7 @@ as last term we have to consider that $n_i=\sqrt{N_cN_v}e^{-E_{gap}/2kT}$ is str
 \end{equation}
 Putting all this results in the first expression we get the final expression
 \begin{equation}
-\frac{dV}{dT}=-(2m-1)\frac{k}{q}\left(\ln(\frac{\sqrt{N_cN_v}}{N_a}+\frac{3}{2}\right) +\frac{m-1}{q}\frac{dE_{gap}}{dT}
+\frac{dV}{dT}=-(2m-1)\frac{k}{q}\left(\ln(\frac{\sqrt{N_cN_v}}{N_a})+\frac{3}{2}\right) +\frac{m-1}{q}\frac{dE_{gap}}{dT}
 \end{equation}
 That is negative $\simeq -1mV/K$.\\
 This phenomena have the effect to increase the offstate current.\\
@@ -841,7 +849,7 @@ Main idea is to avoid the 2D electrostatic regime keeping the ratio between the 
 In order to do this we need to scale all vertical and horizontal dimensions of the same factor as the voltages.\\ 
 For the doping concentrations we can say form the 2D Poisson equation in sub-threshold regime that 
 \begin{equation}
-\frac{\partial^2 \phi}{\partial x}+\frac{\partial^2 \phi}{\partial y}=\frac{qN_a}{\varepsilon_{si}}=-\frac{\partial F_x}{\partial x}-\frac{\partial F_y}{\partial y}
+\frac{\partial^2 \phi}{\partial x^2}+\frac{\partial^2 \phi}{\partial y^2}=\frac{qN_a}{\varepsilon_{si}}=-\frac{\partial F_x}{\partial x}-\frac{\partial F_y}{\partial y}
 \end{equation}
 and so scaling all dimension by a factor k we get that to have the same electrostatic conditions
 \begin{equation}
