@@ -40,11 +40,10 @@ Looking at the last band diagram we plotted the poisson equation it's very simil
 n=\frac{n_i^2}{N_a}e^{q\Delta \phi /kT}e^{-qV/kT}
 \end{equation}
 The last exponential takes into account the decrease of the quasi-Fermi level for electrons that is far from the conduction band wrt the MOS capacitor case.\\
-If $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$ [storng inverision?] we get $e^{-2|\phi_b|/kT}e^{-qV/kT}e^{qV_s/kT}=1$ and so
+If $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$  we get $e^{-2|\phi_b|/kT}e^{-qV/kT}e^{qV_s/kT}=1$ and so
 \begin{equation}
 -2|\phi_b|-V_s+V=0 \ \ \ \ V_s=2|\phi_b|+V
 \end{equation}
-{\bf check all up passage}.\\
 Repeating all calcualtion done for the expression we get is similar to the one with the mos capacitor
 \begin{equation}
 \left(\frac{d\Delta\phi}{dx}\right)^2=\frac{2kTN_a}{\varepsilon_{si}}[e^{-q\Delta\phi/kT}+\frac{q\Delta\phi}{kT}-1+\frac{n_i^2}{N_a^2}\left(e^{-qV/kT}(e^{q\Delta\phi/kT}-1)-\frac{q\Delta\phi}{kT}\right)]
@@ -373,7 +372,7 @@ With this two expressions we can derive the gate and the drain capacitance as
 C_g=-\frac{\partial Q_c}{\partial V_{gs}}|_{V_{ds}}=WLC_{ox}[1-\frac{m^2V_{ds}^2}{3(2(V_{gs}-V_t)-mV_{ds})^2}]
 \end{equation}
 \begin{equation}
-C_d=\frac{\partial Q_c}{\partial V_{ds}}|_{V_{gs}}=2/3W/LC_{ox}[1-\frac{(V_{gs}-V_{t})^2}{[2(V_{gs}-V_t)-mV_{ds}]^2}]
+C_d=\frac{\partial Q_c}{\partial V_{ds}}|_{V_{gs}}=2/3WLC_{ox}[1-\frac{(V_{gs}-V_{t})^2}{[2(V_{gs}-V_t)-mV_{ds}]^2}]
 \end{equation}
 With this parameter we can complete the small signal model of the MOS transistor\\
 
@@ -700,7 +699,7 @@ Depending at the charge given at a certain $\overline{V}$ we get different value
 %------------------------------------------------------------------------%
 \subsection{Interface states}
 We get the same consideration of the MOS-capacitor.\\
-Now the change of charge at the surface is modulating the slope of the sub-threshold slope. It's like having another capacitance in parallel with $C_dep$ so
+Now the change of charge at the surface is modulating the slope of the sub-threshold slope. It's like having another capacitance in parallel with $C_{dep}$ so
 \begin{equation}
 STS=\frac{kT}{q}\ln(10)\left(1+\frac{C_{dep}+C_{i,s}}{C_{ox}}\right)
 \end{equation}
