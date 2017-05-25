@@ -13,8 +13,8 @@ In our analysis we will consider the dialectric ideal (this means we have to sol
 \raggedright
 
 We start considering the 3 material isolated from each other under th.eq.\\
-We will refer $E_{f(m)}\simeq E_{c}^{Si}$. we have olso to introduce the vacuum level and so electron affinity for oxide and silicon, metal work function, and silicon work function. From this data we can say that the metal we need is Al in order to mantain $E_{f(m)}\simeq E_{c}^{Si}$.\\
-We olso underlined in red the potential barrier created by the oxide for holes and electrons.\\
+We will refer $E_{f(m)}\simeq E_{c}^{Si}$. we have also to introduce the vacuum level and so electron affinity for oxide and silicon, metal work function, and silicon work function. From this data we can say that the metal we need is Al in order to mantain $E_{f(m)}\simeq E_{c}^{Si}$.\\
+We also underlined in red the potential barrier created by the oxide for holes and electrons.\\
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.5\textwidth]{mos_theq.png}
@@ -86,7 +86,7 @@ If we continue to increase the voltage applied we will reach the strong inverson
 
 We have to solve the Poisson equation $\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon_{Si}}(p-n-N_a^-)$ only in the substrate.\\
 We define $\phi_B=E_f-E_i=[E_f=0]=-\frac{kT}{q}\ln(N_a/N_i)$ the electrostatic potential of the bulk far away from the interface and we take $E_f$ that is costant as the reference energy level 0.\\
-We introduce olso $\Delta \phi (x)=\phi(x)-\phi_B$  that is the change of the electrostatic potential wrt the bulk;$\Delta \phi (W_d)=0$ and $\Delta \phi (0)=V_s$.\\
+We introduce also $\Delta \phi (x)=\phi(x)-\phi_B$  that is the change of the electrostatic potential wrt the bulk;$\Delta \phi (W_d)=0$ and $\Delta \phi (0)=V_s$.\\
 \vspace{5mm}
 Now we have to write $p-n-N_a^-$ as function of $\phi(x)$.\\
 For electrons we can say that $n=n_ie^{(E_f-E_i)/kT}$ if we multiply and divide by q we get $n=n_ie^{q\phi(x)/kT}$ same for holes as $p=n_ie^{-q\phi(x)/kT}$. Electrons and holes in the bulk are $n_0=n_ie^{q\phi_b/kT}$ and $p_0=n_ie^{-q\phi_b/kT}$. From this 4 equation we can write that 
@@ -111,11 +111,11 @@ d(\frac{d\phi}{dx})=-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_
 \begin{equation}
 \frac{d\phi}{dx}d(\frac{d\phi}{dx})=-\frac{q}{\varepsilon_{Si}}(N_ae^{-q\Delta \phi/kt}-\frac{n_i^2}{N_a}e^{q\Delta \phi/kT}-N_a+\frac{n_i^2}{N_a})dx\frac{d\phi}{dx}
 \end{equation}
-Now we integrate one time this expression. The first member is like f(x)f'(x) so the result is $-1/2(\frac{d\phi}{dx})^2$. Integrating olso the second member and gathering the common terms the equation we get
+Now we integrate one time this expression. The first member is like f(x)f'(x) so the result is $-1/2(\frac{d\phi}{dx})^2$. Integrating also the second member and gathering the common terms the equation we get
 \begin{equation}
 (\frac{d\Delta \phi }{dx})^2=\frac{2kTN_a}{\varepsilon_{si}}\left(e^{-q\Delta \phi/kT}+\frac{q\Delta \phi}{kT}-1+\frac{n_i^2}{N_a^2}(e^{q\Delta \phi/kT}-\frac{q\Delta \phi}{kT}-1)\right)=F^2(x)
 \end{equation}
-For Gauss law $F_{sub}=F(0)=-\frac{Q_s}{\varepsilon_{si}}$ (and olso that $\Delta \phi (0)=V_s$ )from this relation and the previous equation we get
+For Gauss law $F_{sub}=F(0)=-\frac{Q_s}{\varepsilon_{si}}$ (and also that $\Delta \phi (0)=V_s$ )from this relation and the previous equation we get
 \begin{equation}
 Q_s=\pm\sqrt{2kTN_a\varepsilon_{si}}\left(e^{-qV_s/kT}+\frac{qV_s}{kT}-1+\frac{n_i^2}{N_a^2}(e^{qV_s/kT}-\frac{qV_s}{kT}-1)\right)^{1/2}
 \end{equation}
@@ -154,7 +154,7 @@ in the solution of the Poisson equation is the term that takes into account elec
 \subsection{Total charge in function of gate bias}
 %------------------------------------------------------------------------%
 We want $Q(V_g)$ ; to have that expression we need to remember that $V_g-V_{fb}=V_s+V_{ox}$ but we can write $V_{ox}=F_{ox}t_{ox}=\frac{\varepsilon_{Si}F_{Si}}{\varepsilon_{ox}}t_{ox}=-Q(V_s)/C_{ox}$ so $V_g-V_{fb}=V_s-\frac{Q_s}{C_{ox}}$ using this expression and $Q_s=Q_s(V_s)$ we can get what we want.\\
-We will plot olso the 2 graphs $V_s-V_g$ and $|Q_s|-V_g$.\\
+We will plot also the 2 graphs $V_s-V_g$ and $|Q_s|-V_g$.\\
 
 \centering
 \includegraphics[width=0.5\textwidth]{qvs.png}\\
@@ -197,7 +197,7 @@ remembering that $\frac{n_i^2}{N_a^2}e^{q2|\phi_b|/kT}=1$ we can say that $\frac
 \begin{equation}
 V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}e^{\frac{q(V_s-2|\phi_b|)}{2kT}}
 \end{equation}
-So we get $V_s$ and making a rought approx of $V_s\simeq 2|\phi_b|$ olso $Q_s$
+So we get $V_s$ and making a rought approx of $V_s\simeq 2|\phi_b|$ also $Q_s$
 \begin{equation}
 V_s=2|\phi_b|+\frac{2kT}{q}\ln \left(\frac{C_{ox}(V_g-V_{fb}-V_s)}{\sqrt{2\varepsilon_{si}kTN_a}} \right) \ \ \ \ \ \ Q_s=-C_{ox}(V_g-V_{fb}-2|\phi_b|)
 \end{equation}
@@ -314,7 +314,7 @@ Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards 
 For signals with high frequency ($f>1Hz$) we cannot change electron concentration so we can only add or remove holes at the substrate making the depletion layer bigger or smaller.\\ 
 The graph of $C_g$ remains constant form the threshold voltage on.\\
 The total capacitnace depends on the frequency of the small signal we are appling.\\
-Here the modulation of $\delta V_g$ can't modulate the electron concentration at the surface of silicon. There is a modulation of the depletion layer so $\delta V_s$ but for the continuity of the electric field olso $\delta V_{ox}$ have to change in a comparable manner. With the downwards band banding we have to keep constant the distance with $E_{fn}$ with the conduction band so our substrate is no longer at th.eq. This triggers GR processes that tends to move the system back in the th.eq of low freqeuncy.
+Here the modulation of $\delta V_g$ can't modulate the electron concentration at the surface of silicon. There is a modulation of the depletion layer so $\delta V_s$ but for the continuity of the electric field also $\delta V_{ox}$ have to change in a comparable manner. With the downwards band banding we have to keep constant the distance with $E_{fn}$ with the conduction band so our substrate is no longer at th.eq. This triggers GR processes that tends to move the system back in the th.eq of low freqeuncy.
 $E_{fn}$ is constant over the depletion layer and merges with $E_{fp}$ in the quasi neutral region of the device. We have a flow of electrons from the substrate to the surface similar to the pn-j reverse current.\\
 
 %------------------------------------------------------------------------%
@@ -457,7 +457,7 @@ Let's assume a MOS capacitor at the flat band condition with a negative charge s
 \raggedright
 
 The negative charge decreases the potential so bands upwards the bands. We have a linear banding beacuse the charge is concentrated in one point.\\
-We have a layer of hole at the the substrate and olso a positive charge on the gate (electrostatic induction tends to nihil the charge). The important fact is that $V_s\neq0$ with the flat-band voltage.\\
+We have a layer of hole at the the substrate and also a positive charge on the gate (electrostatic induction tends to nihil the charge). The important fact is that $V_s\neq0$ with the flat-band voltage.\\
 To recover the flat band state we have to decrease $E_{f(m)}$ so increase the gate voltage; the new flat band voltage will be $V_{fb}'=V_{fb}+\Delta V_g$. With Gauss law we get
 \begin{equation}
 \Delta V_g=-\frac{Q_{ox}}{\varepsilon_{ox}}x
@@ -519,7 +519,7 @@ A better process is : p-substrate, deposit the oxide, deposit the gate, etching 
 
 To dope we have to do a heat threatment at 800C so this process does not works with metals (melting point issues) but works with polysilicon.\\
 Olso another improvmen comes from the threshold voltage $V_t=V_{fb}+2|\phi_b|+|Q_{dep}^{max}|/C_{ox}$ that with a poly-p-doped gate is $\simeq 0$ but with a n-doped-poly is reduced to $V_t=|Q_{dep}^{max}|/C_{ox}$ beacuse $V_{fb}\simeq -1V$ in this case and $2|\phi_b|\simeq 1V$.\\
-The problem with this gate material is that we have to consider the charge as for unit volume not as untit area (we don't have that much electrons as in a metal) so doing we get a depletion layer olso in the gate of $W_d=\sqrt{\frac{2\varepsilon_{si}V_p}{qN_d^g}}$ and so an additional voltage drop $V_p$ and an additional capacitance.\\
+The problem with this gate material is that we have to consider the charge as for unit volume not as untit area (we don't have that much electrons as in a metal) so doing we get a depletion layer also in the gate of $W_d=\sqrt{\frac{2\varepsilon_{si}V_p}{qN_d^g}}$ and so an additional voltage drop $V_p$ and an additional capacitance.\\
 
 \centering
 \includegraphics[width=0.25\textwidth]{polygate.png}\\

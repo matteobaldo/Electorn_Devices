@@ -99,7 +99,7 @@ In stong inversion the electrons concentration is no more negligible and at the 
 \raggedright
 
 
-In order to arrive to $V_s(V_{gd},V_{ds})$ we have to use not only $V_{gs}+V_{fb}=V_{s}+V_{ox}=V_{s}-Q_s/C_{ox}$ but olso the continuity equation for electrons beacuse the substrate isn't at th.eq.\\
+In order to arrive to $V_s(V_{gd},V_{ds})$ we have to use not only $V_{gs}+V_{fb}=V_{s}+V_{ox}=V_{s}-Q_s/C_{ox}$ but also the continuity equation for electrons beacuse the substrate isn't at th.eq.\\
 We assume the device stationary and the GR processes negligible so $J_n$ is constant in the channel region. From the interface with the oxide to the substrate the current will decrease due to the decrease of electron concentration but form S-D J will remains constant beacuse the direction is parallel to the current flow so we can say that
 \begin{equation}
 I_{ds}=-W\int^{t_{inv}}_0 J_n(x)dx
@@ -135,7 +135,7 @@ we will not solve this equation but we will consider some different regimes
 %------------------------------------------------------------------------%
 \subsection{Ohmic regime $V_{ds}<<2|\phi_b|$}
 
-If $V_{ds}$ is small olso V will be small so we can neglect that contribution 
+If $V_{ds}$ is small also V will be small so we can neglect that contribution 
 \begin{equation}
 Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-\frac{Q_{dep}^{max}}{C_{ox}})\simeq -C_{ox}(V_{gs}-V_t)
 \end{equation}
@@ -222,7 +222,7 @@ Let's look at $V_s(y=L)$ at the drain side as $V_{ds}$ increases; if $V_{ds}$ is
 \raggedright
 
 
-We consider the $V_s-V_{ds}$ plot at constant $V_{gs}$ by increasing $V_{ds}$ we have $V_s$ closer to the $V_t'$ (threshold voltage olso at the drain) and the onset of weak inversion. When we reach the intersection $V_s$ does not change any longer and the drain looses control of the electrostatics; the channel and the elctric fields in the y direction does not change anymore so we reach the maximum band banding.\\ $Q_{inv}=0$ does not means really zero but negligible electron concentration (we are in weak inversion).\\
+We consider the $V_s-V_{ds}$ plot at constant $V_{gs}$ by increasing $V_{ds}$ we have $V_s$ closer to the $V_t'$ (threshold voltage also at the drain) and the onset of weak inversion. When we reach the intersection $V_s$ does not change any longer and the drain looses control of the electrostatics; the channel and the elctric fields in the y direction does not change anymore so we reach the maximum band banding.\\ $Q_{inv}=0$ does not means really zero but negligible electron concentration (we are in weak inversion).\\
 The parameter $m=1+\frac{C_{dep}}{C_{ox}}$ involves doping concentration and oxide thikness and express how much of $V_g$ drops over the substrate; for a good mos m=1,1-1,4.\\
 
 
@@ -330,7 +330,7 @@ refering to a long channel device $\Delta L$ is very small compared to L so we c
 \begin{equation}
 I_{ds}=I_{ds}^{sat}(1+\frac{\Delta L}{L})=I_{ds}^{sat}(1+\frac{V_{ds}-V_{ds}^{sat}}{LF_p})
 \end{equation}
-we get a linear increase of the current increasing $V_{ds}$ and olso a larger slope ot the rect with higher currents.\\
+we get a linear increase of the current increasing $V_{ds}$ and also a larger slope ot the rect with higher currents.\\
 So the real output resistance is 
 \begin{equation}
 g_d=\left(\frac{\partial I_{ds}}{\partial V_{ds}}\right)^{-1}_{V_{gs}}=\frac{LF_p}{I_{ds}^{sat}}
@@ -418,7 +418,7 @@ In this case we get that $V_{gs}-V_{bs}-V_{fb}=V_s-Q_s/C_{ox}$ from this we get 
 \begin{equation}
 Q_{inv}=Q_s-Q_{dep}=-C_{ox}(V_{gs}-V_{bs}-V_{fb}-V_s)+\sqrt{2\varepsilon_{si}qN_aV_s}
 \end{equation}
-In ohmic regime $V_s\simeq 2|\phi_b|-V_{bs}$ so we get a change of the band diagram where olso at the source $E_{fn}$ is under $E_{fp}$ \\
+In ohmic regime $V_s\simeq 2|\phi_b|-V_{bs}$ so we get a change of the band diagram where also at the source $E_{fn}$ is under $E_{fp}$ \\
 
 \centering
 \includegraphics[width=0.35\textwidth]{body2.png}\\
@@ -514,7 +514,7 @@ STS=\left(\frac{\partial \log(I_{ds})}{\partial V_{gs}}\right)^{-1}=\frac{kT}{q}
 At room temperature STS=(60 mV/dec)m.\\ 
 Form $V_t$ on the diffusion contribution to the current saturates and the drift becomes dominant.\\
 If we move to low current we break the assumption of flat band condition $V_s$ becomes indipendent on $V_{gs}$ (near and below the FB condition) so our expression is no more valid and the current will saturate to a lower value.\\
-At low current we have to take also in account the GR processes in the channel. We have a net generation process beacuse $E_{fn}<E_{fp}$ and olso form the reversed bias junctions form drain-bulk. Generated electrons will assist the current flow. Tipically before breaking the assumption of flat-band the current saturate due to the G process.\\
+At low current we have to take also in account the GR processes in the channel. We have a net generation process beacuse $E_{fn}<E_{fp}$ and also form the reversed bias junctions form drain-bulk. Generated electrons will assist the current flow. Tipically before breaking the assumption of flat-band the current saturate due to the G process.\\
 
 \centering
 \includegraphics[width=0.4\textwidth]{noisefloor.png}\\
@@ -522,8 +522,8 @@ At low current we have to take also in account the GR processes in the channel. 
 
 %------------------------------------------------------------------------%
 \subsubsection{Improvment for MOS}
-If we reduce $t_{ox}$ the gate will have better control of the substrate and better $STS=\frac{kT}{q}\ln(10)(1+(\varepsilon_{si}t_{ox})/(\varepsilon_{ox}W_d^{max}))$ and olso lower $V_t\propto|Q_{dep}^{max}|/(\varepsilon_{si}/t_{ox})$.\\
-It's olso good to decrease $N_a$ to better deplete the substrate getting better STS and lower $V_t$
+If we reduce $t_{ox}$ the gate will have better control of the substrate and better $STS=\frac{kT}{q}\ln(10)(1+(\varepsilon_{si}t_{ox})/(\varepsilon_{ox}W_d^{max}))$ and also lower $V_t\propto|Q_{dep}^{max}|/(\varepsilon_{si}/t_{ox})$.\\
+It's also good to decrease $N_a$ to better deplete the substrate getting better STS and lower $V_t$
 
 
 %------------------------------------------------------------------------%
@@ -536,7 +536,7 @@ In sub-threshold regime the STS with high temperatures becomes higher and so we 
 \includegraphics[width=0.35\textwidth]{tchange.png}\\
 \raggedright
 
-We have a change olso of the $V_t$; $\phi_b$ change, with T also $E_f$ change ans so the flat band voltage and also $E_{f(m)}$ change depending on what metal we are using.\\
+We have a change also of the $V_t$; $\phi_b$ change, with T also $E_f$ change ans so the flat band voltage and also $E_{f(m)}$ change depending on what metal we are using.\\
 
 
 \centering
@@ -749,7 +749,7 @@ If now we increase $V_{ds}$ in short channel we change the electrostatic and the
 \raggedright
 
 We are further reducing the $V_t$ of the transistor; this phenomena is called drain induced barrier lowering or DIBL. The effect is a decrease of the output resistance in the saturation regime.\\
-In the transcharacteristic changing $V_{ds}$ we change $V_t$ increasing the on-state current exponentially and we have olso a worstening of the STS that has a flatter dependance beacuse increasing $V_{ds}$ we decrease the barrier and $F_x$ becomes negligible wrt $F_y$.\\
+In the transcharacteristic changing $V_{ds}$ we change $V_t$ increasing the on-state current exponentially and we have also a worstening of the STS that has a flatter dependance beacuse increasing $V_{ds}$ we decrease the barrier and $F_x$ becomes negligible wrt $F_y$.\\
 
 \centering
 \includegraphics[width=0.5\textwidth]{shorttc.png}\\
@@ -767,7 +767,7 @@ To have a $\Delta V_t<100mV$ we need to have
 L>2(W_d^{max}+3t_{ox})
 \end{equation}
 if this condition is respected we have a long channel device if not a short channel. So we don't have an absolute value but a dependance con $t_{ox},N_a$ to separate long and short channel mosfets.\\
-Reducing $t_{ox}$ we get a better control of the gate on the substate. With higher doping concentration the transitions regions are smaller but we get olso a worst STS.\\
+Reducing $t_{ox}$ we get a better control of the gate on the substate. With higher doping concentration the transitions regions are smaller but we get also a worst STS.\\
 
 %------------------------------------------------------------------------%
 \subsection{Velocity saturation}
@@ -783,7 +783,7 @@ To express this dependence we can use the following formula
 v_d=\mu_{eff}\frac{F}{[1+\left(\frac{F}{F_{sat}}\right)^n]^{1/n}}
 \end{equation}
 where n is a coefficient equal to 1 for holes in a p-mos, 2 for electrons in n-mos.\\ 
-The term $\mu_{eff}$ it's an effective mobility and depends on $F_x$; since the transport of electrons is very close to the surface there is a strong interaction with the interface Si-Oxide that causes surface-scattering events. The mobility in that region is much lower than that in the bulk and depends a lot on the vetical fields. We introduce olso an effective vertical electric field as $F_{eff}=\frac{Q_{dep}+0.5Q_{inv}}{\varepsilon_{si}}$ that is related to the effective mobility as in the graph.\\
+The term $\mu_{eff}$ it's an effective mobility and depends on $F_x$; since the transport of electrons is very close to the surface there is a strong interaction with the interface Si-Oxide that causes surface-scattering events. The mobility in that region is much lower than that in the bulk and depends a lot on the vetical fields. We introduce also an effective vertical electric field as $F_{eff}=\frac{Q_{dep}+0.5Q_{inv}}{\varepsilon_{si}}$ that is related to the effective mobility as in the graph.\\
 
 \centering
 \includegraphics[width=0.35\textwidth]{muefff.png}\\
@@ -812,7 +812,7 @@ This relation has got a maximum at
 \begin{equation}
 V_{ds}^{sat}=\frac{2(V_{gs}-V_t)/m}{1+\sqrt{1+\frac{2(V_{gs}-V_t)}{F_{sat}mL}}}
 \end{equation}
-so we are reaching the saturation regime before than a long channel device and we get a higer slope of the rect after that point (Early's rect, this is olso caused by the DIBLE). With a short L we get lower saturation voltage and saturation current.\\
+so we are reaching the saturation regime before than a long channel device and we get a higer slope of the rect after that point (Early's rect, this is also caused by the DIBLE). With a short L we get lower saturation voltage and saturation current.\\
 
 \centering
 \includegraphics[width=0.35\textwidth]{ls.png}\\ %93up
@@ -833,7 +833,7 @@ The saturation velocity $v_{sat}$ is the maximum average velocity in a drift-dif
 \raggedright
 
 Electrons that before scattering reaches a lot of kinetics energy (2-3eV) are called hot electrons. This electrons are so full of energy that can create impact ionization with atoms and so GR processes.\\
-They can olso inteact with silicon atoms at the surface breaking bonds and so creating some interface states. They are able to overcome the barrier of the oxide and reach the gate or remain trapped in the oxide ( they are used for floating gates charge processes).\\
+They can also inteact with silicon atoms at the surface breaking bonds and so creating some interface states. They are able to overcome the barrier of the oxide and reach the gate or remain trapped in the oxide ( they are used for floating gates charge processes).\\
 
 
 
@@ -963,10 +963,10 @@ We can study this 3 constraint on $t_{ox}$ in a graph $t_{ox}-W_d^{max}$\\
 \includegraphics[width=0.35\textwidth]{trianglemos.png}\\
 \raggedright
 
-To satisfy the 3 requirements we have to stay in the triangle area and so we have a minimum and a maximum value for $t_{ox}$. In particular $t_{ox}^{max}\simeq \frac{L}{20}$; scaling L we have olso to scale the oxide thickness increasing the leakage current through the gate.\\
+To satisfy the 3 requirements we have to stay in the triangle area and so we have a minimum and a maximum value for $t_{ox}$. In particular $t_{ox}^{max}\simeq \frac{L}{20}$; scaling L we have also to scale the oxide thickness increasing the leakage current through the gate.\\
 
 \vspace{5mm}
-Of course in the graph $t_{ox}^{max}>t_{ox}^{min}$ that means $V_{dd}<\frac{LF_{ox}^{max}}{20}$ but reducing the supply voltage we have olso to reduce $V_t$ and doing so we increase the off-state current and power dissipation
+Of course in the graph $t_{ox}^{max}>t_{ox}^{min}$ that means $V_{dd}<\frac{LF_{ox}^{max}}{20}$ but reducing the supply voltage we have also to reduce $V_t$ and doing so we increase the off-state current and power dissipation
 From a requirement on off-power dissipation we can get the $I_{off}=I_{ds}^{V_{ds}=V_{dd} \ V_{gs}=0}$ and from sub-th current get the $V_t$ we want. We have to take the worst case so the one at high temperature and then come back to the RT. Olso we can't increase too much $V_t$ or the on-state current will be too low. Typical requirement is to have $V_t \le \frac{V_{dd}}{4}$\\
 
 These constraint are why we came to "strange" structure like the finfet in figue \\

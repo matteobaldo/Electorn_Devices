@@ -13,7 +13,7 @@ The main idea is to forward bias the EB-j and reverse bias the BC-j. Foward bias
 We have a large flow of electrons throght a reverse biased junction (BC) beacuse the supply comes from the EB-j and not from GR processes. In the collector we have high resistivity due to low doping concentrations so we have to put the sub-collector to make a contact.\\
 \vspace{5mm}
 This device has a significant flow of both electrons and holes so it's a bipolar device (intrinsic flow of holes from base to emitter).\\
-We can minimize the base current by reducing the width of the base and olso making the emitter more doped wrt the base.\\
+We can minimize the base current by reducing the width of the base and also making the emitter more doped wrt the base.\\
 \vspace{5mm}
 If the BC-j was direct biased we will have an additional component to the base current that is something we want to avoid.\\
 
@@ -32,7 +32,7 @@ We can focus our analysis on the quasi-neutral p region that is the bottom-neck 
 \includegraphics[width=0.35\textwidth]{bjt3.png}\\
 \raggedright
 
-We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration. Doping concentration is not constant so we have a band banding like in figure so a F due to non constant doping concentrations. This condition can be reached olso with high level of injection.\\
+We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration. Doping concentration is not constant so we have a band banding like in figure so a F due to non constant doping concentrations. This condition can be reached also with high level of injection.\\
 Considering hole concentration $p=n_ie^{\frac{E_i-E_{fp}}{kT}}$ we get $E_i=E_{fp}+kT\ln(p/n_i)$. We want this parameter beacuse it's releted to the potential and so to the electric field
 \begin{equation}
 F=-\frac{d\phi}{dx}=\frac{1}{q}\frac{dE_{i}}{dx}=\frac{1}{q}\frac{dE_{fp}}{dx}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
@@ -227,7 +227,7 @@ The area of the triangle of F profile has to be constant and proportional at $\D
 \raggedright
 
 All this results are based on the depletion approximation but in this case we have the EB-j that forces a large (and indipendent on $V_{BC}$) flow of electrons.\\
-Electrons move by drift (we are in a reverse bias junction) and we can suppose they move at the saturation velocity so $J_n=qnv_{sat}$ form which we can write that $n=J_n/qv_{sat}$; if $J_n$ increase olso n increase until it's comparabple with $N_d^C$ and in this case the depletion approximation is no more valid.\\
+Electrons move by drift (we are in a reverse bias junction) and we can suppose they move at the saturation velocity so $J_n=qnv_{sat}$ form which we can write that $n=J_n/qv_{sat}$; if $J_n$ increase also n increase until it's comparabple with $N_d^C$ and in this case the depletion approximation is no more valid.\\
 The slope of the second part of F becomes from $\frac{qN_d^C}{\varepsilon_{si}}$ to $\frac{q(N_d^C-n)}{\varepsilon_{si}}$ we are reducing the slope but the area has to remain constant so we decrease also the elcetric field.\\
 
 \centering
@@ -380,7 +380,7 @@ At too high current we enter in high current regime triggering base widening and
 \section{Considerations}
 %------------------------------------------------------------------------%
 
-If we want to increase $I_C$ we have to increase $N_d^C$ to avoid Kirk and work at higher frequency but to not worst the Early effect we have to increase olso $N_d^B$ but at this point olso $N_d^E$ to not decrease $\beta$.\\
+If we want to increase $I_C$ we have to increase $N_d^C$ to avoid Kirk and work at higher frequency but to not worst the Early effect we have to increase also $N_d^B$ but at this point also $N_d^E$ to not decrease $\beta$.\\
 \vspace{5mm}
 We want low variability of $\beta$ so a deep emitter with the consequents strange process technology as in figure.\\
 
@@ -393,7 +393,7 @@ With this technology we can arrive at $f_t\simeq 100GHz$.\\
 
 \vspace{5mm}
 With C-mos technology we have to trade the maximum gain with high frequency regimes but in bjt technology no; this is why bjt's are still used for analog circuits.\\
-In a simple amplifier with a BJT the maximum gain is $G_{max}=g_m r_0=V_a/(\frac{kT}{q})\simeq 1000$ that is indipendent on the working current. In a MOS amplifier we have $G_{max}=V_a/\left(\frac{V_{gs}-V_t}{m}\right)\simeq100$ that is lower but we can olso write that as 
+In a simple amplifier with a BJT the maximum gain is $G_{max}=g_m r_0=V_a/(\frac{kT}{q})\simeq 1000$ that is indipendent on the working current. In a MOS amplifier we have $G_{max}=V_a/\left(\frac{V_{gs}-V_t}{m}\right)\simeq100$ that is lower but we can also write that as 
 \begin{equation}
 G_{max}=\sqrt{\mu_nC_{ox}WL2/m}\frac{F_P}{\sqrt{I_{ds}^{sat}}}
 \end{equation}
