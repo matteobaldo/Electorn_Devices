@@ -46,7 +46,7 @@ Making thefirst derivative of the equation by dE we can obtain finally the densi
 \begin{equation}
 g_c(E)=\frac{4\pi}{h^3}\sqrt{2m_xm_ym_z}\sqrt{E-E_c}\cdot 2 \cdot deg
 \end{equation}
-where the last 2 terms are a corrective coefficients for the spin and the degeneration of the material we consider (for silicon 6).\\
+where the last 2 terms are a corrective coefficients for the spin and the degeneration of the material we consider (for silicon deg=6).\\
 We can say how many states are occupied only in a very specific case of thermodinamical equilibrium\footnote{In thermodynamic equilibrium there are no net macroscopic flows of matter or of energy, either within a system or between systems. In a system in its own state of internal thermodynamic equilibrium, no macroscopic change occurs.}. 
 If this condition is satisfacted we can use the Fermi-Dirac statistic
 \begin{equation}
@@ -57,7 +57,7 @@ That can be approximated with the Maxwell-Bolzmann statistic if $E-E_f>>kT$
 \begin{equation}
 f(E)\simeq e^{-\frac{E-E_f}{kT}}
 \end{equation}
-This is a good approximation if we are at least well above $E_f$ at least a few kT.\\
+This is a good approximation if we are well above $E_f$ (at least a few kT).\\
 Concentretion of electrons in CB is (under the condition of thermodinamic equilibrium)
 \begin{equation}
 n=\int^{+\infty}_{E_c} g_c(E)f(E)dE
@@ -109,7 +109,7 @@ Putting 1.18 into p expression we obtain
 \begin{equation}
 p=n=\sqrt{N_cN_v}e^{-\frac{E_{gap}}{2kT}}=n_i
 \end{equation}
-$n_i$ is the intrinsic carrier concentration that has a strong dependance with T as it is involved in $N_c N_v$ and in $E_{gap}$.\\
+$n_i$ is the intrinsic carrier concentration that has a strong dependance with T as it is involved in $N_c,N_v \propto (kT)^{3/2}$ and in $E_{gap}$.\\
 From 1.11 by adding and subtracting $E_i$ and dividing the exponential in 2 parts we can write 
 \begin{equation}
 n=n_ie^{(E_f-E_i)/kT}\ \ \ \ p=n_ie^{(E_i-E_f)/kT}
@@ -128,7 +128,7 @@ the factor 1/2 it's a spin correction coefficient. At RT $E_d-E_f>>kT$ and p con
 \begin{equation}
 E_c-E_f=kT\ln (N_c/N_d)
 \end{equation}
-Moving $E_f$ upwards some hypothesis falls: when $E_f$ reachs $E_d$ the complete ionization theory is not true anymore and from there further the M-B approximation is no longer valid.\\
+Moving $E_f$ upwards some hypothesis falls (we supposed $E_f$ to be under $E_d$) : when $E_f$ reachs $E_d$ the complete ionization theory is not true anymore and from there further the M-B approximation is no longer valid.\\
 \newline
 %------------------------------------------------------------------------%
 {\bf Fermi level dependence on temperature in doped semiconductors}\\ 
@@ -159,14 +159,14 @@ n=N_c 2/3 \frac{2}{\sqrt{\pi}}\left(\frac{E_f-E_c}{kT}\right)^{3/2}=N_c 2/3 \fra
 In the graph above we can notice the difference between F-D and M-B distribution over $\eta$.\\
 %------------------------------------------------------------------------%
 \section{Current transport}
-There are 2 most important mechanisms that generates current: drift and diffusion process.\\
+There are 2 most important mechanisms that generates current: drift and diffusion.\\
 Drift current is caused by the application of a electric field F; electrons are not only influenced by F but also from scattering events so we can define a drift velocity (that is an average velocity) as 
 \begin{equation}
 v_d=\mu_n F
 \end{equation}
 So drift velocity is proportional to F with a constant $\mu_n$ called mobility that depends on doping concentration, temperature and dimensionality of the system taking in account all scattering events.It's important to note that in a bulk of doped Si if we are near the surface the mobility is much lower than the inside (dimensionality).\\
 Mobility has a drop for Si around doping concentration of $\simeq 10^6 cm^{-3}$ beacuse at that level scattering with impurities becomes dominant in respect of thermal scattering.\\
-Increasing too much F we arrive at the phenomena of velocity saturation ($\simeq 10^7 cm/s$) caused by scattering with high energetic optical phonons.\\
+Increasing too much F we encounter the phenomena of velocity saturation ($v_{sat}\simeq 10^7 cm/s$) caused by scattering with high energetic optical phonons.\\
 The density current caused by drift process is 
 \begin{equation}
 J=(qn\mu_n + qp\mu_p)F=\sigma F=F/\rho
@@ -233,7 +233,7 @@ Band banding is the phenomena caused by applying an electric field on a material
 \begin{equation}
 n=n_ie^{q\frac{\phi(x)-\phi_f}{kT}} \ \ \ p=n_ie^{q\frac{\phi_f-\phi(x)}{kT}}
 \end{equation}
-This band banding is tipically caused by the change of doping concentration over the space.With a smooth change of $N_d$ in a material we can assume that $n=N_d$.\\
+This band banding is also caused by the change of doping concentration over the space.With a smooth change of $N_d$ in a material we can assume that $n=N_d$.\\
 Let's assume a step-like function in doping concentration in this case we cannot consider $n=N_d$ over the space beacuse this assumption will lead us to an infinite electric field.\\ 
 Using Poisson equation and neglecting holes and ionized acceptors we can say that $N_d(x)=\hat{N_d}+\delta N_d(x)$ corrisponding to $\phi(x)=\hat{\phi}+\delta \phi(x)$ and assuming $\delta N_d<<N_d $ we can write
 \begin{equation}
@@ -267,7 +267,7 @@ pn=n_i^2e^{\frac{E_{fn}-E_{fp}}{kT}}
 \end{equation}
 Now let's try to analise the total current density of electrons. The formula has a strong dependance from the electrostatic potential (from F and n) so
 \begin{equation}
-J_n=-qn\mu_nF+qD_n\frac{dn}{dx}=-qn\mu_n\frac{d\phi}{dx}+qD_n\frac{d}{dx}\left(n_ie^{q\frac{\phi-\phi_f}{kT}}\right)=-qn\mu_n\frac{d\phi_f}{dx}
+J_n=qn\mu_nF+qD_n\frac{dn}{dx}=-qn\mu_n\frac{d\phi}{dx}+qD_n\frac{d}{dx}\left(n_ie^{q\frac{\phi-\phi_f}{kT}}\right)=-qn\mu_n\frac{d\phi_f}{dx}
 \end{equation} 
 But since the Fermi potential is costant the result is 0 and it's obvius beacuse we assume th.eq. with formula (1.20).
 If we substitute the (1.39) in n we obtain
@@ -295,7 +295,7 @@ where G and R are generation and ricombination processes per unit time per unit 
 that are the continuity equation for electrons and hole current.\\
 In a stationary system nothing change with time so subtractring the 2 equation we have 
 \begin{equation}
-\frac{1}{q}\frac{\partial(J_n+J_p)}{\partial x}=0
+\frac{\partial(J_n+J_p)}{\partial x}=0
 \end{equation}
 so the sum of the 2 contributions of current from e and h stay costant. If we neglect G and R the 2 contrbutes are costant separatly.\\
 G and R process restabilize equilibrium of a system if we perturb the minority carrier concentration. If we disturb majority carrier the system returns in equilibrium with a very short time costant.
@@ -321,7 +321,8 @@ solving this differential equation we have a solution that has an exponential de
 \vspace{5mm}
 {\bf Minority carrier perturbation}\\
 The phenomena described for majority carrier concentration isn't valid for minority carrier. Considering a n-doped material like before the $\rho$ in equation 1.48 is very high (we are considering holes now) so the real result of the field is that attracts a concentration $\Delta n$ over $\Delta p$ creating a quasi-neutral region where G and R slowly decrease the 2 extra concentration.\\
-In the processes of G and R in Si electrons cannot move thought the bandgap from CB to VB they need another particle to respect the conservation of momentum.\\
+In the processes of G and R in Si electrons cannot move 
+through the bandgap from CB to VB they need another particle to respect the conservation of momentum.\\
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.4\textwidth]{srhp1.png}
@@ -380,7 +381,7 @@ Maximum G is when p=n=0 so $G=-n_i/2\tau_0$.\\
 
 Under quasi-neutral condition $\Delta n +n_0=n$ and $\Delta p +p_0=p$ assuming low injection level ($\Delta n<<p_0+n_0$) we can neglect in the eq of R all the terms with "$\Delta$" so we obtain
 \begin{equation}
-R=\frac{\Delta n}{\tau_n}=\frac{(p_0+n_0)\Delta n}{\tau\left[p_0+n_0+2n_iCosh(\frac{E_T-E_i}{kT})\right]}=\frac{\Delta n}{\tau_n}
+R=\frac{(p_0+n_0)\Delta n}{\tau\left[p_0+n_0+2n_iCosh(\frac{E_T-E_i}{kT})\right]}=\frac{\Delta n}{\tau_n}
 \end{equation}
 if we suppose $E_T-E_i=0$ $\tau_n\simeq \tau_0=1/(N_Tv_{th}\delta)$\\
 So the continuity equation for electrons becomes \footnote{Minus sign in the expression comes form G-R we are considering -R}
