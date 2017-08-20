@@ -2,7 +2,7 @@
 \chapter{Diodes}
 %------------------------------------------------------------------------%
 Diodes or pn junction are basically 2 zones of opposite doping polarity attached toghether.\\
-To study pn junctions we have to make some simplyfing assumptions : we consider 1D materials with constant doping concentration and a step-like change of doping.\\
+To study pn junctions we have to make some simplyfing assumptions : we consider 1D materials with constant doping concentration and a step-like change of doping from p to n.\\
 %------------------------------------------------------------------------%
 \section{Built-in potential}
 %------------------------------------------------------------------------%
@@ -119,13 +119,13 @@ Applying a external voltage like in figure we are reducing the total voltage dro
 \includegraphics[width=0.35\textwidth]{pn8.png}\\
 \raggedright
 
-In this case $V<0$ electrons and holes move for drift the total voltae drop is will be greater than the built in. The flow of current is given by minority carrier so small I.\\
+In this case $V<0$ electrons and holes move for drift the total voltage drop will be greater than the built in. The flow of current is given by minority carrier so small I.\\
 
 %------------------------------------------------------------------------%
 \section{The V-I characteristic of pn }
 %------------------------------------------------------------------------%
 First we want to investigate on foward bias electrostatic but we have to make some other simplyfing assumption: the contacts of our junction are at th.eq. and looking to the n region moving closer to the contact (from the interface) we will enter in a region where electrons are majority carrier. Beacuse we are injecting holes in that region we will have $p=p_{n0}+\Delta p$ so a region of quasi-equilibrium.\\
-If we assume stationarity and that G and R process are negligible and so the $J_n=n\mu_n \frac{dE_{fn}}{dx}=cost$ so beacuse n isn't costant all over the space (space of all the diod first n minority than majority) $\frac{dE_{fn}}{dx}$ will change over the space.
+If we assume stationarity and that G and R process are negligible and so the $J_n=-n\mu_n \frac{dE_{fn}}{dx}=cost$ so beacuse n isn't costant all over the space (space of all the diod first n minority than majority) $\frac{dE_{fn}}{dx}$ will change over the space.
 The final graph is this 
 
 \centering
@@ -147,7 +147,7 @@ Beacuse the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ an
 \begin{equation}
 \frac{d^2\Delta n}{dx^2}-\frac{\Delta n}{L_n^2}=0
 \end{equation} 
-where $L_n=\sqrt{D_n\tau_n}=$ diffusion length of electrons in the quasi neutral p-region. Introducing the system of coordinate like in figure (where $W_p$ is the end of the quasi-neutral p region) we can solve this differential equation.
+where $L_n=\sqrt{D_n\tau_n}=$ diffusion length of electrons in the quasi neutral p-region. Introducing the system of coordinate like in figure (where $W_p$ is the end of the quasi-neutral p region and so of the device) we can solve this differential equation.
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.45\textwidth]{pn10.png}
@@ -202,7 +202,7 @@ If we have a narrow-base diode if $W_p<<L_n$ so we can approximate as follow the
 \includegraphics[width=0.35\textwidth]{wbnb.png}
 \end{wrapfigure}
 
-In a wide base diode n(x) decrease exponentially in the p region therefore $E_{fn}$ will decrease linearly with a slope of $kT/L_n$ and after the intersection with $E_{fn}$ it will be costant as this last one.\\
+In a wide base diode n(x) decrease exponentially in the p region therefore $E_{fn}$ will decrease linearly with a slope of $kT/L_n$ and after the intersection with $E_{fn}$ it will be costant .\\
 For a narrow base the decrease of $E_{fn}$ will be logaritmic beacuse n(x) decreases linearly.\\
 In the quasi neutral p (n) region we have less electrons (holes) than in all other zone so the highest resistivity. The limit for conduction is given by the quasi-neutral region where we have less concentration of minority carriers; this is why the pn junction is called a minority carriers device , the limit for current transport is given by minority carriers.\\
 
@@ -248,7 +248,7 @@ The derivate of a linear dependence is constat so $J_n$ and $J_p$ remain constat
 
 
 \centering
-\includegraphics[width=0.5\textwidth]{nbJf.png}\\
+\includegraphics[width=0.4\textwidth]{nbJf.png}\\
 \raggedright
 
 {\bf Narrow base reverse bias}\\
@@ -326,7 +326,7 @@ With reverse bias the current is dominated by $J_{RG}$ and have a slight increas
 \raggedright
 
 \subsection{High current regime}
-At high current regime there are 2 problems that create distortion in the ideal characteristic.\\
+At high current regime there are 2 problems that create distortions in the ideal characteristic.\\
 {\bf High injection regime}\\
 At high current the hypotesis of low injection regime decades so taking p quasi-neutral region we have $n=n_0+\Delta n\simeq\Delta n$ and $p=p_0+\Delta n\simeq \Delta n$ so with the law of mass action generalized we obtain $pn=n_i^2e^{\frac{qV}{kT}}=\Delta n^2$ and so $\Delta n=n_ie^{\frac{qV}{2kT}}$ from this through continuity equation (see ~\ref{cont.eq}) we get that 
 \begin{equation}
@@ -334,7 +334,7 @@ J\propto n_ie^{\frac{qV}{2kT}}
 \end{equation}
 so an additional solpe of 120mv/dec.\\ 
 {\bf Resistive drops}\\
-$E_f$ gradient is no more negligible so we have parasitic resistance due to the law $J_n=n\mu_n \frac{dE_{fn}}{dx}$.\\
+$E_f$ gradient is no more negligible so we have parasitic resistance due to the law $J_n-=n\mu_n \frac{dE_{fn}}{dx}$.\\
 To introduce this non ideality we can say that $J=J_0e^{\frac{qv}{mkT}}$ where m is a factor of non ideality.\\
 What it follows is the Gummel plot of the pn junction that include all non idealities.\\
 
@@ -377,10 +377,6 @@ Q_{diff}=q\Delta n(0) \frac{W_p^2}{2W_p}\frac{D_n}{D_n}=J_nt_p
 \end{equation}
 where $t_p$ is defined as electron transit time through the quasi-neutral p region.\\
 
-\begin{wrapfigure}{i}{0pt}
-\includegraphics[width=0.35\textwidth]{smallpn.png}
-\end{wrapfigure}
-
 It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_{diff}=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx $\frac{1}{v_{diff}}$ we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
 
 We could have come to the same result by reasoning on the physical situation: in the case of a wide-base diode, since we are in a stationary situation the amount of charge stored in the p-region cannot change, therefore if electrons are entering our region at a given rate, we must remove the same quantity at the same time, which is what the founded relation is saying
@@ -403,5 +399,10 @@ and for a narrow base
 C_{diff}^{narrow}=g_mt_p
 \end{equation}
 In the end the small signal model is showed in figure.\\
+
+\centering
+\includegraphics[width=0.35\textwidth]{smallpn.png}\\
+\raggedright
+
 In reverse bias the modulation of the quasi-neutral change is negligible and so is the diffusion capacitance.
 

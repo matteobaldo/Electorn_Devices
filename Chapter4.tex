@@ -22,7 +22,7 @@ We also underlined in red the potential barrier created by the oxide for holes a
 
 We put the 3 materials in contact after a while we will have a single Fermi-level all over the device and we can say that far from the contact p-Si will be at equilibrium.\\
 $E_{f(m)}$ will move downwards toghether with $E_c^{ox}$ since the distance $E_{f(m)}-E_c^{ox}$ is constant (material dependent) as $E_{gap}^{ox}$ .
-We have discontinuity of F, for Gauss law $\varepsilon_{ox}F_{ox}=\varepsilon_{Si}F_{Si}\rightarrow F_{ox}=3F_{Si}(0)$. We have a linear band banding in the oxide for the hp of idealty of the dialectric and a parabolic band banding (that means a linear F) in the Si.\\
+We have discontinuity of F, for Gauss law $\varepsilon_{ox}F_{ox}=\varepsilon_{Si}F_{Si}\rightarrow F_{ox}=3F_{Si}(0)$. We have a linear band banding in the oxide for the hp of idealty of the dialectric (no charge distribution inside) and a parabolic band banding (that means a linear F) in the Si.\\
 We have 2 voltage drops over the silicon and over the metal that define $V_s+V_{ox}=\phi_{bi}$.
 If we apply a $V>0$ at the gate we push $E_{f(m)}$ downwards creating a higher band banding both in oxide and silicon, this band banding will increase both $V_{ox}$ and $V_{s}$ so assuming that the bulk keeps th.eq we can write the following equation
 \begin{equation}
@@ -77,6 +77,9 @@ From now on if we slightly increase the voltage we will have more electrons than
 %------------------------------------------------------------------------%
 If we continue to increase the voltage applied we will reach the strong inverson regime that is characterized by $(E_i-E_f)|_{interface}=-(E_i-E_f)|_{bulk}$ so the concentration of electrons at the interface is equal to the doping concentration in the bulk.
 
+
+
+
 %------------------------------------------------------------------------%
 \section{Electrostatics}
 %------------------------------------------------------------------------%
@@ -85,7 +88,7 @@ If we continue to increase the voltage applied we will reach the strong inverson
 \raggedright
 
 We have to solve the Poisson equation $\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon_{Si}}(p-n-N_a^-)$ only in the substrate.\\
-We define $\phi_B=E_f-E_i=[E_f=0]=-\frac{kT}{q}\ln(N_a/N_i)$ the electrostatic potential of the bulk far away from the interface and we take $E_f$ that is costant as the reference energy level 0.\\
+We define $\phi_B=(E_f-E_i)_{bulk}/q=[E_f=0]=-\frac{kT}{q}\ln(N_a/n_i)$ the electrostatic potential of the bulk far away from the interface and we take $E_f$ that is costant as the reference energy level 0.\\
 We introduce also $\Delta \phi (x)=\phi(x)-\phi_B$  that is the change of the electrostatic potential wrt the bulk;$\Delta \phi (W_d)=0$ and $\Delta \phi (0)=V_s$.\\
 \vspace{5mm}
 Now we have to write $p-n-N_a^-$ as function of $\phi(x)$.\\
@@ -153,7 +156,7 @@ in the solution of the Poisson equation is the term that takes into account elec
 %------------------------------------------------------------------------%
 \subsection{Total charge in function of gate bias}
 %------------------------------------------------------------------------%
-We want $Q(V_g)$ ; to have that expression we need to remember that $V_g-V_{fb}=V_s+V_{ox}$ but we can write $V_{ox}=F_{ox}t_{ox}=\frac{\varepsilon_{Si}F_{Si}}{\varepsilon_{ox}}t_{ox}=-Q(V_s)/C_{ox}$ so $V_g-V_{fb}=V_s-\frac{Q_s}{C_{ox}}$ using this expression and $Q_s=Q_s(V_s)$ we can get what we want.\\
+We want $Q(V_g)$ not $Q(V_s)$; to have that expression we need to remember that $V_g-V_{fb}=V_s+V_{ox}$ but we can write $V_{ox}=F_{ox}t_{ox}=\frac{\varepsilon_{Si}F_{Si}}{\varepsilon_{ox}}t_{ox}=-Q(V_s)/C_{ox}$ so $V_g-V_{fb}=V_s-\frac{Q_s}{C_{ox}}$ using this expression and $Q_s=Q_s(V_s)$ we can get what we want.\\
 We will plot also the 2 graphs $V_s-V_g$ and $|Q_s|-V_g$.\\
 
 \centering
@@ -215,7 +218,7 @@ V_t=V_{fb}+2|\phi_b|+\frac{|Q_{dep}^{max}|}{C_{ox}} \ \ \ \rightarrow Q_{inv}=Q_
 \section{Small signal capacitance}
 %------------------------------------------------------------------------%
 We want to study the small signal capacitance of the MOS capacitor that is a non linear device so we want $C_g=-\frac{dQ_s}{dV_g}$ the change of charge over the change of voltage.\\
-We can guess the behaviour of $C_g$ using the expression $V_g-V_{fb}=V_s-Q_s/C_ox$ and calculating the derivative wrt $d(-Q_s)$ we get
+We can guess the behaviour of $C_g$ using the expression $V_g-V_{fb}=V_s-Q_s/C_{ox}$ and calculating the derivative wrt $d(-Q_s)$ we get
 \begin{equation}
 \frac{dV_g}{d(-Q_s)}=\frac{dV_s}{d(-Q_s)}+\frac{1}{C_{ox}}
 \end{equation}
@@ -302,7 +305,7 @@ The time constant for the generation process in strong inversion can be extracte
 \end{equation}
 $\tau_g$ is technology dependent and very big in the order of seconds.\\
 Only if the signal has a frequence much lower than $\tau_g$ ($f<1Hz$) we have the ideal charachteristic seen before.\\
-Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards or downwards. With a $\delta V_g>0$ we have to increase the total voltage drop but the dependance with $V_{sub}$ is very weak so $\delta V_s\simeq 0$ and we modulate only the voltage drop over the oxide (under charge sheet approximation that we will see in next chapter) $\delta V_g\simeq V_{ox}$
+Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards or downwards. With a $\delta V_g>0$ we have to increase the total voltage drop but the dependance with $V_{sub}$ is very weak (logaritmic dependance) so $\delta V_s\simeq 0$ and we modulate only the voltage drop over the oxide (under charge sheet approximation that we will see in next chapter) $\delta V_g\simeq \delta V_{ox}$
 
 
 %------------------------------------------------------------------------%
@@ -326,7 +329,7 @@ $E_{fn}$ is constant over the depletion layer and merges with $E_{fp}$ in the qu
 
 If we consider a step increase of the gate voltage form 0 to $\overline{V}_g>V_t$ we don't give the time to the system to create electrons so we get a super wide depletion layer $W_d>>W_d^{max}$. This is called deep depletion condition of the MOS capacitor and it's a large signal regime.\\
 If we apply on this step increase a $\delta V_g$ this will modulate the width of the depletion layer (in low and high freqence too) beacuse we don't have electron at the interface. The capacitance is $C_s=C_{dep}=\varepsilon_{si}/W_d$ so the total capacitance will decrease over V.\\
-$W_d$ is related to $V_s$ so $W_d>W_d^{max}$ means $V_s>2|\phi_b|$ the conduction band can bend even below the fermi level but we have to keep the condition of no electrons at the interface so we have the split in the two Fermi level for electrons and holes. Small voltage drop ove the oxide due to big voltage drop over the substrate.\\
+$W_d$ is related to $V_s$ so $W_d>W_d^{max}$ means $V_s>2|\phi_b|$ the conduction band can bend even below the fermi level but we have to keep the condition of no electrons at the interface so we have the split in the two Fermi level for electrons and holes. Small voltage drop over the oxide due to big voltage drop over the substrate.\\
 GR processes will pull the system to the LF regime in order to restore the equilibrimu so with a $Q_{inv}$ of electrons at the surface.\\
 
 \begin{wrapfigure}{i}{0pt}
@@ -354,15 +357,15 @@ so an exponential increase of the charge with a time constant $t_g$
 \centering
 \includegraphics[width=0.7\textwidth]{ring.png}\\
 \raggedright
-We want to modify the structure adding a contact that can provide a lot of electrons. This contact is calle ring it's $n^+$ doped. With $V_g>V_t$ $E_{fn}$ goes down but the Fermi level in the ring is higher than it so there is a flow of electrons from the ring to the substrate with a time constant similar to the transient time from the 2 zones of the electrons.\\
+We want to modify the structure adding a contact that can provide a lot of electrons. This contact is called ring it's $n^+$ doped. With $V_g>V_t$ $E_{fn}$ goes down but the Fermi level in the ring is higher than it so there is a flow of electrons from the ring to the substrate with a time constant similar to the transient time from the 2 zones of the electrons.\\
 
 %------------------------------------------------------------------------%
 \subsection{Split C-V curve}
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.5\textwidth]{splitcv.png}
 \end{wrapfigure}
-With this structure it's possible to measure the current of e and h indipendently and split the 2 contributions.\\
-Let's assume that in accumulation regime and weak inversion we modulate only $dQ_p$ no $dQ_n$ flow so the capacitance is only $\frac{dQ_p}{dV_g}=C_g$ beacuse $\frac{dQ_n}{dV_g}=0$.
+With this structure it's possible to measure the current of electrons and holes indipendently and split the 2 contributions.\\
+Let's assume that in accumulation regime and weak inversion we modulate only $dQ_p$ (no $dQ_n$ flow) so the capacitance is only $\frac{dQ_p}{dV_g}=C_g$ beacuse $\frac{dQ_n}{dV_g}=0$.
 At stong inversion we modulate only electrons beacuse we reach the maximum width of the depletion layer so $\frac{dQ_p}{dV_g}=0$ and $\frac{dQ_n}{dV_g}=C_g$.\\ In this way we are splitting the total gate capacitance in 2 contributions due to holes and electrons.\\
 
 
@@ -405,8 +408,8 @@ First graph is the one we have already seen. In crossection 2 we make the same c
 \includegraphics[width=0.7\textwidth]{b1.png}\\
 \raggedright
 
-We have no change in crossection 1 wrt the first case.
-For second crossection we have to set the distance $E_c-E_f$ under the gate in accord to the first graph. In the $n^+$ region we are applying a potential that bands the band downwards by an amount $qV_r$ giving a large band banding and so a separation of the Fermi levels.\\
+We have no change in the vertical crossection wrt the first case.
+For the horizontal crossection we have to set the distance $E_c-E_f$ under the gate in accord to the first graph. In the $n^+$ region we are applying a potential that bands the band downwards by an amount $qV_r$ giving a large band banding and so a separation of the Fermi levels.\\
 The quasi Fermi level for electrons has to stay constant for simmetry $E_{fp}$ changes.\\
 Form this we have to modify graph 1 where $E_{fn}$ is moved downwards by an amount $qV_r$ (doing this we do not change the electrostatic beacuse the electron concetration was already negligible so no other modifications in the band banding are needed).\\
 
