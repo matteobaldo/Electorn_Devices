@@ -8,12 +8,12 @@
 \raggedright
 
 This device is created with 2 pn junctions with a back to back connection creating a npn or a pnp device. This device can be horizontal or vertical (we will study this second approach beacuse is the most important).\\
-The n structure is the collector the $n^+$ is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the collector area.\\
+The n structure is the collector the $n^+$ is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the emitter area.\\
 The main idea is to forward bias the EB-j and reverse bias the BC-j. Foward bias in EB-j so there will be a flow of electrons form E to B holes to B-E but if the base region is narrow we have that electrons don't recombine in the p region but travel throught it reaching the collector.\\
 We have a large flow of electrons throght a reverse biased junction (BC) beacuse the supply comes from the EB-j and not from GR processes. In the collector we have high resistivity due to low doping concentrations so we have to put the sub-collector to make a contact.\\
 \vspace{5mm}
 This device has a significant flow of both electrons and holes so it's a bipolar device (intrinsic flow of holes from base to emitter).\\
-We can minimize the base current by reducing the width of the base and also making the emitter more doped wrt the base.\\
+We can minimize the base current by reducing the width of the base and also making the emitter more doped wrt the base (since the dominant current flow comes from the zone less doped doing so the holes from the emitter will be less).\\
 \vspace{5mm}
 If the BC-j was direct biased we will have an additional component to the base current that is something we want to avoid.\\
 
@@ -32,7 +32,8 @@ We can focus our analysis on the quasi-neutral p region that is the bottom-neck 
 \includegraphics[width=0.35\textwidth]{bjt3.png}\\
 \raggedright
 
-We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration. Doping concentration is not constant so we have a band banding like in figure so a F due to non constant doping concentrations. This condition can be reached also with high level of injection.\\
+We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration.\\
+Doping concentration is not constant so we have a band banding like and an electic field. This condition can be reached also with high level of injection.\\
 Considering hole concentration $p=n_ie^{\frac{E_i-E_{fp}}{kT}}$ we get $E_i=E_{fp}+kT\ln(p/n_i)$. We want this parameter beacuse it's releted to the potential and so to the electric field
 \begin{equation}
 F=-\frac{d\phi}{dx}=\frac{1}{q}\frac{dE_{i}}{dx}=\frac{1}{q}\frac{dE_{fp}}{dx}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
@@ -127,22 +128,22 @@ Second cause is a technological method to gradually change from Si to GeSi to na
 \includegraphics[width=0.4\textwidth]{bjt6.png}\\
 \raggedright
 
-In all the calculation we have an important role of the bangap only in $pn=n_i^2e^{(E_{fn}-E_{fp})/kT}$ in this the intrinsic carrier concentration becomes
+We have an important role of the bangap only in $pn=n_i^2e^{(E_{fn}-E_{fp})/kT}$ in this case the intrinsic carrier concentration becomes
 \begin{equation}
 n_{i,e}^2=N_vN_ce^{-E_{gap}/kT}e^{\Delta E_{gap}/kT}=n_i^2e^{\Delta E_{gap}/kT}
 \end{equation}
 where $n_{i,e}$ is the effective intrinsic carrier density. 
-So $J_n=n\mu_n \frac{dE_{fn}}{dx}$ where from the previous equation and the generalized law of mass action we get 
+So $J_n=-n\mu_n \frac{dE_{fn}}{dx}$ where from the previous equation and the generalized law of mass action we get 
 \begin{equation}
 E_{fn}=E_{fp}+kT\ln(\frac{pn}{n_{i,e}})
 \end{equation}
 considering $E_{fp}$ constant as usual we get that the current density is 
 \begin{equation}
-J_n=qD_n \frac{n_{i,e}^2}{p}\frac{d(pn/n_{i,e}^2)}{dx}
+J_n=-qD_n \frac{n_{i,e}^2}{p}\frac{d(pn/n_{i,e}^2)}{dx}
 \end{equation}
 as the previous case now we integrate this expression 
 \begin{equation}
-J_n=-\frac{qe^{qV_{BE}/kT}}{\int^{W_b}_0 \frac{p}{D_nn_{i,e}^2}}dx
+J_n=-\frac{qe^{qV_{BE}/kT}}{\int^{W_b}_0 \frac{p}{D_nn_{i,e}^2}dx}
 \end{equation}
 Multiplying the result for the emitter area and changing the sign we get the collector current as 
 \begin{equation}
@@ -168,11 +169,11 @@ We will refer to the most general case of high level of injection, non constant 
 From the consideration made for the collector current we get $J_p=-qD_p \frac{n_{i,e}^2}{n}\frac{d(pn)}{dx}$ and as boundary condition we know that $p(0)=p_{n0}e^{qV_{BE}/kT}$ and at the contact $p(-W_e)=p_{n0}$.\\
 Making one step of integration (and neglecting 1) we get 
 \begin{equation}
-J_p=-e^{qV_{BE}/kT}\frac{1}{\int_{-W_e}^0 n/(qD_nn_{i,e}^2) dx}
+J_p=-qe^{qV_{BE}/kT}\frac{1}{\int_{-W_e}^0 n/(qD_nn_{i,e}^2) dx}
 \end{equation}
 From this we get the base current
 \begin{equation}
-I_B= A_E e^{qV_{BE}/kT}\frac{n_i^2}{\int_{-W_e}^{0}\frac{n n_i^2}{n_{i,e}^2D_n} dx}=A_Ee^{qV_{BE}/kT}\frac{n_i^2}{G_E}
+I_B= qA_E e^{qV_{BE}/kT}\frac{n_i^2}{\int_{-W_e}^{0}\frac{n n_i^2}{n_{i,e}^2D_n} dx}=qA_Ee^{qV_{BE}/kT}\frac{n_i^2}{G_E}
 \end{equation}
 where $G_E$ is the Gummel number of the emitter. All base current parameter are function of the emitter.\\
 We will never reach high injection condition beacuse the emitter is highly doped so we can write
@@ -188,7 +189,7 @@ J_p=-{\frac{qD_pn_i^2}{N_d^EL_p\tanh(W_e/L_p)}e^{\frac{qV_{BE}}{kT}}}
 \end{equation}
 and so the base current as
 \begin{equation}
-I_B=A_E \frac{qn_i^2}{\frac{N_d^E L_p \tanh(W_e/L_p)}{D_p}}e^{qV_{BE}/kT}=A_E \frac{qn_i^2}{G_E}
+I_B=A_E \frac{qn_i^2}{\frac{N_d^E L_p \tanh(W_e/L_p)}{D_p}}e^{qV_{BE}/kT}=A_E \frac{qn_i^2}{G_E}e^{qV_{BE}/kT}
 \end{equation}
 where $G_E=\frac{N_d^EL_p \tanh(W_e/L_p)}{D_p}$ it's the new Gummel number of the emitter. \\
 Now we can calculate the beta of the transistor as
@@ -248,7 +249,7 @@ but when we have non negligible n we get $x_{p0}(N_a^B+n)=x_{n0}(N_d^C-n)$ and f
 \end{equation}
 combining this 4 equations we get the real distances 
 \begin{equation}
-x_n=x_{n0}\sqrt{\frac{1+n/N_a^B}{1-n/N_d^C}}\simeq x_{n0}/\sqrt{1-n/N_d^C}
+x_n=x_{n0}\sqrt{\frac{1+n/N_a^B}{1-n/N_d^C}}\simeq \frac{x_{n0}}{\sqrt{1-n/N_d^C}}
 \end{equation}
 \begin{equation}
 x_p=x_{p0}\sqrt{\frac{1-n/N_d^C}{1+n/N_a^B}}\simeq x_{p0}\sqrt{1-n/N_d^C}

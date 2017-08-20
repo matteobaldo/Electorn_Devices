@@ -123,7 +123,7 @@
 \contentsline {section}{\numberline {6.6}Early effect}{92}{section.6.6}
 \contentsline {section}{\numberline {6.7}Small signal model}{93}{section.6.7}
 \contentsline {subsection}{\numberline {6.7.1}Trasconductance}{93}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Output resistance}{93}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.7.2}Output resistance}{94}{subsection.6.7.2}
 \contentsline {subsection}{\numberline {6.7.3}Base resistance}{94}{subsection.6.7.3}
 \contentsline {subsection}{\numberline {6.7.4}Capacitive effects}{94}{subsection.6.7.4}
 \contentsline {section}{\numberline {6.8}Frequency responce}{94}{section.6.8}
