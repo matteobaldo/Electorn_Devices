@@ -7,16 +7,21 @@
 
 We start our analysis of the MOS-transistor with the hypotesis of an ideal dialectric ($SiO_2$) and constant doping concentrations.\\
 This is an intrinsically bi-dimensional device we will study it in the crossection showed in figure and assuming that all is omogenuos in the ortogonal direction.\\
-The most important region of the device is the "channel region" of lenght L that is the one under the gate between the 2 n-doped regions. We will consider in our analysis the 2 x and y axes placed as in figure.\\
+The most important region of the device is the "channel region" of lenght L that is the one under the gate between the 2 n-doped regions. We will consider in our analysis the two x and y axes placed as in figure.\\
 We want to study the electrostatic of this device changing the bias of the four pin; withouth lack of generality since we are intrested in the voltage difference we ground the source for all our analysis.\\
 
+
+%------------------------------------------------------------------------%
 \subsubsection{Working principles}
+%------------------------------------------------------------------------%
 If $V_{gs}$ is low (until depletion regime) there is no interation between source and drain but if we move to higher $V_{gs}$ (inversion region) we get a lot of electrons from source to drain for the inversion layer so a flow of current it's possible under the gate. The behaviour of the device is like a resistor.\\
 Holes have a minor role in the behaviour of the device this is why the MOS transistor, also called field effect unipolar transistor, is an unipolar device.\\
 
+%------------------------------------------------------------------------%
 \section{Gradual channel approximation}
+%------------------------------------------------------------------------%
 To study the electrostatic of this device we have to ideally solve the bi-dimentional Poisson equation but we can simplify our analysis studing only long channel MOS: we define a channel "long" if we can use the gradual channel approximation.\\
-The gradual channel approximation says that the electrostatic in channel region is a quasi 1-D electrostatic and so we can approximate every vertical crossection as a MOS capacitor. If L is large the electric field in the y direction is very small and the dominant electric fiel is in the vertical direction.\\
+The gradual channel approximation says that the electrostatic in the channel region is a quasi 1-D electrostatic and so we can approximate every vertical crossection as a MOS capacitor. If L is large the electric field in the y direction is very small and the dominant electric field is in the vertical direction.\\
 We can use the resuslts we have from the MOS capacitor.\\
 
 \centering
@@ -28,25 +33,30 @@ Placing the 0 level to $E_{fp}$ that doesn't change we introduce the parameter
 \begin{equation}
 V=-\frac{E_{fn}(y)}{q}=V(y)
 \end{equation}
-V goes from 0 at the source to $V_{ds}$ at the drain.\\
+V goes from 0 (at the source) to $V_{ds}$ (at the drain).\\
 
 
 %------------------------------------------------------------------------%
 \section{Poisson equation}
 %------------------------------------------------------------------------%
-
 Looking at the last band diagram we plotted the poisson equation it's very similar to the one of an MOS capacitor the only difference is in the n term that now is 
 \begin{equation}
 n=\frac{n_i^2}{N_a}e^{q\Delta \phi /kT}e^{-qV/kT}
 \end{equation}
 The last exponential takes into account the decrease of the quasi-Fermi level for electrons that is far from the conduction band wrt the MOS capacitor case.\\
-If $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$  we get $e^{-2|\phi_b|/kT}e^{-qV/kT}e^{qV_s/kT}=1$ and so
+
+\vspace{5mm}
+
+Check: if $n(0)=\frac{n_i^2}{N_a}e^{qV_s/kT}e^{-qV/kT}$ let's consider $n(0)=N_a$ (stong inversion at the source) we get $e^{-2|\phi_b|/kT}e^{-qV/kT}e^{qV_s/kT}=1$ and so
 \begin{equation}
--2|\phi_b|-V_s+V=0 \ \ \ \ V_s=2|\phi_b|+V
+-2|\phi_b|+V_s-V=0 \ \ \ \ V_s=2|\phi_b|+V
 \end{equation}
+
+\vspace{5mm}
+
 Repeating all calcualtion done for the expression we get is similar to the one with the mos capacitor
 \begin{equation}
-\left(\frac{d\Delta\phi}{dx}\right)^2=\frac{2kTN_a}{\varepsilon_{si}}[e^{-q\Delta\phi/kT}+\frac{q\Delta\phi}{kT}-1+\frac{n_i^2}{N_a^2}\left(e^{-qV/kT}(e^{q\Delta\phi/kT}-1)-\frac{q\Delta\phi}{kT}\right)]
+\left(\frac{d\Delta\phi}{dx}\right)^2=\frac{2kTN_a}{\varepsilon_{si}}[e^{-q\Delta\phi/kT}+\frac{q\Delta\phi}{kT}-1+\frac{n_i^2}{N_a^2}\left((e^{q\Delta\phi/kT}-1)e^{-qV/kT}-\frac{q\Delta\phi}{kT}\right)]
 \end{equation}
 we change the term that takes into account the electron concentration.\\
 With this result we know $F_x^2=\left(\frac{d\Delta\phi}{dx}\right)^2$ and that $F_x(x,y)=F_x(\Delta\phi,V)$.\\
@@ -107,7 +117,7 @@ I_{ds}=-W\int^{t_{inv}}_0 J_n(x)dx
 where $t_{inv}$ is the thikness of the inversion layer and we simply multiply by W beacuse we supposed that everything is constant in that direction. The minus sign is becuse we want positive the current that enter in the drain.\\
 So taking into account drift and diffusion process we have 
 \begin{equation}
-I_{ds}=-W\int^{t_{inv}}_0 n\mu_n \frac{dE_{fn}}{dx} dx
+I_{ds}=W\int^{t_{inv}}_0 n\mu_n \frac{dE_{fn}}{dx} dx
 \end{equation}
 we know that $\frac{dE_{fn}}{dx}=-q \frac{dV}{dy}$ so solving the integral we get
 \begin{equation}
@@ -117,7 +127,7 @@ This is the differential form of the drain current in MOS transistor and making 
 \begin{equation}
 I_{ds}=-\mu_n\frac{W}{L}\int^{V_{ds}}_0Q_{inv}dV
 \end{equation}
-the integral form for drain current. This expression are general.\\
+the integral form for drain current. This expressions (differential and interal) are general.\\
 \vspace{5mm}
 
 Let's now foucs on storng inversion regime.\\
@@ -197,7 +207,7 @@ this is called the pinch off conditon of the transistor. If from the saturation 
 \raggedright
 
 Let's consider $-Q_{inv}(V_{ds})$ we calculated the area of this expression to find the current so the area under the rect in the graph is proportional to the current. When $V_{ds}=V_{ds}^{sat}$ we are at the vertex of the parabola and so the current is proportional to the area of the triangle.\\
-From there on we add negative area contribution that has no sense it's like accumuling holes in the inversion layer. At the drain we were at the limit of strong inversion regime if we increase $V_{ds}$ over the saturation point we enter at the drain at weak inversion regime where electrons concentration can be apporoximated as negligible $Q_{inv}$. The real graph of the inversion charge becomes zero over the saturation voltage so from the vertex on the current remains constant.\\
+From there on we add negative area contribution that has no sense it's like accumuling holes in the inversion layer. At the drain we were at the limit of strong inversion regime if we increase $V_{ds}$ over the saturation point we enter at the drain at weak inversion regime where electrons concentration can be apporoximated as negligible. The real graph of the inversion charge becomes zero over the saturation voltage so from the vertex on the current remains constant.\\
 
 %------------------------------------------------------------------------%
 \subsubsection{Physical explanation of dicendent parabola}
@@ -207,10 +217,10 @@ From there on we add negative area contribution that has no sense it's like accu
 \includegraphics[width=0.35\textwidth]{f1.png}\\
 \raggedright
 
-Start from the condition of $V_{gs}$ big enought to have strong inversion in the channel; at source we will have a single Fermi level at drain 2 Fermi levels displaced by $qV_{ds}$. Since we are keeping strong inversion the bands must move down to keep $E_{fn}$ close to $E_c$.\\
+Start from the condition of $V_{gs}$ big enough to have strong inversion in the channel; at source we will have a single Fermi level at drain 2 Fermi levels displaced by $qV_{ds}$. Since we are keeping strong inversion the bands must move down to keep $E_{fn}$ close to $E_c$.\\
 
 \centering
-\includegraphics[width=0.5\textwidth]{f2.png}\\
+\includegraphics[width=0.7\textwidth]{f2.png}\\
 \raggedright
 
 
@@ -222,7 +232,7 @@ Let's look at $V_s(y=L)$ at the drain side as $V_{ds}$ increases; if $V_{ds}$ is
 \raggedright
 
 
-We consider the $V_s-V_{ds}$ plot at constant $V_{gs}$ by increasing $V_{ds}$ we have $V_s$ closer to the $V_t'$ (threshold voltage also at the drain) and the onset of weak inversion. When we reach the intersection $V_s$ does not change any longer and the drain looses control of the electrostatics; the channel and the elctric fields in the y direction does not change anymore so we reach the maximum band banding.\\ $Q_{inv}=0$ does not means really zero but negligible electron concentration (we are in weak inversion).\\
+We consider the $V_s-V_{ds}$ plot at constant $V_{gs}$ by increasing $V_{ds}$ we have $V_s$ closer to the $V_t'$ (threshold voltage also at the drain) and the onset of weak inversion. When we reach the intersection $V_s$ does not change any longer and the drain loses control of the electrostatics; the channel and the elctric fields in the y direction does not change anymore so we reach the maximum band banding.\\ $Q_{inv}=0$ does not means really zero but negligible electron concentration (we are in weak inversion).\\
 The parameter $m=1+\frac{C_{dep}}{C_{ox}}$ involves doping concentration and oxide thikness and express how much of $V_g$ drops over the substrate; for a good mos m=1,1-1,4.\\
 
 
