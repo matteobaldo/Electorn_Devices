@@ -121,10 +121,10 @@
 \contentsline {section}{\numberline {6.4}$\beta $ dependance on $I_C$}{90}{section.6.4}
 \contentsline {section}{\numberline {6.5}Kirk effect}{91}{section.6.5}
 \contentsline {section}{\numberline {6.6}Early effect}{92}{section.6.6}
-\contentsline {section}{\numberline {6.7}Small signal model}{93}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Trasconductance}{93}{subsection.6.7.1}
+\contentsline {section}{\numberline {6.7}Small signal model}{94}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Trasconductance}{94}{subsection.6.7.1}
 \contentsline {subsection}{\numberline {6.7.2}Output resistance}{94}{subsection.6.7.2}
 \contentsline {subsection}{\numberline {6.7.3}Base resistance}{94}{subsection.6.7.3}
 \contentsline {subsection}{\numberline {6.7.4}Capacitive effects}{94}{subsection.6.7.4}
-\contentsline {section}{\numberline {6.8}Frequency responce}{94}{section.6.8}
+\contentsline {section}{\numberline {6.8}Frequency responce}{95}{section.6.8}
 \contentsline {section}{\numberline {6.9}Considerations}{95}{section.6.9}

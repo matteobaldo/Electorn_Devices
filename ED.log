@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.16)  20 AUG 2017 23:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.8.16)  21 AUG 2017 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1764,95 +1764,96 @@ Package pdftex.def Info: bjt6.png used on input line 128.
  [88 <./bjt5.png> <./bjt6.png>] <emi.png, id=1069, 657.45625pt x 554.07pt>
 File: emi.png Graphic file (type png)
  <use emi.png>
-Package pdftex.def Info: emi.png used on input line 162.
+Package pdftex.def Info: emi.png used on input line 165.
 (pdftex.def)             Requested size: 146.39133pt x 123.36684pt.
  [89 <./emi.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beta' on input line 201.
+(hyperref)                removing `\beta' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 201.
+(hyperref)                removing `subscript' on input line 204.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 201.
+(hyperref)                removing `math shift' on input line 204.
 
-<bjt7.png, id=1079, 768.8725pt x 484.81125pt>
+<bjt7.png, id=1080, 768.8725pt x 484.81125pt>
 File: bjt7.png Graphic file (type png)
  <use bjt7.png>
-Package pdftex.def Info: bjt7.png used on input line 205.
+Package pdftex.def Info: bjt7.png used on input line 208.
 (pdftex.def)             Requested size: 104.56342pt x 65.92754pt.
 
-<bjt8.png, id=1080, 474.77374pt x 443.6575pt>
+<bjt8.png, id=1081, 474.77374pt x 443.6575pt>
 File: bjt8.png Graphic file (type png)
  <use bjt8.png>
-Package pdftex.def Info: bjt8.png used on input line 211.
+Package pdftex.def Info: bjt8.png used on input line 214.
 (pdftex.def)             Requested size: 146.39133pt x 136.7945pt.
  [90 <./bjt7.png>]
-<bjt9.png, id=1091, 1324.95pt x 368.37625pt>
+<bjt9.png, id=1092, 1324.95pt x 368.37625pt>
 File: bjt9.png Graphic file (type png)
  <use bjt9.png>
-Package pdftex.def Info: bjt9.png used on input line 227.
+Package pdftex.def Info: bjt9.png used on input line 235.
 (pdftex.def)             Requested size: 334.60422pt x 93.0269pt.
 
-<bjt10.png, id=1092, 1089.06876pt x 468.75125pt>
+<bjt10.png, id=1093, 1089.06876pt x 468.75125pt>
 File: bjt10.png Graphic file (type png)
  <use bjt10.png>
-Package pdftex.def Info: bjt10.png used on input line 235.
+Package pdftex.def Info: bjt10.png used on input line 243.
 (pdftex.def)             Requested size: 146.39133pt x 63.00688pt.
- [91 <./bjt8.png> <./bjt9.png> <./bjt10.png>] <bjt11.png, id=1099, 788.9475pt x
+ [91 <./bjt8.png> <./bjt9.png> <./bjt10.png>] <bjt11.png, id=1100, 788.9475pt x
  348.30125pt>
 File: bjt11.png Graphic file (type png)
 
 <use bjt11.png>
-Package pdftex.def Info: bjt11.png used on input line 263.
+Package pdftex.def Info: bjt11.png used on input line 271.
 (pdftex.def)             Requested size: 146.39133pt x 64.62604pt.
- <bjt12.png, id=1100, 539.01375pt x 508.90125pt>
+ <bjt12.png, id=1101, 539.01375pt x 508.90125pt>
 File: bjt12.png Graphic file (type png)
 
 <use bjt12.png>
-Package pdftex.def Info: bjt12.png used on input line 272.
-(pdftex.def)             Requested size: 62.73549pt x 59.22516pt.
+Package pdftex.def Info: bjt12.png used on input line 280.
+(pdftex.def)             Requested size: 146.39133pt x 138.21275pt.
  [92 <./bjt11.png> <./bjt12.png>]
-<ear.png, id=1109, 1002.74625pt x 400.49625pt>
+<ear.png, id=1110, 1002.74625pt x 400.49625pt>
 File: ear.png Graphic file (type png)
  <use ear.png>
-Package pdftex.def Info: ear.png used on input line 282.
+Package pdftex.def Info: ear.png used on input line 293.
 (pdftex.def)             Requested size: 313.69025pt x 125.28922pt.
  [93 <./ear.png>]
 <bjt13.png, id=1119, 810.02625pt x 374.39874pt>
 File: bjt13.png Graphic file (type png)
  <use bjt13.png>
-Package pdftex.def Info: bjt13.png used on input line 355.
+Package pdftex.def Info: bjt13.png used on input line 366.
 (pdftex.def)             Requested size: 146.39133pt x 67.66307pt.
- [94 <./bjt13.png>] <bjt14.png, id=1129, 602.25pt x 526.96875pt>
+ [94]
+<bjt14.png, id=1129, 602.25pt x 526.96875pt>
 File: bjt14.png Graphic file (type png)
  <use bjt14.png>
-Package pdftex.def Info: bjt14.png used on input line 373.
+Package pdftex.def Info: bjt14.png used on input line 384.
 (pdftex.def)             Requested size: 146.39133pt x 128.0913pt.
 
 <bjtfinal.png, id=1130, 1199.48125pt x 379.4175pt>
 File: bjtfinal.png Graphic file (type png)
  <use bjtfinal.png>
-Package pdftex.def Info: bjtfinal.png used on input line 389.
+Package pdftex.def Info: bjtfinal.png used on input line 400.
 (pdftex.def)             Requested size: 188.21288pt x 59.53278pt.
-)
+ [95 <./bjt13.png> <./bjt14.png> <./bjtfinal.png>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
- [95 <./bjt14.png> <./bjtfinal.png>] [96]
+ [96]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
  (./ED.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
@@ -1864,8 +1865,8 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 8804 strings out of 495028
- 121753 string characters out of 6181497
+ 8805 strings out of 495028
+ 121768 string characters out of 6181497
  203614 words of memory out of 5000000
  11215 multiletter control sequences out of 15000+600000
  15139 words of font info for 58 fonts, out of 8000000 for 9000
@@ -1895,10 +1896,10 @@ nts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm7.pfb>
-Output written on ED.pdf (96 pages, 3983732 bytes).
+Output written on ED.pdf (96 pages, 3983952 bytes).
 PDF statistics:
- 1694 PDF objects out of 1728 (max. 8388607)
- 1402 compressed objects within 15 object streams
- 523 named destinations out of 1000 (max. 500000)
+ 1695 PDF objects out of 1728 (max. 8388607)
+ 1403 compressed objects within 15 object streams
+ 524 named destinations out of 1000 (max. 500000)
  1723 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -8,7 +8,7 @@
 \raggedright
 
 This device is created with 2 pn junctions with a back to back connection creating a npn or a pnp device. This device can be horizontal or vertical (we will study this second approach beacuse is the most important).\\
-The n structure is the collector the $n^+$ is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the emitter area.\\
+The n structure is the collector the adjacent $n^+$ part is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the emitter area.\\
 The main idea is to forward bias the EB-j and reverse bias the BC-j. Foward bias in EB-j so there will be a flow of electrons form E to B holes to B-E but if the base region is narrow we have that electrons don't recombine in the p region but travel throught it reaching the collector.\\
 We have a large flow of electrons throght a reverse biased junction (BC) beacuse the supply comes from the EB-j and not from GR processes. In the collector we have high resistivity due to low doping concentrations so we have to put the sub-collector to make a contact.\\
 \vspace{5mm}
@@ -33,16 +33,16 @@ We can focus our analysis on the quasi-neutral p region that is the bottom-neck 
 \raggedright
 
 We call $W_b$ the quasi neutral region of the base. In this region the band banding is set by holes concentration.\\
-Doping concentration is not constant so we have a band banding like and an electic field. This condition can be reached also with high level of injection.\\
+Doping concentration is not constant so we have band banding and an electic field. This condition can be reached also with high level of injection.\\
 Considering hole concentration $p=n_ie^{\frac{E_i-E_{fp}}{kT}}$ we get $E_i=E_{fp}+kT\ln(p/n_i)$. We want this parameter beacuse it's releted to the potential and so to the electric field
 \begin{equation}
 F=-\frac{d\phi}{dx}=\frac{1}{q}\frac{dE_{i}}{dx}=\frac{1}{q}\frac{dE_{fp}}{dx}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
 \end{equation}
 both high injection and non constant doping concentration events are taken into account by the term $\frac{dp}{dx}$, the term $\frac{dE_{fp}}{dx}$ take into account of resistive drops.\\
 \vspace{5mm}
-The base current density is $J_B=p\mu_p \frac{dE_{fp}}{dx}$ so we get that $\frac{dE_{fp}}{dx}=J_p/(p\mu_p)$ and so putting this equation into the electric field equation we get 
+The base current density is $J_B=p\mu_p \frac{dE_{fp}}{dx}$ so we get that $\frac{dE_{fp}}{dx}=J_B/(p\mu_p)$ and so putting this equation into the electric field equation we get 
 \begin{equation}
-\frac{1}{q}\frac{J_p}{p\mu_p}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
+\frac{1}{q}\frac{J_B}{p\mu_p}+\frac{kT}{q}\frac{1}{p}\frac{dp}{dx}
 \end{equation}
 using some reasonable values for all the parameter we get that $\Delta V_t$ is of a few fractions of mV when the total voltage applied is in the order of 0.6-0.7V. This contribution is negligible we consider the $E_{fp}$ almost constant so 
 \begin{equation}
@@ -102,7 +102,7 @@ We consider now the possibility of non constant doping concentration or high inj
 \begin{equation}
 J_n=\frac{qD_n}{p}\left(n \frac{dp}{dx}+p \frac{dn}{dx}\right)= \frac{qD_n}{p}\frac{d(pn)}{dx}
 \end{equation}
-As before we integrate keeping $J_n$ as a constant we know that $pn(W_d)\simeq 0$ so we reach the current density as 
+As before we integrate keeping $J_n$ as a constant (neglecting G-R and in stationary conditions) we know that $pn(W_d)\simeq 0$ so we reach the current density as 
 \begin{equation}
 J_n=-\frac{qn_i^2}{\int^{W_b}_0 \frac{p}{D_n}dx}e^{qV_{BE}/kT}
 \end{equation}
@@ -135,7 +135,10 @@ n_{i,e}^2=N_vN_ce^{-E_{gap}/kT}e^{\Delta E_{gap}/kT}=n_i^2e^{\Delta E_{gap}/kT}
 where $n_{i,e}$ is the effective intrinsic carrier density. 
 So $J_n=-n\mu_n \frac{dE_{fn}}{dx}$ where from the previous equation and the generalized law of mass action we get 
 \begin{equation}
-E_{fn}=E_{fp}+kT\ln(\frac{pn}{n_{i,e}})
+pn=n_{i,e}^2e^{\frac{E_{fn}-E_{fp}}{kT}}
+\end{equation}
+\begin{equation}
+E_{fn}=E_{fp}+kT\ln(\frac{pn}{n_{i,e}^2})
 \end{equation}
 considering $E_{fp}$ constant as usual we get that the current density is 
 \begin{equation}
@@ -212,16 +215,21 @@ $\beta$ changes with different $I_C$ values at high current and low current we c
 \raggedright
 
 Plotting the Gummel plot for the BJT that at low current the base current drops slowly reducing $\beta$ while at high current both $I_C$ and $I_B$ deviate from ideal characteristic.\\
+
 \vspace{3mm}
+
 At low current we have GR processes of the forward biased EB junction in the depletion layer.
+
 \vspace{3mm}
-In high current we have high injection effects and resistive drops. The high injection effects affect only $I_C$ for the low doping of the base region. This is called modulation of the base conductivity.\\
+
+At high currents we have high injection effects and resistive drops.\\
+The high injection effects affect only $I_C$ for the low doping of the base region. This is called modulation of the base conductivity.\\
 
 %------------------------------------------------------------------------%
 \section{Kirk effect}
 Consider now the BC junction under the condition of constant doping concentration. We get the results of a pn junction.\\
 The total charge in the quasi neutral region is 0 but in the depletion zone we have some localized charge and so an electric field as shown in the figures below.\\
-The area of the triangle of F profile has to be constant and proportional at $\Delta \phi=\phi_{bi}+V_{CB}$.\\
+The area of the triangle of F profile has to be constant and proportional to $\Delta \phi=\phi_{bi}+V_{CB}$.\\
 
 \centering
 \includegraphics[width=0.8\textwidth]{bjt9.png}\\
@@ -269,12 +277,15 @@ The onset of this event can be found at current $J_n=qnv_{sat}=qN_d^C v_{sat}$
 %------------------------------------------------------------------------%
 
 \centering
-\includegraphics[width=0.15\textwidth]{bjt12.png}\\
+\includegraphics[width=0.35\textwidth]{bjt12.png}\\
 \raggedright
 
 Now we want to investigate the dependances of $I_C$ on $V_{CE}$ so we focus on the qn base region and we keep $V_{BC}$ not big and negative.\\
 If $V_{CE}=0$ than $V_{BE}=V_{BC}$ so constant electron concentration and no diffusion current (accounting for base current it isn't really zero but slightly negative).
 Increasing $V_{CE}$ we reduce forward bias on BC decrease electron concentration at the BC depletion region so the current increase and we enter in the forward active mode leaving the saturation regime.
+
+\vspace{5mm}
+
 In the forward active mode we have a slight increase of the current the physical reason for this comes from the qn region of the base; increasing $V_{CE}$ at constant $V_{BE}$ we are moving the width of the depletion layer in the base increasing F profile and so the diffusion current. This is the Early effect of the BJT.\\
 
 
