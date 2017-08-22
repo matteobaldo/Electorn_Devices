@@ -413,7 +413,7 @@ So in ohmic and saturation regimes we get
 Smaller L we get smaller distance and grater electric field so grater velocity (over a smaller space).\\
 Using the cutting frequency of the transistor we find that 
 \begin{equation}
-f_t=\frac{g_m}{2\pi (C_{gs}+C_{gd})}=\frac{g_m}{2\pi C_g}=\frac{1}{2\pi \tau_t}
+f_t=\frac{g_m}{2\pi (C_{gs}+C_{gd})}=\frac{1}{2\pi}\frac{g_m}{C_g}=\frac{1}{2\pi \tau_t}
 \end{equation}
 
 %------------------------------------------------------------------------%
@@ -436,7 +436,7 @@ In ohmic regime $V_s\simeq 2|\phi_b|-V_{bs}$ so we get a change of the band diag
 
 making a little bit of calculation we get that in ohmic regime
 \begin{equation}
-Q_{inv}-C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-\frac{\sqrt{2\varepsilon_{si}qN_a(2|\phi_b|-V_{bs})}}{C_{ox}})=-C_{ox}(V_{gs}-V_t')
+Q_{inv}=-C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-\frac{\sqrt{2\varepsilon_{si}qN_a(2|\phi_b|-V_{bs})}}{C_{ox}})=-C_{ox}(V_{gs}-V_t')
 \end{equation}
 $V_t'$ is the new threshold voltage of the system and we get $I_{ds}=\mu_nC_{ox}\frac{W}{L}(V_{gs}-V_t')V_{ds}$ this expression is equal to the one with the bulk grounded but with another $V_t$. For the other regimes we get the same resuslts of bulk grounded with $V_t'$ and for the parabolic regime m is modified.\\
 
@@ -461,7 +461,7 @@ For better undestand the behaviour of $V_t'(-V_{bs})$ we can study
 \raggedright
 
 In this regime $V_{gs} \lesssim V_t$ so we don't have strong inversion anywhere in the channel, the electron concentration is negligible for electrostatics that is dominated by the depletion charge. Bands are almost flat in the channel (also if electorn concentation change beacuse it's a neglibile contribution).\\
-We get a diffusion current of electrons the drift flow is negligible. Solving the poisson equation we got that $Q_{inv}=\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}$ we can use this expression to derive the current in this regime so 
+We get a diffusion current of electrons the drift flow is negligible. Solving the poisson equation we got that $Q_{inv}=-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}$ we can use this expression to derive the current in this regime so 
 \begin{equation}
 I_{ds}=-\mu_n \frac{W}{L}\int^{V_{ds}}_0-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}dV
 \end{equation}
@@ -495,18 +495,28 @@ The physical meaning of this can be explained considering a system like in fiure
 where we can say that $V_s=2|\phi_b|+\delta V \frac{C_{ox}}{C_{ox}+C_{dep}}=2|\phi_b|+\frac{\delta V}{m}$.\\
 Turning back the the expression for the current we can write it in this way now
 \begin{equation}
-I_{ds}=\mu_nC_{ox}(m-1)\frac{W}{L}(\frac{kT}{q})^2 e^{q(V_{gs}-V_t)/kT}\left(1-e^{-qV_{ds}/kT}\right)
+I_{ds}=\mu_nC_{ox}(m-1)\frac{W}{L}(\frac{kT}{q})^2 e^{q(V_{gs}-V_t)/mkT}\left(1-e^{-qV_{ds}/kT}\right)
 \end{equation}
 That is the expression for the current in the subtheshold regime. If $V_{ds}$ is more than a few kT the last exponential can be neglected.\\
+
+\vspace{5mm}
+
 The current density $J_n$ is a pure diffusion process so we can say that $J_n=qD_n \frac{dn}{dy}$ and so
 \begin{equation}
-I_{ds}=-w\int^{t_{inv}}_0qD_n \frac{dn}{dy}dx=WD_n \frac{d}{dy}\left(\int^{t_{inv}}_0 -qndx\right)=WD_n \frac{d}{dy}Q_{inv}
+I_{ds}=-W\int^{t_{inv}}_0qD_n \frac{dn}{dy}dx=WD_n \frac{d}{dy}\left(\int^{t_{inv}}_0 -qndx\right)=WD_n \frac{d}{dy}Q_{inv}
 \end{equation}
-This means that $Q_{inv}$ has to change linearly over y so that 
+This means that $Q_{inv}$ has to change linearly over y (stationary case without G-R so current constant over y) so that 
 \begin{equation}
 I_{ds}=-WD_n \frac{Q_{inv}(0)-Q_{inv}(L)}{L}
 \end{equation}
-Since the change of tha charge is linear $E_{fn}$ must drop logaritmically.\\
+where we remember that 
+\begin{equation}
+Q_{inv}(0)=\sqrt{\frac{\varepsilon_{Si}qN_a}{2V_s}}	\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q\frac{V_s}{kT}}
+\end{equation}
+\begin{equation}
+Q_{inv}(L)=Q_{inv}(0)e^{q \frac{V_s-V_{ds}}{kT}}
+\end{equation}
+Since the change of charge is linear $E_{fn}$ must drop logaritmically.\\
 
 
 %------------------------------------------------------------------------%
@@ -576,7 +586,7 @@ Putting all this results in the first expression we get the final expression
 \end{equation}
 That is negative $\simeq -1mV/K$.\\
 This phenomena have the effect to increase the offstate current.\\
-With higher T also the mobility decrease and so also the current.\\
+With higher T also the mobility decrease and so the current.\\
 
 
 %------------------------------------------------------------------------%
@@ -668,8 +678,8 @@ that becomes
 J_{s-ox}=\frac{1}{(\frac{2\pi}{L})^3}\int_{0}^{+\infty}\int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}\frac{q}{L^3}T(E_x)v_x(k_x)f(k_x,k_y,k_z)dk_xdk_ydk_z
 \end{equation}
 the integrals can be computed by considering $dk_{x,y,z}=\frac{m_{x,y,z}}{\hslash}dv_{x,y,z}$.\\
-The difference wrt the metal-semiconductor junction is that here we have to use the Fermi-Dirac distribution for f beacuse we are intrested in stats near $E_f$.\\
-We can obtain that the current density is 
+The difference wrt the metal-semiconductor junction is that here we have to use the Fermi-Dirac distribution for f beacuse we are intrested in states near $E_f$.\\
+We can obtain that the current density as 
 \begin{equation}
 J=\frac{q\sqrt{m_ym_z}kT}{2\pi^2\hslash^3}\int^{+\infty}_0T(E_x)\ln(1+e^{-(E_x-E_f)/kT})dx
 \end{equation}
@@ -697,7 +707,7 @@ We will consider a sheet of negative charge in the oxide at distance x from the 
 \begin{equation}
 \Delta V_g=-\frac{Q_{ox}}{C_{xg}}
 \end{equation}
-this consideration is also good for MOS-transistor. We have only a rigid shift of the transcaracteristic by an amount $\Delta V_gs$ that will be rightward if the charge is negative or lefward if positive.\\
+this consideration is also good for MOS-transistor. We have only a rigid shift of the transcaracteristic by an amount $\Delta V_{gs}$ that will be rightward if the charge is negative or lefward if positive.\\
 This phenomena is used adding a strate of poly-silicon in the oxide called floating gate like in figure.\\
 Depending at the charge given at a certain $\overline{V}$ we get different values of current. The charge in the floating gate is changed by quantum mechanical tunneling or other processes.\\
 
@@ -728,7 +738,7 @@ Reducing L we can increase the number of components per unit area and so decreas
 \begin{equation}
 I_{ds}\propto \frac{W}{L} \ \ \ \ \ C\propto WL \ \ \ \ \rightarrow \ \ \ \ \ \frac{I_{ds}}{C}=\frac{dV}{dt}\propto \frac{1}{L^2}
 \end{equation}
-If we start reducing L leaving all the other parameters unchanged (like the oxide thikness or the doping concentrations) at the beginning the performance will increase but after a while they will become worst; this beacuse some secondary effects of the long channel MOS becomes dominants degrading the good performance of the transistor.
+If we start reducing L leaving all the other parameters unchanged (like the oxide thikness or the doping concentrations) at the beginning the performance will increase but after a while they will become worst; this beacuse some secondary effects becomes dominants degrading the good performance of the transistor.
 
 %------------------------------------------------------------------------%
 \subsection{2D electrostatic in channel coming from $n^+$ regions}
@@ -769,7 +779,7 @@ This goes on until we have no barrier at all the gate is no more able to turn of
 \vspace{5mm}
 From the 2D Poisson equation we get that the difference of $V_t$ wrt a long channel device is 
 \begin{equation}
-\Delta V_t= \frac{24t_{ox}}{W_d^{max}}[\sqrt{\phi_b(\phi_b-V_{ds})}-0.4\cdot 2|\phi_b|]e^{-\pi L/2(W_d^{max}+3t_{ox})}
+\Delta V_t= \frac{24t_{ox}}{W_d^{max}}\left(\sqrt{\phi_b(\phi_b-V_{ds})}-0.4\cdot 2|\phi_b|\right)e^{-\pi L/2(W_d^{max}+3t_{ox})}
 \end{equation} 
 the importat term is the exponential.\\
 To have a $\Delta V_t<100mV$ we need to have 
@@ -816,7 +826,7 @@ Solving the integral we get
 \begin{equation}
 I_{ds}=\frac{\mu_nC_{ox}\frac{W}{L}[(V_{gs}-V_t)V_{ds}-\frac{mV_{ds}^2}{2}]}{1+\frac{1}{F_{sat}}\frac{V_{ds}}{L}}
 \end{equation}
-We get the same expression of the ideal case but with the ddenominator that scales the current. With L long the denominator $\simeq 1$.\\
+We get the same expression of the ideal case but with the denominator that scales the current. With L long the denominator $\simeq 1$.\\
 Decreasing L we get a decrease of the current wrt the long channel case.\\
 This relation has got a maximum at 
 \begin{equation}
@@ -885,7 +895,7 @@ The width of the depletion layer $W_d=\sqrt{\frac{2\varepsilon_{si}}{q}\frac{1}{
 L>2(W_d^{max}+3t_{ox})
 \end{equation}
 beacuse L scales as 1/k ,$t_{ox}$ scales as 1/k but due to the dependance of $W_{d}^{max}$ on $2|\phi_b|$ it scales less than 1/k.\\
-Scaling ,in theory , also $V_t$ of k since the scaling process does not affect the STS we are exponentially increasing the off-power dissipation.\\
+Scaling also $V_t$ of k (supposing it possible) since the scaling process does not affect the STS we are exponentially increasing the off-power dissipation.\\
 The transit time $\tau=L^2/(\mu_{eff}V_{ds})$ is scaled of 1/k so we are getting a better frequency responce.\\
 
 \subsubsection{Circuit parameters changes}
