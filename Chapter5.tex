@@ -288,7 +288,7 @@ In the x axis the band diagram is purely 2D band-diagram; the maximum electron c
 \raggedright
 
 %------------------------------------------------------------------------%
-\section{Transcaracteristic}
+\section{Linear transcaracteristic}
 %------------------------------------------------------------------------%
 
 \centering
@@ -474,7 +474,7 @@ Solving the integral we get the following expression
 I_{ds}=\mu_n \frac{W}{L}\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\left(\frac{kT}{q}\right)^2\frac{n_i^2}{N_a^2}e^{qV_s/kT}\left(1-e^{-qV_{ds}/kT}\right)
 \end{equation}
 we want a dependance on $V_{gs}$ not on $V_s$.\\
-As done for the MOS capacitor we use $V_{gs}-V_{fb}=V_s+\sqrt{2\varepsilon_{si}qN_aV_s}/C_{ox}$ we can assume that $V_s \lesssim 2|\phi_b|$ so we can make a Taylor expansion of $\sqrt{V_s}$ over $2|\phi_b|$ getting 
+As done for the MOS capacitor we use $V_{gs}+V_{fb}=V_s+\sqrt{2\varepsilon_{si}qN_aV_s}/C_{ox}$ we can assume that $V_s \lesssim 2|\phi_b|$ so we can make a Taylor expansion of $\sqrt{V_s}$ over $2|\phi_b|$ getting 
 \begin{equation}
 \sqrt{V_s}\simeq \sqrt{2|\phi_b|}+\frac{1}{2}\frac{V_{s}-2|\phi_b|}{\sqrt{2|\phi_b|}}
 \end{equation}
@@ -786,7 +786,7 @@ To have a $\Delta V_t<100mV$ we need to have
 \begin{equation}
 L>2(W_d^{max}+3t_{ox})
 \end{equation}
-if this condition is respected we have a long channel device if not a short channel. So we don't have an absolute value but a dependance con $t_{ox},N_a$ to separate long and short channel mosfets.\\
+if this condition is respected we have a long channel device if not a short channel. So we don't have an absolute value but a dependance with $t_{ox},N_a$ to separate long and short channel mosfets.\\
 Reducing $t_{ox}$ we get a better control of the gate on the substate. With higher doping concentration the transitions regions are smaller but we get also a worst STS.\\
 
 %------------------------------------------------------------------------%
