@@ -128,25 +128,33 @@ the factor 1/2 it's a spin correction coefficient. At RT $E_d-E_f>>kT$ and p con
 \begin{equation}
 E_c-E_f=kT\ln (N_c/N_d)
 \end{equation}
-Moving $E_f$ upwards some hypothesis falls (we supposed $E_f$ to be under $E_d$) : when $E_f$ reachs $E_d$ the complete ionization theory is not true anymore and from there further the M-B approximation is no longer valid.\\
-\newline
+Moving $E_f$ upwards some hypothesis falls (we supposed $E_f$ to be under $E_d$) : when $E_f$ reachs $E_d$ the complete ionization theory is not true anymore (2) ,since in that case $n=p+N_d/3$, and from there further the M-B approximation is no longer valid (3) ,not all states over conduction band are empty.\\
+
+\centering
+\includegraphics[width=1\textwidth]{complete_ion.png}\\
+\raggedright
+
+
 %------------------------------------------------------------------------%
 {\bf Fermi level dependence on temperature in doped semiconductors}\\ 
 
-\begin{wrapfigure}{i}{0pt}
-\includegraphics[width=0.5\textwidth]{E_f(T).png}
-\end{wrapfigure}
 
-With high T $E_g$ decreases and $E_f$ will move distant to $E_c$ following 1.23 until the hypothesis of negligible holes concentration decades and so at very high temperatures $E_f$ will tend asimptotically to $E_i$.\\
+\centering
+\includegraphics[width=0.35\textwidth]{E_f(T).png}\\
+\raggedright
+
+
+With high T $E_g$ decreases and $E_f$ will move distant to $E_c$ following $E_f=E_c-kT\ln (N_c/N_d) $ until the hypothesis of negligible holes concentration decades and so at very high temperatures $E_f$ will tend asimptotically to $E_i$.\\
 At very low temperature $E_f$ will increase until we reach the 0K where there is no conduction so $E_f$ has to stay a little bit higher than $E_d$.\\
 
 
 %------------------------------------------------------------------------%
 {\bf Low-temperature approssimation}\\
 
-\begin{wrapfigure}{i}{0pt}
-\includegraphics[width=0.35\textwidth]{mbfd.png}
-\end{wrapfigure}
+
+\centering
+\includegraphics[width=0.35\textwidth]{mbfd.png}\\
+\raggedright
 
 In the case of a material that has its Fermi level higher than the conduction band level we cannot use the M-B approximaton. The approximation we can do is a low-temperature one that trasforms the Fermi Dirac distribution into a step so
 \begin{equation}
@@ -164,8 +172,8 @@ Drift current is caused by the application of a electric field F; electrons are 
 \begin{equation}
 v_d=\mu_n F
 \end{equation}
-So drift velocity is proportional to F with a constant $\mu_n$ called mobility that depends on doping concentration, temperature and dimensionality of the system taking in account all scattering events.It's important to note that in a bulk of doped Si if we are near the surface the mobility is much lower than the inside (dimensionality).\\
-Mobility has a drop for Si around doping concentration of $\simeq 10^6 cm^{-3}$ beacuse at that level scattering with impurities becomes dominant in respect of thermal scattering.\\
+So drift velocity is proportional to F with a constant $\mu_n$ called mobility that depends on doping concentration, temperature and dimensionality of the system taking in account all scattering events. It's important to note that in a bulk of doped Si if we are near the surface the mobility is much lower than the inside (dimensionality).\\
+Mobility has a drop for Si around doping concentration of $\simeq 10^6 cm^{-3}$ beacuse at that level scattering with impurities becomes dominant compared with thermal scattering.\\
 Increasing too much F we encounter the phenomena of velocity saturation ($v_{sat}\simeq 10^7 cm/s$) caused by scattering with high energetic optical phonons.\\
 The density current caused by drift process is 
 \begin{equation}
@@ -249,6 +257,12 @@ L_D=\sqrt{\frac{\varepsilon_{Si}kT}{q^2N_d}}
 \end{equation}
 this will cause a net charge (both negative and positive near the discontinuity).\\
 
+
+\centering
+\includegraphics[width=0.5\textwidth]{dbeL.png}\\
+\raggedright
+
+
 %------------------------------------------------------------------------%
 \section{Quasi-Fermi levels}
 
@@ -272,10 +286,19 @@ J_n=qn\mu_nF+qD_n\frac{dn}{dx}=-qn\mu_n\frac{d\phi}{dx}+qD_n\frac{d}{dx}\left(n_
 But since the Fermi potential is costant the result is 0 and it's obvius beacuse we assume th.eq. with formula (1.20).
 If we substitute the (1.39) in n we obtain
 \begin{equation}
-J_n=-n\mu_n\frac{d\phi_{fn}}{dx}
+J_n=-qn\mu_n\frac{d\phi_{fn}}{dx}
 \end{equation}
+\begin{equation}
+J_n=n\mu_n\frac{dE_{fn}}{dx}
+\end{equation}  
 that isn't 0 beacuse $\phi_{fn}$ can change.\\
 Electrons moves from the region of high quasi Fermi level to region of low quasi Fermi level, holes the opposite.
+\begin{equation}
+J_p=-qp\mu_p\frac{d\phi_{fp}}{dx}
+\end{equation}
+\begin{equation}
+J_n=p\mu_p\frac{dE_{fp}}{dx}
+\end{equation}  
 \newline
 %------------------------------------------------------------------------%
 \section{Equation of for e and h}
@@ -373,6 +396,15 @@ We want to study only recombination so $R=\nu_1=\nu_3=(1-f(E_T))n=f(E_T)p$ so we
 The best position fot the difect is on the middle of the gap.\\
 Maximum G is when p=n=0 so $G=-n_i/2\tau_0$.\\
 
+\vspace{5mm}
+
+The rapid drop can also be explained physically taking into account that more the trap energy level moves from the middle of the gap (to conduction band for example) more becomes easy for an electron to have enought energy to jump in CB and hard for a hole to arrive in VB. Also an electron from CB can occupy the empty energy state easilly since it has to loose a small amount of energy 
+We arrive in a condition when electrons recirculates and holes "cannot" partecipate in the process.
+
+
+\centering
+\includegraphics[width=0.35\textwidth]{Grate.png}\\
+\raggedright
 
 
 %------------------------------------------------------------------------%
