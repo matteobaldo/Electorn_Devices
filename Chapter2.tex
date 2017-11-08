@@ -43,7 +43,7 @@ We have to solve poisson equation in the depletion region so using depletion app
 \begin{equation}
 \frac{d\phi^2}{dx^2}=-\frac{q}{\varepsilon}(N_d-N_a)
 \end{equation} 
-and considering the concentration of fixed charges like the graph we can split the Poisson eq in 2 parts for $-x_p<x<0$ we have $\frac{d\phi^2}{dx^2}=\frac{q}{\varepsilon}N_a$ and for $0<x<x_n$ we have $\frac{d\phi^2}{dx^2}=-\frac{q}{\varepsilon}N_d$.\\
+and considering the concentration of fixed charges like the graph we can split the Poisson eq in 2 parts for $-x_p<x<0$ we have $\frac{d^2\phi}{dx^2}=\frac{q}{\varepsilon}N_a$ and for $0<x<x_n$ we have $\frac{d^2\phi}{dx^2}=-\frac{q}{\varepsilon}N_d$.\\
 If we integrate both side of this equation and remembering that $F(x_n)=0$ we can deduce the electric field in the junction as 
 \begin{equation}
 \int^{x_n}_{x} d\frac{d\phi}{dx}=\int^{x_n}_{x}-\frac{q}{\varepsilon}N_d dx
@@ -106,6 +106,16 @@ W\simeq x_p \ \ \ \ \ q\phi_{bi}\simeq E_g/2 + kT\ln(\frac{N_a}{n_i})
 %------------------------------------------------------------------------%
 \section{Bias}
 %------------------------------------------------------------------------%
+
+
+\centering
+\fbox{\begin{minipage}{40em}
+To better uderstand this paragraph draw the below graphs with also the electric field due to the external applied voltage.
+\end{minipage}}
+\raggedright
+
+
+\vspace{3mm}
 {\bf Forward Bias}\\
 
 \centering
@@ -125,14 +135,23 @@ In this case $V<0$ electrons and holes move for drift the total voltage drop wil
 \section{The V-I characteristic of pn }
 %------------------------------------------------------------------------%
 First we want to investigate on foward bias electrostatic but we have to make some other simplyfing assumption: the contacts of our junction are at th.eq. and looking to the n region moving closer to the contact (from the interface) we will enter in a region where electrons are majority carrier. Beacuse we are injecting holes in that region we will have $p=p_{n0}+\Delta p$ so a region of quasi-equilibrium.\\
-If we assume stationarity and that G and R process are negligible and so the $J_n=-n\mu_n \frac{dE_{fn}}{dx}=cost$ so beacuse n isn't costant all over the space (space of all the diod first n minority than majority) $\frac{dE_{fn}}{dx}$ will change over the space.
+If we assume stationarity and that G and R process are negligible and so the $J_n=n\mu_n \frac{dE_{fn}}{dx}=cost$. \\
+Beacuse n isn't costant all over the space (space of all the diod first n minority than majority) $\frac{dE_{fn}}{dx}$ will change over the space.\\
+Being the grandient of n very small near the contacts $E_{fn}$ will be almost flat as conduction and valence bands in that region.
 The final graph is this 
 
 \centering
 \includegraphics[width=0.6\textwidth]{pn9.png}\\
 \raggedright
 
-we have 2 region of quasi-equilibrium and a transition region that is depleted from free charges. This is the same result of electrostatic without bias so the depletion region will be
+we have 2 region of quasi-equilibrium and a transition region that is depleted from free charges.\\
+\vspace{3mm}
+We can divide the a zone in 3 regions and analyse the the two factors n and $\frac{dE_{fn}}{dx}$:\\ 
+\tab {Near the contact: small gradient of n so also small change of $\frac{dE_{fn}}{dx}$ that we can assume quasi-constant.\\}
+\tab Depleted region: free carriers are negligible and so "constant" all over that zone so also here quasi-constant $\frac{dE_{fn}}{dx}$.\\
+\tab Opposite transition region: here the values of n rapidally drops until it reachs the equilibrum value so there will be a noticeble $\frac{dE_{fn}}{dx}$.\\
+\vspace{3mm}  
+This is the same result of electrostatic without bias so the depletion region will be
 \begin{equation}
 W=\sqrt{\frac{2\varepsilon}{q}(\phi_{bi}-V)(\frac{1}{N_a}+\frac{1}{N_d})}
 \end{equation}
@@ -176,7 +195,9 @@ If $V>>kT/q$ we can neglect 1 and plot a log-log scale of this characteristic th
 \log(J)=log(J_0)+\frac{qV}{kT\ln(10)}
 \end{equation}
 One important parameter of the characteristic is the slope in foward bias that is $kT/q \ln(10)=60mV/dec \ @RT$.\\
+\vspace{5mm}
 The dominant contribute to the current is from the zone less doped like in the electrostatic.\\
+If we have a $n^+-p$ junction the dominant flow is $J_n$; electron flowing through the p-region injected to n-region. Current density dominated by the less doped zone minority carriers.
 
 %------------------------------------------------------------------------%
 \section{Wide and narrow base diode}
@@ -205,6 +226,22 @@ If we have a narrow-base diode if $W_p<<L_n$ so we can approximate as follow the
 In a wide base diode n(x) decrease exponentially in the p region therefore $E_{fn}$ will decrease linearly with a slope of $kT/L_n$ and after the intersection with $E_{fn}$ it will be costant .\\
 For a narrow base the decrease of $E_{fn}$ will be logaritmic beacuse n(x) decreases linearly.\\
 In the quasi neutral p (n) region we have less electrons (holes) than in all other zone so the highest resistivity. The limit for conduction is given by the quasi-neutral region where we have less concentration of minority carriers; this is why the pn junction is called a minority carriers device , the limit for current transport is given by minority carriers.\\
+\vspace{5mm}
+
+\centering
+\fbox{\begin{minipage}{40em}
+Consider a narrow base diod in reverse bias. 
+Increasing the negative voltage applied we increase the depletion layer reducing the width of the quasi neutral region. The reverse current will increase due to the increase of the slope of carriers.
+\end{minipage}}
+\raggedright
+
+\centering
+\fbox{\begin{minipage}{40em}
+Looking at the two expressions of the current in wide and narrow base case we can notice that the $J_0$ stay constant changing the length of the device if we consider a wide base diode but if we consider a narrow base one $J_0$ will increase hyperbolically (as 1/x) reducing W.\\
+This is due to the fact that the current is purely diffusive and reducing the length means to increase the gradient of carriers and so the current. 
+\end{minipage}}
+\raggedright
+
 
 \subsection{Current profile}
 %------------------------------------------------------------------------%
@@ -256,6 +293,19 @@ With the same path of before we arrive at
 
 \centering
 \includegraphics[width=0.85\textwidth]{nwall.png}\\
+\raggedright
+
+\centering
+\fbox{\begin{minipage}{40em}
+If we take into account a pn-j with dopings $N_a=10^{16}$, $N_d=10^{17}$ we get a diffusion lenght $L_n\simeq 310\mu m$, $L_p\simeq 110\mu m$ so it's unlikely to have a wide base diode in our integrated circuits.\\
+G-R effects in modern integrated devices are secondary effects that takes place only at low current.
+\end{minipage}}
+\raggedright
+
+\centering
+\fbox{\begin{minipage}{40em}
+Orders of magnitude for $J_0$ with $W=1\mu m$ in case of a wide base diod is $1 \ pA/cm^2$ for narrow base $1 \ nA/cm^2$
+\end{minipage}}
 \raggedright
 
 %------------------------------------------------------------------------%
@@ -318,7 +368,7 @@ J_{GR}=\frac{qn_i}{2\tau_0}W_d(e^{\frac{qV}{2kT}}-1)=J_{0GR}(e^{\frac{qV}{2kT}}-
 \raggedright
 
 Similar to ideal but $J_{0GR}$ is bigger and we have a factor 2 at the exp so there is a slight difference at very low current.
-Note that $J_{0GR}\propto 1/\tau_0$ so is very process dependent and also that the ideal $J_0$ has a quadratic dependance on $n_i$ (and this term has a linear dependance) so at high temperature we recover the ideal diode characteristic.\\ 
+Note that $J_{0GR}\propto 1/\tau_0$ so is very process dependent and also that $J_{0GR}\propto n_i$ linear dependance on $n_i$ (wrt $J_0\propto n_i^2$) so at high temperature we recover the ideal diode characteristic.\\ 
 With reverse bias the current is dominated by $J_{RG}$ and have a slight increase due to the dependence of $W_d$ with V.\\
 
 \centering
@@ -334,7 +384,7 @@ J\propto n_ie^{\frac{qV}{2kT}}
 \end{equation}
 so an additional solpe of 120mv/dec.\\ 
 {\bf Resistive drops}\\
-$E_f$ gradient is no more negligible so we have parasitic resistance due to the law $J_n-=n\mu_n \frac{dE_{fn}}{dx}$.\\
+$E_f$ gradient is no more negligible so we have parasitic resistance due to the law $J_n=n\mu_n \frac{dE_{fn}}{dx}$.\\
 To introduce this non ideality we can say that $J=J_0e^{\frac{qv}{mkT}}$ where m is a factor of non ideality.\\
 What it follows is the Gummel plot of the pn junction that include all non idealities.\\
 
