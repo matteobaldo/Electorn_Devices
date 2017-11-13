@@ -368,7 +368,13 @@ J_{GR}=\frac{qn_i}{2\tau_0}W_d(e^{\frac{qV}{2kT}}-1)=J_{0GR}(e^{\frac{qV}{2kT}}-
 \raggedright
 
 Similar to ideal but $J_{0GR}$ is bigger and we have a factor 2 at the exp so there is a slight difference at very low current.
-Note that $J_{0GR}\propto 1/\tau_0$ so is very process dependent and also that $J_{0GR}\propto n_i$ linear dependance on $n_i$ (wrt $J_0\propto n_i^2$) so at high temperature we recover the ideal diode characteristic.\\ 
+
+\centering
+\fbox{\begin{minipage}{40em}
+Note that $J_{0GR}\propto 1/\tau_0$ so is very process dependent and also that $J_{0GR}\propto n_i$ linear dependance on $n_i$ (wrt $J_0\propto n_i^2$) so at high temperature we recover the ideal diode characteristic.
+\end{minipage}}
+\raggedright
+
 With reverse bias the current is dominated by $J_{RG}$ and have a slight increase due to the dependence of $W_d$ with V.\\
 
 \centering
@@ -377,12 +383,14 @@ With reverse bias the current is dominated by $J_{RG}$ and have a slight increas
 
 \subsection{High current regime}
 At high current regime there are 2 problems that create distortions in the ideal characteristic.\\
+\vspace{5mm}
 {\bf High injection regime}\\
 At high current the hypotesis of low injection regime decades so taking p quasi-neutral region we have $n=n_0+\Delta n\simeq\Delta n$ and $p=p_0+\Delta n\simeq \Delta n$ so with the law of mass action generalized we obtain $pn=n_i^2e^{\frac{qV}{kT}}=\Delta n^2$ and so $\Delta n=n_ie^{\frac{qV}{2kT}}$ from this through continuity equation (see ~\ref{cont.eq}) we get that 
 \begin{equation}
 J\propto n_ie^{\frac{qV}{2kT}}
 \end{equation}
 so an additional solpe of 120mv/dec.\\ 
+\vspace{5mm}
 {\bf Resistive drops}\\
 $E_f$ gradient is no more negligible so we have parasitic resistance due to the law $J_n=n\mu_n \frac{dE_{fn}}{dx}$.\\
 To introduce this non ideality we can say that $J=J_0e^{\frac{qv}{mkT}}$ where m is a factor of non ideality.\\
@@ -428,7 +436,7 @@ Q_{diff}=q\Delta n(0) \frac{W_p^2}{2W_p}\frac{D_n}{D_n}=J_nt_p
 where $t_p$ is defined as electron transit time through the quasi-neutral p region.\\
 
 It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_{diff}=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx $\frac{1}{v_{diff}}$ we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
-
+\vspace{5mm}
 We could have come to the same result by reasoning on the physical situation: in the case of a wide-base diode, since we are in a stationary situation the amount of charge stored in the p-region cannot change, therefore if electrons are entering our region at a given rate, we must remove the same quantity at the same time, which is what the founded relation is saying
 \begin{equation}
 \frac{Q_{diff}}{\tau_0}=J_n
