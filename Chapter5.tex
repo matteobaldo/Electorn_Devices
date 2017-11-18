@@ -15,7 +15,7 @@ We want to study the electrostatic of this device changing the bias of the four 
 \subsubsection{Working principles}
 %------------------------------------------------------------------------%
 If $V_{gs}$ is low (until depletion regime) there is no interation between source and drain but if we move to higher $V_{gs}$ (inversion region) we get a lot of electrons from source to drain for the inversion layer so a flow of current it's possible under the gate. The behaviour of the device is like a resistor.\\
-Holes have a minor role in the behaviour of the device this is why the MOS transistor, also called field effect unipolar transistor, is an unipolar device.\\
+Holes have a minor role in the behaviour of the device this is why the MOS transistor (also called field effect unipolar transistor) is an unipolar device.\\
 
 %------------------------------------------------------------------------%
 \section{Gradual channel approximation}
@@ -75,11 +75,19 @@ In weak inversion we have that $Q_s=Q_{inv}+Q_{dep}$  using Taylor expansion of 
 \begin{equation}
 Q_{dep}=-\sqrt{2\varepsilon_{si}qN_aV_s}\ \ \ \ \ \ \ \ \ \   Q_{inv}=-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}
 \end{equation}
-In the y axes $E_c, E_v$ are flat and $F_y^{weak.i}\simeq0$ so current transport is a diffusion process and the flow of holes is negligible.
+In the y axes $E_c, E_v$ are flat and $F_y^{weak.i}\simeq0$ so current transport is a diffusion process and the flow of holes is negligible.\\
+
+\vspace{3mm}
+\centering
+\fbox{\begin{minipage}{40em}
+Note that since the electrons’ concentration is negligible
+in the source, and further decreases along y, along the channel the bands are flat: as a result, the electric field is almost nil and current transport is mainly given by diffusion, not by drift.
+\end{minipage}}
+\raggedright
 
 %------------------------------------------------------------------------%
 \subsection{Charge in strong inversion}
-The expression seen before for the depletion charge is no longer valid in strong inversion becuse the concentration of electrons isn't negligible and the inversion layer charge chanege the F profile \\
+The expression seen before for the depletion charge is no longer valid in strong inversion becuse the concentration of electrons isn't negligible and the inversion layer charge change the F profile \\
 
 
 \centering
@@ -91,13 +99,20 @@ Making this approximation we conclude that
 \begin{equation}
 Q_{dep}=-\sqrt{2\varepsilon_{si}qN_aV_s} \ \ \ \ \ \ \ \ Q_{inv}=Q_s-\sqrt{2\varepsilon_{si}qN_aV_s}
 \end{equation}
-In stong inversion the electrons concentration is no more negligible and at the drain $E_{fn}<E_{fp}$ and bands move downwards form source to drain as the quasi-Fermi level for electrons so there will be a drift flow of electrons and a relevan electric fiels in the y direction.
+In stong inversion the electrons concentration is no more negligible and at the drain $E_{fn}<E_{fp}$ and bands move downwards form source to drain as the quasi-Fermi level for electrons so there will be a drift flow of electrons and a relevan electric fiels in the y direction.\\
 
 
 \centering
 \includegraphics[width=0.35\textwidth]{a1.png}\\
 \raggedright
 
+
+\vspace{3mm}
+\centering
+\fbox{\begin{minipage}{40em}
+We have at source $V_s = 2|\phi_{bi}|$ whereas at drain $V_s = 2|\phi_{bi}|+V_{DS} $: this means that the bands must move downwards along the channel, where therefore we highlight the presence of a field, creating this time a drift current.
+\end{minipage}}
+\raggedright
 
 %------------------------------------------------------------------------%
 \section{Current behaviour}
@@ -166,6 +181,8 @@ R_{ch}=(\frac{\partial I_{ds}}{\partial V_{ds}})^{-1}=\frac{1}{\mu_nC_{ox}(V_{gs
 \end{equation}
 We espect the field constatn and so equal to $V_{ds}/L$.\\
 
+
+%------------------------------------------------------------------------%
 \subsection{Parabolic regime $V_{ds}<2|\phi_b|$}
 Now $V_{ds}$ is no more negliglibe but enought small to make a Taylor expansion of the second terms as
 \begin{equation}
@@ -176,6 +193,16 @@ and so re-writing the equation
 Q_{inv}\simeq-C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-\frac{Q_{dep}^{max}}{C_{ox}}-V(1+\frac{C_{dep}}{C_{ox}}))=-C_{ox}(V_{gs}-V_t-mV)
 \end{equation}
 The term -mV is an increase of the threshold voltage from source to drain.\\
+
+\vspace{3mm}
+\centering
+\fbox{\begin{minipage}{40em}
+"$-mV$" is an icrease of the threshold voltage form source to drain like in the case of MOS-capacitor with ring. We have $V_t$ at source but at drain $V_t'=V_t+mV$ recovering the expression for the charge form MOS-capacitor with ring $Q_{inv}=-C_{ox}(V_{gs}-V_t')$
+\end{minipage}}
+\raggedright
+\vspace{3mm}
+
+
 The inversion charge is decreasing from source to drain; putting this equation in the integral we get 
 \begin{equation}
 I_{ds}=\mu_nC_{ox}\frac{W}{L}[(V_{gs}-V_t)V_{ds}-\frac{mV_{ds}^2}{2}]
@@ -187,6 +214,14 @@ we have a parabolic behaviour of the current. If $V_{ds}$ is small we can neglec
 \includegraphics[width=0.25\textwidth]{parabreg.png}\\
 \raggedright
 
+
+\vspace{3mm}
+\centering
+\fbox{\begin{minipage}{40em}
+The current deviates from the linear behavior, increasing less than linearly and reaching an horizontal tangent point: this is due to $V_{DS}$ being large, which determines a non negligible reduction of the inversion charge, which triggers an increase of the electric field to maintain the current constant; however, since the charge is decreasing, we are increasing the channel resistance, which is not constant anymore.
+\end{minipage}}
+\raggedright
+\vspace{3mm}
 
 
 \subsection{Saturation point}
@@ -235,6 +270,17 @@ Let's look at $V_s(y=L)$ at the drain side as $V_{ds}$ increases; if $V_{ds}$ is
 We consider the $V_s-V_{ds}$ plot at constant $V_{gs}$ by increasing $V_{ds}$ we have $V_s$ closer to the $V_t'$ (threshold voltage also at the drain) and the onset of weak inversion. When we reach the intersection $V_s$ does not change any longer and the drain loses control of the electrostatics; the channel and the elctric fields in the y direction does not change anymore so we reach the maximum band banding.\\ $Q_{inv}=0$ does not means really zero but negligible electron concentration (we are in weak inversion).\\
 The parameter $m=1+\frac{C_{dep}}{C_{ox}}$ involves doping concentration and oxide thikness and express how much of $V_g$ drops over the substrate; for a good mos m=1,1-1,4.\\
 
+
+\vspace{3mm}
+\centering
+\fbox{\begin{minipage}{40em}
+We now want to give a more physically detailed description of the saturation condition. We are stating that $V_{GS}$ is large enough to provide strong inversion regime in the channel: at source we will have one single Fermi level, whereas at drain we will have two Fermi levels displaced by $qV_{DS}$ ; since we are keeping strong inversion, the bands must move down too, so to keep $E_{Fn}$ close to $E_{C}$.\\
+Let’s now look at $V_s(y = L)$, so at the drain side, as $V_{DS}$ increases: if $V_{DS}$ is small, $V_s = 2|\phi_B |$; increasing $V_{DS}$ , $V_s$ increases proportionally as $V_s= 2|\phi_B|+V_{DS}$ ; when $V^{sat}_{DS}$ is reached, we must study deeper to understand $V_s$ ’s behavior.\\
+We consider the $V_s-V_G$ plot: given a constant $V_{GS}$ , by increasing $V_{DS}$ we move $V_s$ closer to $V_t’$ (the electrostatic threshold voltage at drain) at the onset of weak inversion. When a crossing is reached, $V_s$ does not change any longer, because the intersection no longer changes.
+As a result, $V_s$ does not change anymore and the drain loses control of the electrostatics of the channel: the fields in the y-direction do not change any longer, thus the bands’bending reaches its maximum value. Notice that stating $Q_{inv}'=0$ at the drain means that the charge becomes negligible for the electrostatics (charge can never be actually null).
+\end{minipage}}
+\raggedright
+\vspace{3mm}
 
 
 %------------------------------------------------------------------------%
