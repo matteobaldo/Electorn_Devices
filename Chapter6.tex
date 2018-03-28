@@ -8,12 +8,12 @@
 \raggedright
 
 This device is created with 2 pn junctions with a back to back connection creating a npn or a pnp device. This device can be horizontal or vertical (we will study this second approach beacuse is the most important).\\
-The n structure is the collector the adjacent $n^+$ part is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the emitter area.\\
+The n structure is the collector, the adjacent $n^+$ part is the sub-collector region connected to the surface with a reach-throught implantation. The current flows in the vertical direction so the most significant part is the one under the emitter area.\\
 The main idea is to forward bias the EB-j and reverse bias the BC-j. Foward bias in EB-j so there will be a flow of electrons form E to B holes to B-E but if the base region is narrow we have that electrons don't recombine in the p region but travel throught it reaching the collector.\\
 We have a large flow of electrons throght a reverse biased junction (BC) beacuse the supply comes from the EB-j and not from GR processes. In the collector we have high resistivity due to low doping concentrations so we have to put the sub-collector to make a contact.\\
 \vspace{5mm}
 This device has a significant flow of both electrons and holes so it's a bipolar device (intrinsic flow of holes from base to emitter).\\
-We can minimize the base current by reducing the width of the base and also making the emitter more doped wrt the base (since the dominant current flow comes from the zone less doped doing so the holes from the emitter will be less).\\
+We can minimize the base current by reducing the width of the base (to avoid ricombination of e, so that they can reach the collector) and also making the emitter more doped wrt the base (since the dominant current flow comes from the zone less doped doing so the holes from the emitter will be less).\\
 \vspace{5mm}
 If the BC-j was direct biased we will have an additional component to the base current that is something we want to avoid.\\
 
@@ -133,7 +133,7 @@ We have an important role of the bangap only in $pn=n_i^2e^{(E_{fn}-E_{fp})/kT}$
 n_{i,e}^2=N_vN_ce^{-E_{gap}/kT}e^{\Delta E_{gap}/kT}=n_i^2e^{\Delta E_{gap}/kT}
 \end{equation}
 where $n_{i,e}$ is the effective intrinsic carrier density. 
-So $J_n=-n\mu_n \frac{dE_{fn}}{dx}$ where from the previous equation and the generalized law of mass action we get 
+So $J_n=n\mu_n \frac{dE_{fn}}{dx}$ where from the previous equation and the generalized law of mass action we get 
 \begin{equation}
 pn=n_{i,e}^2e^{\frac{E_{fn}-E_{fp}}{kT}}
 \end{equation}
@@ -313,7 +313,11 @@ Finally we get
 V_A=\frac{qN_a^BW_B}{C_{dep}^{BC}}=\frac{Q_p}{C_{dep}^{BC}}
 \end{equation}
 $Q_p$ total base charge of holes.\\
-To increase $V_A$ it's better to act on $C_{dep}^{BC}$.
+\vspace{5mm}
+To increase $V_A$ we have 3 factors that we can modify: $N_a$, $C_{dep}^{BC}$ and the width of the base (that regulates $W_B$).\\
+An increase of $N_a^B$ degenerates the $\beta$ of the transistor and a larger $W_b$ means G-R processes in the base so an extra base current and the decrease of the frequency responce.\\
+It's better to act on $C_{dep}^{BC}$; reducing $N_d^C$ we have a larger $W_d$ and so a smaller capacitance but the triggering level for Kirk effect becomes lower.\\
+\vspace{5mm}
 The lower limit for the width of the base is to avoid the punch-throught regime that is when the entire base is depleted.\\
 
 %------------------------------------------------------------------------%

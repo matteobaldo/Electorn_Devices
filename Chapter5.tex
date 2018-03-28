@@ -461,6 +461,9 @@ Using the cutting frequency of the transistor we find that
 \begin{equation}
 f_t=\frac{g_m}{2\pi (C_{gs}+C_{gd})}=\frac{1}{2\pi}\frac{g_m}{C_g}=\frac{1}{2\pi \tau_t}
 \end{equation}
+\vspace{5mm}
+
+Reducing L we improve frequency responce, increase current and reduce inctrinsic capacitances, all good effects but if we keep reducing it we lose the long channel approximation and something bad happens.\\
 
 %------------------------------------------------------------------------%
 \section{Body effect}
@@ -1033,7 +1036,7 @@ To satisfy the 3 requirements we have to stay in the triangle area and so we hav
 
 \vspace{5mm}
 Of course in the graph $t_{ox}^{max}>t_{ox}^{min}$ that means $V_{dd}<\frac{LF_{ox}^{max}}{20}$ but reducing the supply voltage we have also to reduce $V_t$ and doing so we increase the off-state current and power dissipation
-From a requirement on off-power dissipation we can get the $I_{off}=I_{ds}^{V_{ds}=V_{dd} \ V_{gs}=0}$ and from sub-th current get the $V_t$ we want. We have to take the worst case so the one at high temperature and then come back to the RT. Olso we can't increase too much $V_t$ or the on-state current will be too low. Typical requirement is to have $V_t \le \frac{V_{dd}}{4}$\\
+From a requirement on off-power dissipation we can get the $I_{off}=I_{ds}^{V_{ds}=V_{dd} \ V_{gs}=0}$ and from sub-th current get the $V_t$ we want. We have to take the worst case so the one at high temperature and then come back to the RT. Also we can't increase too much $V_t$ or the on-state current will be too low. Typical requirement is to have $V_t \le \frac{V_{dd}}{4}$\\
 
 These constraint are why we came to "strange" structure like the finfet in figue \\
 
@@ -1061,7 +1064,7 @@ With so small spaces we have problems of statistical variability due to the intr
 \includegraphics[width=0.15\textwidth]{mosrand.png}\\
 \raggedright
 
-In the area under the gate of a mos we have a certain nuber of dopants that can be calculated as $M=N_aWLW_d^{max}$ that for a 10nm thecnology are of a few thousand so variation of this nummber are very important and effective on the device behaviour.\\
+In the area under the gate of a mos we have a certain nuber of dopants that can be calculated as $M=N_aWLW_d^{max}$ that for a 10nm thecnology are of a few thousand so variation of this number are very important and effective on the device behaviour.\\
 Also with so few M it's relevant the position of them; we can have regions where the local $V_t$ is higher causing a non uniform inversion layer ad so a percolative substrate conduction.\\ 
 
 

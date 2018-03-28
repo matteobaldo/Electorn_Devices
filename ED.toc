@@ -88,17 +88,17 @@
 \contentsline {section}{\numberline {5.8}Body effect}{70}{section.5.8}
 \contentsline {section}{\numberline {5.9}Subtheshold regime}{71}{section.5.9}
 \contentsline {subsection}{\numberline {5.9.1}Current expression}{71}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{72}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{73}{subsection.5.9.2}
 \contentsline {subsubsection}{Improvment for MOS}{73}{section*.9}
 \contentsline {section}{\numberline {5.10}Temperature dependance}{73}{section.5.10}
-\contentsline {section}{\numberline {5.11}Effects of non idealities}{74}{section.5.11}
-\contentsline {subsection}{\numberline {5.11.1}Parasitic resistance of $n^+$ regions}{74}{subsection.5.11.1}
+\contentsline {section}{\numberline {5.11}Effects of non idealities}{75}{section.5.11}
+\contentsline {subsection}{\numberline {5.11.1}Parasitic resistance of $n^+$ regions}{75}{subsection.5.11.1}
 \contentsline {subsection}{\numberline {5.11.2}Parasitic capacitance}{76}{subsection.5.11.2}
 \contentsline {subsection}{\numberline {5.11.3}Leakage current}{76}{subsection.5.11.3}
 \contentsline {subsection}{\numberline {5.11.4}Charge in the oxide}{77}{subsection.5.11.4}
 \contentsline {subsection}{\numberline {5.11.5}Interface states}{78}{subsection.5.11.5}
 \contentsline {section}{\numberline {5.12}Short channel devices}{78}{section.5.12}
-\contentsline {subsection}{\numberline {5.12.1}2D electrostatic in channel coming from $n^+$ regions}{78}{subsection.5.12.1}
+\contentsline {subsection}{\numberline {5.12.1}2D electrostatic in channel coming from $n^+$ regions}{79}{subsection.5.12.1}
 \contentsline {subsection}{\numberline {5.12.2}Velocity saturation}{81}{subsection.5.12.2}
 \contentsline {subsubsection}{Hot electrons}{82}{section*.10}
 \contentsline {section}{\numberline {5.13}Scaling rules}{83}{section.5.13}
@@ -128,3 +128,8 @@
 \contentsline {subsection}{\numberline {6.7.4}Capacitive effects}{97}{subsection.6.7.4}
 \contentsline {section}{\numberline {6.8}Frequency responce}{98}{section.6.8}
 \contentsline {section}{\numberline {6.9}Considerations}{98}{section.6.9}
+\contentsline {chapter}{\numberline {7}Summary on basics formulas}{100}{chapter.7}
+\contentsline {section}{\numberline {7.1}Semicoductors basics}{100}{section.7.1}
+\contentsline {section}{\numberline {7.2}Diodes}{101}{section.7.2}
+\contentsline {section}{\numberline {7.3}Metal-semiconductor junction}{101}{section.7.3}
+\contentsline {section}{\numberline {7.4}MOS capacitor}{102}{section.7.4}

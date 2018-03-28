@@ -1,0 +1,153 @@
+%-------------------------------------------------------------%
+\chapter{Summary on basics formulas}
+%-------------------------------------------------------------%
+
+
+\raggedright
+\section{Semicoductors basics}
+
+\begin{equation}
+\phi=-\frac{E}{q}
+\end{equation}
+
+
+\begin{equation}
+F=-\frac{d\phi}{dx}
+\end{equation}
+\vspace{3mm}
+Diffusion coefficients\\
+\begin{equation}
+D_n=\mu_n\frac{kT}{q}\ \ \ D_p=\mu_p\frac{kT}{q}
+\end{equation}
+\vspace{3mm}
+Dybae lenght\\
+\begin{equation}
+L_D=\sqrt{\frac{\varepsilon_{Si}kT}{q^2N_d}}
+\end{equation}
+\vspace{3mm}
+Current expressions\\
+\begin{equation}
+J_p=-qp\mu_p\frac{d\phi_{fp}}{dx}
+\end{equation}
+\begin{equation}
+J_n=p\mu_p\frac{dE_{fp}}{dx}
+\end{equation}  
+\begin{equation}
+J_n=-qn\mu_n\frac{d\phi_{fn}}{dx}
+\end{equation}
+\begin{equation}
+J_n=n\mu_n\frac{dE_{fn}}{dx}
+\end{equation} 
+\vspace{3mm}
+Equation for e and h \\
+\begin{equation}
+\frac{\partial n}{\partial t}=\frac{1}{q}\frac{\partial J_n}{\partial x}+G-R \ \ \ \ \ \ \frac{\partial p}{\partial t}=-\frac{1}{q}\frac{\partial J_p}{\partial x}+G-R
+\end{equation}
+\vspace{3mm}
+Recombination R\\
+\begin{equation}
+R=\frac{pn-n_i}{\tau_0\left[p+n+2n_iCosh(\frac{E_T-E_i}{kT})\right]}
+\end{equation}
+
+
+%--------------------------------------------%
+\section{Diodes}
+
+General current-carriers expression\\
+\begin{equation}
+J=[\frac{qD_nn_{p0}}{L_n\tanh(W_p/L_n)}+\frac{qD_pp_{n0}}{L_p\tanh(W_n/L_p)}](e^{\frac{qV}{kT}}-1)=J_0(e^{\frac{qV}{kT}}-1)
+\end{equation}
+\begin{equation}
+\Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)\frac{\sinh(\frac{W_p-x}{L_n})}{\sinh(\frac{W_p}{L_n})}
+\end{equation}
+\vspace{3mm}
+For wide base diod we have 
+\begin{equation}
+\Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)e^{\frac{-x}{L_n}} \ \ \ \ \ \ \ J_n=\frac{qD_nn_{p0}(e^{\frac{qV}{kT}}-1)}{L_n}
+\end{equation}
+\vspace{3mm}
+For narrow base diod we have
+\begin{equation}
+\Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)e^{\frac{-x}{L_n}} \ \ \ \ \ \ \ J_n=\frac{qD_nn_{p0}(e^{\frac{qV}{kT}}-1)}{L_n}
+\end{equation}
+\vspace{3mm}
+R-current 
+\begin{equation}
+J_R=qR_{max}W_d=qW_d\frac{n_i(e^{\frac{qV}{2kT}})}{2\tau_0}
+\end{equation}
+G-current 
+\begin{equation}
+J_G=-q\frac{n_i}{2\tau_0}W_d
+\end{equation}
+General low current expression due to G-R processes
+\begin{equation}
+J_{GR}=\frac{qn_i}{2\tau_0}W_d(e^{\frac{qV}{2kT}}-1)=J_{0GR}(e^{\frac{qV}{2kT}}-1)
+\end{equation}
+
+%--------------------------------------------%
+\section{Metal-semiconductor junction}
+
+Bethe's model current from semiconductor to metal
+\begin{equation}
+J_{s-m}^{(1)}=\frac{4\pi q}{h^3}\sqrt{m_xm_y}(kT)^2e^{\frac{-\phi_{bn}}{kT}}e^{\frac{qV}{kT}}=A\cdot\sqrt{m_xm_y}T^2e^{\frac{-\phi_{bn}}{kT}}e^{\frac{qV}{kT}}
+\end{equation}
+Bethe's model current in MS-J
+\begin{equation}
+J=A^*T^2e^{\frac{-q\phi_{bn}}{kT}}(e^{\frac{qV}{kT}}-1)=J_{0,th}(e^{\frac{qV}{kT}}-1)
+\end{equation}
+\vspace{3mm}
+Universal model boundary condition
+\begin{equation}
+J_n(0)=\frac{A^*T^2 }{N_c}[n(0)-n_0]
+\end{equation}
+\vspace{3mm}
+Shottky effect barrier lowering 
+\begin{equation}
+E_0(x)=E_0(+\infty)-\frac{q^2}{16 \pi \varepsilon_0 x}
+\end{equation}
+\begin{equation}
+\phi(x)=\phi(+\infty)+\frac{q}{16\pi \varepsilon_0 x}
+\end{equation}
+\vspace{3mm}
+
+Ohmic contact transparancy coefficient ($E_{00}=q\frac{\hslash \sqrt{N_d}}{2\sqrt{m^*\varepsilon_{si}}}$)
+\begin{equation}
+T=e^{-2\sqrt{\frac{2m^*}{\hslash^2}}\sqrt{\frac{q^2N_d}{2\varepsilon_{Si}}}\frac{2\varepsilon_{Si}}{qN_d}(\phi_{bi}-V)}=e^{-q \frac{(\phi_{bi}-V)}{E_{00}}}
+\end{equation}
+Contact resistivity
+\begin{equation}
+\rho_c=(\frac{\partial J }{\partial V})^{-1}|_{V=0}=\frac{E_{00}}{q}e^{q\phi_{bi}/E_{00}}
+\end{equation}
+
+
+\section{MOS capacitor}
+
+\begin{equation}
+V_g-V_{fb}=V_s-\frac{Q_s}{C_{ox}}
+\end{equation}
+
+Charge in the substrate 
+\begin{equation}
+Q_s=\pm\sqrt{2kTN_a\varepsilon_{si}}\left(e^{-qV_s/kT}+\frac{qV_s}{kT}-1+\frac{n_i^2}{N_a^2}(e^{qV_s/kT}-\frac{qV_s}{kT}-1)\right)^{1/2}
+\end{equation}
+\vspace{3mm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
