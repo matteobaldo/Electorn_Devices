@@ -13,7 +13,7 @@ To study pn junctions we have to make some simplyfing assumptions : we consider 
 
 Let's consider the 2 regions isolated from each other and under th.eq. We don't have a single Fermi level so depending on the zone we have 
 \begin{equation}
-E_i-E_f^{(n)}=kT\ln(\frac{N_a}{n_i}) \ \ \ \ \ \ \ E_f^{(n)}-E_i=kT\ln(\frac{N_d}{n_i})
+E_i-E_f^{(p)}=kT\ln(\frac{N_a}{n_i}) \ \ \ \ \ \ \ E_f^{(n)}-E_i=kT\ln(\frac{N_d}{n_i})
 \end{equation}
 where $E_f^{(n/p)}$ is the Fermi level in that zone.\\
 
@@ -155,13 +155,13 @@ This is the same result of electrostatic without bias so the depletion region wi
 \begin{equation}
 W=\sqrt{\frac{2\varepsilon}{q}(\phi_{bi}-V)(\frac{1}{N_a}+\frac{1}{N_d})}
 \end{equation}
-$E_{fn}$ remains costant until $-x_p$ but n changes beacuse $E_c$ moves upwards.\\
+$E_{fn}$ remains almost\footnote{if $E_{fn}$ is constant its gradient is zero and there is no current flowing according to previous expressions} costant until $-x_p$ but n changes beacuse $E_c$ moves upwards.\\
 For reverse bias we have to follow the same path of forward bias arriving at the graph above.\\
 Bands are flat near the contact beacuse we suppose (1) quasi-neutral region under (2) low level of injection with (3) costant doping and (4) negligible gradient of quasi-Fermi levels; if one of this supposition falls the bands will no more be flat.\\
 \vspace{5mm}
 \label{cont.eq}
 Now we want to know the quasi-Fermi level in the minority region.
-We know that at $x=x_n$ $n\simeq N_d$ and for the law of mass action generalized $p=\frac{n_i^2}{n}e^{\frac{E_{fn}-E_{fp}}{kT}}\simeq p_{n0}e^{\frac{qV}{kT}}$ and at $x=-x_p$ with the same passages we obtain $n\simeq n_{p0}e^{\frac{qV}{kT}}$. Now we can solve the continuity equation only in the quasi-neutral region. \\
+We know that at $x=x_n$ $n\simeq N_d$ and for the law of mass action generalized $p=\frac{n_i^2}{N_d}e^{\frac{E_{fn}-E_{fp}}{kT}}\simeq p_{n0}e^{\frac{qV}{kT}}$ and at $x=-x_p$ with the same passages we obtain $n\simeq n_{p0}e^{\frac{qV}{kT}}$. Now we can solve the continuity equation only in the quasi-neutral region. \\
 Beacuse the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ and $G-R=\frac{-\Delta n}{\tau_n}$ from this two in the coninuity equations under stationary condition we get
 \begin{equation}
 \frac{d^2\Delta n}{dx^2}-\frac{\Delta n}{L_n^2}=0
@@ -176,7 +176,7 @@ Solving that as a polynomial we get $\lambda^2-\frac{1}{L_n^2}=0\leftarrow \lamb
 \begin{equation}
 \Delta n(x)=n_{p0}(e^{\frac{qV}{kT}}-1)\frac{\sinh(\frac{W_p-x}{L_n})}{\sinh(\frac{W_p}{L_n})}
 \end{equation}
-Having only diffusion processes we can know the current but we are intrested only in $J_n(0)$ at the edge of the quasi-neutral region so 
+Having only diffusion processes we can know the current but we are intrested only\footnote{ The sum of electron and holes current will be constant since we are in a stationary condition so we keep interest only in one section of the device. We don't want to know the currents graphs in function of space in a rigorous way} in $J_n(0)$ at the edge of the quasi-neutral region so 
 \begin{equation}
 J_n(0)=(qD_n \frac{d\Delta n}{dx})|_{x=0}=-\frac{qD_nn_{p0}}{L_n\tanh(W_p/L_n)}(e^{\frac{qV}{kT}}-1)
 \end{equation}
@@ -228,14 +228,14 @@ For a narrow base the decrease of $E_{fn}$ will be logaritmic beacuse n(x) decre
 In the quasi neutral p (n) region we have less electrons (holes) than in all other zone so the highest resistivity. The limit for conduction is given by the quasi-neutral region where we have less concentration of minority carriers; this is why the pn junction is called a minority carriers device , the limit for current transport is given by minority carriers.\\
 \vspace{5mm}
 
-\centering
+\raggedright
 \fbox{\begin{minipage}{40em}
 Consider a narrow base diod in reverse bias. 
 Increasing the negative voltage applied we increase the depletion layer reducing the width of the quasi neutral region. The reverse current will increase due to the increase of the slope of carriers.
 \end{minipage}}
 \raggedright
 
-\centering
+\raggedleft
 \fbox{\begin{minipage}{40em}
 Looking at the two expressions of the current in wide and narrow base case we can notice that the $J_0$ stay constant changing the length of the device if we consider a wide base diode but if we consider a narrow base one $J_0$ will increase hyperbolically (as 1/x) reducing W.\\
 This is due to the fact that the current is purely diffusive and reducing the length means to increase the gradient of carriers and so the current. 
@@ -274,6 +274,8 @@ Knowing $J_n+J_p=const$ in stationary conditions and that if we neglect also G-R
 The flow of holes becomes zero at n contact but than in grows for generation processes.\\
 We have the same behaviour of the current both in reverse and in forward bias but $J_{tot}$ changes of orders of magnitude. As before minority carriers move by diffusion, majority by drift and in the depletion layer we have movement by drift.\\
 \vspace{5mm}
+
+
 {\bf Narrow base forward bias}\\
 Linear increase of minority carriers so also majority in order to mantain the region quasi-neutral.\\
 
@@ -305,6 +307,12 @@ G-R effects in modern integrated devices are secondary effects that takes place 
 \centering
 \fbox{\begin{minipage}{40em}
 Orders of magnitude for $J_0$ with $W=1\mu m$ in case of a wide base diod is $1 \ pA/cm^2$ for narrow base $1 \ nA/cm^2$
+\end{minipage}}
+\raggedright
+
+\centering
+\fbox{\begin{minipage}{40em}
+All graphs are refered to a $p-n^+$ junction we can say that based on the concentration of carriers and also from the currents densities since the dominant contribution is always the one coming from electrons that are the minority carriers of the less doped zone.
 \end{minipage}}
 \raggedright
 
@@ -342,7 +350,7 @@ There are some phenomena that we have to consider in order to make more realisti
 \includegraphics[width=0.35\textwidth]{Rdl.png}
 \end{wrapfigure}
 
-We have always neglect the G-R in the depletion layer but now we have to make some considerations.\\
+We have always neglected the G-R in the depletion layer but now we have to make some considerations.\\
 Under reverse bias $E_{fn}<E_{fp}$ so there will be some generation processes, knowing the quasi-Fermi level and using the law of mass action generalized we can write the SRH R coefficient as
 \begin{equation}
 R=\frac{n_i^2(e^{qV/kT}-1)}{\tau_0(p+n+2n_i Ch((E_t-E_i)/(kT))}
@@ -403,10 +411,10 @@ What it follows is the Gummel plot of the pn junction that include all non ideal
 %------------------------------------------------------------------------%
 \section{Small signal model}
 %------------------------------------------------------------------------%
-The pn junction is, of course, a non linear device if we assume that is polarized at $\overline{V}>0$ and we change that voltage of $\sigma V$ we are interested in its response. We have 3 small signal parameters: conductance, depletion capacitance and diffusion capacitance.
+The pn junction is, of course, a non linear device if we assume that is polarized at $\overline{V}>0$ and we change that voltage of $\delta V$ we are interested in its response. We have 3 small signal parameters: conductance, depletion capacitance and diffusion capacitance.
 %------------------------------------------------------------------------%
 \subsection{Conductance}
-Changing the voltage of $\sigma V$ we have a variation of the current so a condctance that we can calculate as 
+Changing the voltage of $\delta V$ we have a variation of the current so a condctance that we can calculate as 
 \begin{equation}
 g_m=\frac{\partial I}{\partial V}=\frac{I}{kt/q}
 \end{equation}

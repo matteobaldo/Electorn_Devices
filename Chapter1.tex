@@ -167,12 +167,13 @@ n=N_c 2/3 \frac{2}{\sqrt{\pi}}\left(\frac{E_f-E_c}{kT}\right)^{3/2}=N_c 2/3 \fra
 In the graph above we can notice the difference between F-D and M-B distribution over $\eta$.\\
 %------------------------------------------------------------------------%
 \section{Current transport}
-There are 2 most important mechanisms that generates current: drift and diffusion.\\
+There are 4 main mechanisms that contribute to current transport; drift, diffusion, thermoionic transport and tunneling effects. Among this 4 the first 2 are the most important and frequent.\\
+\vspace{2mm}
 Drift current is caused by the application of a electric field F; electrons are not only influenced by F but also from scattering events so we can define a drift velocity (that is an average velocity) as 
 \begin{equation}
 v_d=\mu_n F
 \end{equation}
-So drift velocity is proportional to F with a constant $\mu_n$ called mobility that depends on doping concentration, temperature and dimensionality of the system taking in account all scattering events. It's important to note that in a bulk of doped Si if we are near the surface the mobility is much lower than the inside (dimensionality).\\
+So drift velocity is proportional to F with a constant $\mu_n$ called mobility that depends on doping concentration, temperature and dimensionality of the system taking in account all scattering events. It's important to note that in a bulk of doped Si if we are near the surface the mobility is much lower than the inside (dimensionality dependance).\\
 Mobility has a drop for Si around doping concentration of $\simeq 10^6 cm^{-3}$ beacuse at that level scattering with impurities becomes dominant compared with thermal scattering.\\
 Increasing too much F we encounter the phenomena of velocity saturation ($v_{sat}\simeq 10^7 cm/s$) caused by scattering with high energetic optical phonons.\\
 The density current caused by drift process is 
@@ -209,11 +210,6 @@ We can obtain external potential $\phi$ as $\phi=\frac{-E_i(x)}{q}$.\\
 The external potential increases in the direction the bands band downwards. The electric field is in the opposite direction of the growth of potential $\vec{F}=-\frac{d\phi}{dx}$.\\
 Electrons move by drift in the opposite direction of F and holes in the same direction of F.\\
 
-\centering
-\includegraphics[width=0.5\textwidth]{bandsgeo2.png}\\
-\raggedright
-
-Without condition of thermal equilibrium electrons move from regions of high quasi fermi level to regions of low quasi fermi level and holes vice-versa.
 %------------------------------------------------------------------------%
 \section{Poisson equation}
 Poisson equation is important to study the electrostatic of a system.\\
@@ -297,7 +293,7 @@ Electrons moves from the region of high quasi Fermi level to region of low quasi
 J_p=-qp\mu_p\frac{d\phi_{fp}}{dx}
 \end{equation}
 \begin{equation}
-J_n=p\mu_p\frac{dE_{fp}}{dx}
+J_p=p\mu_p\frac{dE_{fp}}{dx}
 \end{equation}  
 \newline
 %------------------------------------------------------------------------%
@@ -376,7 +372,7 @@ e_n=n_iv_{th}\delta_ne^{\frac{E_T-E_i}{kT}} \ \ \ \ \ \ e_p=n_iv_{th}\delta_pe^{
 There is an exponential dependance if the difect is colser to the conduction band the process of release is higher; vice-versa the process of capture doesn't have this dependance beacuse the e has only to realese energy.\\
 Under stationary condition $R=r_1-r_2=r_3-r_4$ from this we obtain $f(E_T)$ and we get the final result 
 \begin{equation}
-R=\frac{pn-n_i}{\tau_0\left[p+n+2n_iCosh(\frac{E_T-E_i}{kT})\right]}
+R=\frac{pn-n_i^2}{\tau_0\left[p+n+2n_iCosh(\frac{E_T-E_i}{kT})\right]}
 \end{equation}
 where $\tau_0=1/(v_{th}N_T\delta)$ and we've assumed $\delta_n=\delta_p=\delta$.\\
 
