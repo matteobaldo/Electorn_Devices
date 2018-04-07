@@ -45,6 +45,11 @@ now we can re-write the balance of voltages as
 \begin{equation}
 V_G-V_{FB}=V_s+V_{ox}
 \end{equation}
+
+$V_{fb}$ can be found considering complete ionization as
+\begin{equation}
+V_{FB}=\frac{kT}{q}\ln(\frac{N_a}{n_i})+\frac{E_g}{2}
+\end{equation}
 %------------------------------------------------------------------------%
 \subsection{Accumulation regime}
 %------------------------------------------------------------------------%
@@ -142,12 +147,12 @@ in the solution of the Poisson equation is the term that takes into account for 
 \vspace{5mm}
 In the depletion regime $0<V_s<2|\phi_b|$ we have to consider two dominant term: $\frac{qV_s}{kT}$ and $\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}$. If we evaluate the second term at $2|\phi_b|$ we get 1 so it's negligible and therefore the first term is predominant. In this regime
 \begin{equation}
-Q_s\simeq -qN_a\sqrt{\frac{2\varepsilon_{Si}}{q}\frac{1}{N_a}V_s}
+Q_s\simeq -qN_a\sqrt{\frac{2\varepsilon_{Si}}{q}\frac{1}{N_a}V_s}=-qN_aW_d
 \end{equation}
 that is the charge of the depletion layer.\\
 
 \vspace{5mm}
-In strong inversion $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}\frac{n_i^2}{N_a^2}e^{\frac{qV_s}{2kT}}$ so we can say that the term
+In strong inversion $Q_s\simeq \sqrt{2kTN_a\varepsilon_{si}}\frac{n_i}{N_a}e^{\frac{qV_s}{2kT}}$ so we can say that the term
 \begin{equation}
 \frac{n_i^2}{N_a^2}e^{\frac{qV_s}{kT}}\rightarrow e_{sub}
 \end{equation}
@@ -184,12 +189,23 @@ V_g-V_{fb}=V_s+\frac{\sqrt{2qN_a\varepsilon_{Si}V_s}}{C_{ox}}
 \end{equation}
 
 \vspace{5mm}
+
+{\begin{center} \fbox{\begin{minipage}{40em}
+
 For weak inversion $\phi_b<V_s<2\phi_b$ we can consider both dominants terms 
 getting the following equation 
 \begin{equation}
-V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\left(\frac{qV_s}{kT}+\frac{n_i^2}{N_a^2}e^{qV_s/kT} \right)^{1/2}\simeq V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\sqrt{\frac{qV_s}{kT}}\left(1+\frac{n_i^2}{2N_a^2}e^{qV_s/kT}\frac{kT}{qV_s}\right)
+V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\left(\frac{qV_s}{kT}+\frac{n_i^2}{N_a^2}e^{qV_s/kT} \right)^{1/2}
 \end{equation}
-using Taylor expansion we get an exponential dependance on $V_g$ of the e charge (that is the second term). Form this dependace we will get the sub-th current of the mos capacitor.\\
+\begin{equation}
+V_g-V_{fb}\simeq V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}\sqrt{\frac{qV_s}{kT}}\left(1+\frac{n_i^2}{2N_a^2}e^{qV_s/kT}\frac{kT}{qV_s}\right)
+\end{equation}
+using Taylor expansion we get an exponential dependance on $V_g$ of the e charge (that is the second term). Form this dependace we will get the sub-th current of the mos capacitor.\
+
+\end{minipage}}
+\end{center}}
+
+
 
 \vspace{5mm}
 For strong inversion we get 
@@ -200,9 +216,13 @@ remembering that $\frac{n_i^2}{N_a^2}e^{q2|\phi_b|/kT}=1$ we can say that $\frac
 \begin{equation}
 V_g-V_{fb}=V_s+\frac{\sqrt{2\varepsilon_{si}kTN_a}}{C_{ox}}e^{\frac{q(V_s-2|\phi_b|)}{2kT}}
 \end{equation}
-So we get $V_s$ and making a rought approx of $V_s\simeq 2|\phi_b|$ also $Q_s$
+So we get $V_s$ 
 \begin{equation}
-V_s=2|\phi_b|+\frac{2kT}{q}\ln \left(\frac{C_{ox}(V_g-V_{fb}-V_s)}{\sqrt{2\varepsilon_{si}kTN_a}} \right) \ \ \ \ \ \ Q_s=-C_{ox}(V_g-V_{fb}-2|\phi_b|)
+V_s=2|\phi_b|+\frac{2kT}{q}\ln \left(\frac{C_{ox}(V_g-V_{fb}-V_s)}{\sqrt{2\varepsilon_{si}kTN_a}} \right) 
+\end{equation}
+and making a rought approx of $V_s\simeq 2|\phi_b|$, due to the log dependance, also $Q_s$\\
+\begin{equation}
+Q_s=-C_{ox}(V_g-V_{fb}-V_s)\simeq-C_{ox}(V_g-V_{fb}-2|\phi_b|)
 \end{equation}
 The approximation means that entering in storng inversion we get a maximum depletion layer and a maximum depletion charge
 \begin{equation}
@@ -305,7 +325,7 @@ The time constant for the generation process in strong inversion can be extracte
 \end{equation}
 $\tau_g$ is technology dependent and very big in the order of seconds.\\
 Only if the signal has a frequence much lower than $\tau_g$ ($f<1Hz$) we have the ideal charachteristic seen before.\\
-Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards or downwards. With a $\delta V_g>0$ we have to increase the total voltage drop but the dependance with $V_{sub}$ is very weak (logaritmic dependance) so $\delta V_s\simeq 0$ and we modulate only the voltage drop over the oxide (under charge sheet approximation that we will see in next chapter) $\delta V_g\simeq \delta V_{ox}$
+Looking at the band diagram a movement of $\delta V_g$ moves $E_{f(m)}$ upwards or downwards. With a $\delta V_g>0$ we have to increase the total voltage drop but the dependance with $V_{sub}$ is very weak (logaritmic dependance) so $\delta V_s\simeq 0$ and we modulate only the voltage drop over the oxide (this under charge sheet approximation ,that we will see in next chapter, since we're  breaking the continuity law of the electric field $F_{ox}\varepsilon_{ox}=F_{Si}\varepsilon_{Si}$) $\delta V_g\simeq \delta V_{ox}$
 
 
 %------------------------------------------------------------------------%
@@ -434,6 +454,14 @@ V_t'=V_t(V_r=0)+V_r+\frac{\sqrt{2\varepsilon_{si}qN_a}}{C_{ox}}[\sqrt{2|\phi_b|+
 \includegraphics[width=0.4\textwidth]{vtprimo.png}\\
 \raggedright
 
+Looking at the graph of $V_s(V_g)$ we're basically making the depletion regime longer until $V_t'$ where $V_s\simeq 2|\phi_b|+V_r$ and we gain again the strong inversion.\\
+\vspace{3mm}
+
+\fbox{\begin{minipage}{40em}
+This is exacly the workin principle of the MOS transistor; from a point on of the channel lenght the drop of the potential $V_{ds}$ (that is our $V_r$ here) is too large and strong inversion is no more posible. 
+\end{minipage}}
+
+\vspace{3mm}
 The charge in the substrate will be from the relation $V_g-V_{fb}=V_s-Q_s/C_{ox}$ 
 \begin{equation}
 Q_{inv}=Q_s-Q_{dep}^{max}=-C_{ox}(V_g-V_{fb}-2|\phi_b|-V_r-|Q_{dep}^{max}|/C_{ox})=-C_{ox}(V_g-V_t')
