@@ -39,7 +39,7 @@ V goes from 0 (at the source) to $V_{ds}$ (at the drain).\\
 %------------------------------------------------------------------------%
 \section{Poisson equation}
 %------------------------------------------------------------------------%
-Looking at the last band diagram we plotted the poisson equation it's very similar to the one of an MOS capacitor the only difference is in the n term that now is 
+Looking at the last band diagram we plotted the poisson equation it's very similar to the one of an MOS capacitor the only difference is in the n term that now is\footnote{There is no $N_a^2$ since we are considering also the multiplication with the first coefficient to make this a concentration otherwise is a pure number} 
 \begin{equation}
 n=\frac{n_i^2}{N_a}e^{q\Delta \phi /kT}e^{-qV/kT}
 \end{equation}
@@ -94,6 +94,7 @@ The expression seen before for the depletion charge is no longer valid in strong
 \includegraphics[width=0.7\textwidth]{csa.png}\\
 \raggedright
 
+This means that we cannot use the Gauss law, that we used to pass from the poisson equation to the charge in the substrate, in a rigorous sense. 
 To recover that expression we can make a charge sheet approximation that is considering the thikness of the inversion layer so small to be negligible to have a graph like in figure above.\\
 Making this approximation we conclude that
 \begin{equation}
@@ -125,7 +126,7 @@ We have at source $V_s = 2|\phi_{bi}|$ whereas at drain $V_s = 2|\phi_{bi}|+V_{D
 
 
 In order to arrive to $V_s(V_{gd},V_{ds})$ we have to use not only $V_{gs}+V_{fb}=V_{s}+V_{ox}=V_{s}-Q_s/C_{ox}$ but also the continuity equation for electrons beacuse the substrate isn't at th.eq.\\
-We assume the device stationary and the GR processes negligible so $J_n$ is constant in the channel region. From the interface with the oxide to the substrate the current will decrease due to the decrease of electron concentration but form S-D J will remains constant beacuse the direction is parallel to the current flow so we can say that
+We assume the device stationary and the GR processes negligible so $J_n$ is constant in the channel region. From the interface with the oxide to the substrate the current will decrease due to the decrease of electron concentration but form S-D I will remains constant beacuse the direction is parallel to the current flow so we can say that
 \begin{equation}
 I_{ds}=-W\int^{t_{inv}}_0 J_n(x)dx
 \end{equation}
@@ -146,11 +147,12 @@ the integral form for drain current. This expressions (differential and interal)
 \vspace{5mm}
 
 Let's now foucs on storng inversion regime.\\
-In this regime we've seen that using the charge sheet approximation $Q_{inv}=Q_s+\sqrt{2\varepsilon_{si}qN_aV_s}$ if we combine this equation with 
+In this regime we've seen that using the charge sheet approximation $Q_{inv}=Q_s+\sqrt{2\varepsilon_{si}qN_aV_s}$\\
+If we combine  
 \begin{equation}
 Q_s=-\sqrt{2\varepsilon_{si}kTN_a}\left(\frac{qV_s}{kT}+\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}\right)^{1/2}
 \end{equation}
- and with $V_{gs}+V_{fb}=V_{s}-Q_s/C_{ox}$ we get that $V_s\simeq2|\phi_b|+V$ and $Q_s=-C_{ox}(V_{gs}-V_{fb}-V_{s})$ if we use this two equation with the first one (inversion charge) we get that
+with $V_{gs}+V_{fb}=V_{s}-Q_s/C_{ox}$ we get that $V_s\simeq2|\phi_b|+V$ and $Q_s=-C_{ox}(V_{gs}-V_{fb}-V_{s})$ if we use this two equation with the first one (inversion charge) we get that
 \begin{equation}
 Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+\sqrt{2\varepsilon_{si}qN_a(2|\phi_b|+V)}
 \end{equation}
@@ -173,7 +175,7 @@ This is the expression for ohmic regime the current is proportional to $V_{ds}$.
 \includegraphics[width=0.17\textwidth]{ohmreg.png}
 \end{wrapfigure}
 
-The inversion charge does not change from source to drain and beacuse $V_{ds}$ is very small the electrostatic is almost uniform along the channel.\\
+The inversion charge does not change from source to drain and beacuse $V_{ds}$ is very small the electrostatic is almost uniform along the channel\footnote{This can be verified looking at the expression $I_{ds}=-\mu_nW \frac{dV}{dy}Q_{inv}$ since V is small also its derivative will be small and so, to let the current be constant, also the charge has to be}.\\
 
 It's like having a resistor in the channel that can be modulate by $V_{gs}$. We can define a resistivity for the channel as 
 \begin{equation}
@@ -184,7 +186,7 @@ We espect the field constatn and so equal to $V_{ds}/L$.\\
 
 %------------------------------------------------------------------------%
 \subsection{Parabolic regime $V_{ds}<2|\phi_b|$}
-Now $V_{ds}$ is no more negliglibe but enought small to make a Taylor expansion of the second terms as
+Now $V_{ds}$ is no more negliglibe but enought small to make a Taylor expansion of the second term as
 \begin{equation}
 Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+\sqrt{2\varepsilon_{si}qN_a2|\phi_b|}(1+\frac{1}{2}\frac{V}{2|\phi_b|})=-[...]+\sqrt{\frac{\varepsilon_{si}qN_a}{4|\phi_b|}}V=-[...]+|Q_{dep}^{max}|+C_{dep}V
 \end{equation}
@@ -222,6 +224,9 @@ The current deviates from the linear behavior, increasing less than linearly and
 \end{minipage}}
 \raggedright
 \vspace{3mm}
+
+
+
 
 
 \subsection{Saturation point}
@@ -463,7 +468,7 @@ f_t=\frac{g_m}{2\pi (C_{gs}+C_{gd})}=\frac{1}{2\pi}\frac{g_m}{C_g}=\frac{1}{2\pi
 \end{equation}
 \vspace{5mm}
 
-Reducing L we improve frequency responce, increase current and reduce inctrinsic capacitances, all good effects but if we keep reducing it we lose the long channel approximation and something bad happens.\\
+Reducing L we improve frequency responce, increase current and reduce inctrinsic capacitances, all good effects but if we keep reducing it we lose the long channel approximation so we will have to take into account some other effects that will make our transistor worst.\\
 
 %------------------------------------------------------------------------%
 \section{Body effect}
@@ -503,13 +508,13 @@ For better undestand the behaviour of $V_t'(-V_{bs})$ we can study
 %------------------------------------------------------------------------%
 
 %------------------------------------------------------------------------%
-\subsection{Current expression}
+\subsection{Current expression (long version)}
 
 \centering
 \includegraphics[width=0.35\textwidth]{subth.png}\\
 \raggedright
 
-In this regime $V_{gs} \lesssim V_t$ so we don't have strong inversion anywhere in the channel, the electron concentration is negligible for electrostatics that is dominated by the depletion charge. Bands are almost flat in the channel (also if electorn concentation change beacuse it's a neglibile contribution).\\
+In this regime $V_{gs} \lesssim V_t$ so we don't have strong inversion anywhere in the channel, the electron concentration is negligible for electrostatics that is dominated by the depletion charge. Bands are almost flat in the channel (also if electorn concentation change isn't but it's a neglibile contribution).\\
 We get a diffusion current of electrons the drift flow is negligible. Solving the poisson equation we got that $Q_{inv}=-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}$ we can use this expression to derive the current in this regime so 
 \begin{equation}
 I_{ds}=-\mu_n \frac{W}{L}\int^{V_{ds}}_0-\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q(V_s-V)/kT}dV
@@ -548,7 +553,7 @@ I_{ds}=\mu_nC_{ox}(m-1)\frac{W}{L}(\frac{kT}{q})^2 e^{q(V_{gs}-V_t)/mkT}\left(1-
 \end{equation}
 That is the expression for the current in the subtheshold regime. If $V_{ds}$ is more than a few kT the last exponential can be neglected.\\
 
-\vspace{5mm}
+\subsection{Current expression (short version)}
 
 The current density $J_n$ is a pure diffusion process so we can say that $J_n=qD_n \frac{dn}{dy}$ and so
 \begin{equation}
@@ -635,7 +640,7 @@ Putting all this results in the first expression we get the final expression
 \end{equation}
 That is negative $\simeq -1mV/K$.\\
 This phenomena have the effect to increase the offstate current.\\
-With higher T also the mobility decrease and so the current.\\
+With higher T the mobility decrease and so do the current.\\
 
 
 %------------------------------------------------------------------------%
@@ -787,7 +792,7 @@ Reducing L we can increase the number of components per unit area and so decreas
 \begin{equation}
 I_{ds}\propto \frac{W}{L} \ \ \ \ \ C\propto WL \ \ \ \ \rightarrow \ \ \ \ \ \frac{I_{ds}}{C}=\frac{dV}{dt}\propto \frac{1}{L^2}
 \end{equation}
-If we start reducing L leaving all the other parameters unchanged (like the oxide thikness or the doping concentrations) at the beginning the performance will increase but after a while they will become worst; this beacuse some secondary effects becomes dominants degrading the good performance of the transistor.
+If we start reducing L leaving all the other parameters unchanged (like the oxide thikness or the doping concentrations) at the beginning the performance will increase but after a while they will become worst; this beacuse some secondary effects become dominant degrading the good performance of the transistor.
 
 %------------------------------------------------------------------------%
 \subsection{2D electrostatic in channel coming from $n^+$ regions}

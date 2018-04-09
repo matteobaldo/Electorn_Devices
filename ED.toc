@@ -89,8 +89,9 @@
 \contentsline {subsection}{\numberline {5.7.4}Frequency responce}{69}{subsection.5.7.4}
 \contentsline {section}{\numberline {5.8}Body effect}{69}{section.5.8}
 \contentsline {section}{\numberline {5.9}Subtheshold regime}{70}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Current expression}{70}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Transcaracteristics}{72}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.1}Current expression (long version)}{70}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Current expression (short version)}{71}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}Transcaracteristics}{72}{subsection.5.9.3}
 \contentsline {subsubsection}{Improvment for MOS}{72}{section*.9}
 \contentsline {section}{\numberline {5.10}Temperature dependance}{72}{section.5.10}
 \contentsline {section}{\numberline {5.11}Effects of non idealities}{74}{section.5.11}
