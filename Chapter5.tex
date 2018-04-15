@@ -188,7 +188,13 @@ We espect the field constatn and so equal to $V_{ds}/L$.\\
 \subsection{Parabolic regime $V_{ds}<2|\phi_b|$}
 Now $V_{ds}$ is no more negliglibe but enought small to make a Taylor expansion of the second term as
 \begin{equation}
-Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+\sqrt{2\varepsilon_{si}qN_a2|\phi_b|}(1+\frac{1}{2}\frac{V}{2|\phi_b|})=-[...]+\sqrt{\frac{\varepsilon_{si}qN_a}{4|\phi_b|}}V=-[...]+|Q_{dep}^{max}|+C_{dep}V
+Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+\sqrt{2\varepsilon_{si}qN_a2|\phi_b|}(1+\frac{1}{2}\frac{V}{2|\phi_b|})
+\end{equation}
+\begin{equation}
+Q_{inv}\simeq -C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+|Q_{dep}^{max}|+\sqrt{\frac{\varepsilon_{si}qN_a}{4|\phi_b|}}V
+\end{equation}
+\begin{equation}
+Q_{inv}\simeq=-C_{ox}(V_{gs}-V_{fb}-2|\phi_b|-V)+|Q_{dep}^{max}|+C_{dep}V
 \end{equation}
 and so re-writing the equation
 \begin{equation}
@@ -220,7 +226,7 @@ we have a parabolic behaviour of the current. If $V_{ds}$ is small we can neglec
 \vspace{3mm}
 \centering
 \fbox{\begin{minipage}{40em}
-The current deviates from the linear behavior, increasing less than linearly and reaching an horizontal tangent point: this is due to $V_{DS}$ being large, which determines a non negligible reduction of the inversion charge, which triggers an increase of the electric field to maintain the current constant; however, since the charge is decreasing, we are increasing the channel resistance, which is not constant anymore.
+The current deviates from the linear behavior, increasing less than linearly and reaching an horizontal tangent point (the stepness of the curve represets the channel resistance, flatter is higher the resistance) : this is due to $V_{DS}$ being large, which determines a non negligible reduction of the inversion charge, which triggers an increase of the electric field to maintain the current constant; however, since the charge is decreasing, we are increasing the channel resistance, which is not constant anymore.
 \end{minipage}}
 \raggedright
 \vspace{3mm}
@@ -232,7 +238,7 @@ The current deviates from the linear behavior, increasing less than linearly and
 \subsection{Saturation point}
 We can call the current and voltage of the vertex of the parabola saturation's one 
 \begin{equation}
-V_{ds}^{sat}=\frac{V_{gs}-V_t}{m}\ \ \ \ \ \ \ \ I_{ds}^{sat}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{gs}-V_t)^2}{m}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{ds}^{sat})^2}{m}
+V_{ds}^{sat}=\frac{V_{gs}-V_t}{m}\ \ \ \ \ \ \ \ I_{ds}^{sat}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{gs}-V_t)^2}{2m}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{ds}^{sat})^2}{2m}
 \end{equation}
 Increasing $V_{ds}$ we increase the electric field and decrease the charge (so we get a more resistive channel). At $V_{ds}^{sat}$ the charge at the drain is 
 \begin{equation}
@@ -508,7 +514,7 @@ For better undestand the behaviour of $V_t'(-V_{bs})$ we can study
 %------------------------------------------------------------------------%
 
 %------------------------------------------------------------------------%
-\subsection{Current expression (long version)}
+\subsection{Current expression (mathematical explanation)}
 
 \centering
 \includegraphics[width=0.35\textwidth]{subth.png}\\
@@ -528,7 +534,7 @@ Solving the integral we get the following expression
 I_{ds}=\mu_n \frac{W}{L}\sqrt{\frac{\varepsilon_{si}qN_a}{2V_s}}\left(\frac{kT}{q}\right)^2\frac{n_i^2}{N_a^2}e^{qV_s/kT}\left(1-e^{-qV_{ds}/kT}\right)
 \end{equation}
 we want a dependance on $V_{gs}$ not on $V_s$.\\
-As done for the MOS capacitor we use $V_{gs}+V_{fb}=V_s+\sqrt{2\varepsilon_{si}qN_aV_s}/C_{ox}$ we can assume that $V_s \lesssim 2|\phi_b|$ so we can make a Taylor expansion of $\sqrt{V_s}$ over $2|\phi_b|$ getting 
+As done for the MOS capacitor we use $V_{gs}+V_{fb}=V_s+\sqrt{2\varepsilon_{si}qN_aV_s}/C_{ox}$ (DAFAQ IS THIS! $Q_{s}=Q_{dep}$ HERE IS THIS AN APPROXIMATION?)we can assume that $V_s \lesssim 2|\phi_b|$ so we can make a Taylor expansion of $\sqrt{V_s}$ over $2|\phi_b|$ getting 
 \begin{equation}
 \sqrt{V_s}\simeq \sqrt{2|\phi_b|}+\frac{1}{2}\frac{V_{s}-2|\phi_b|}{\sqrt{2|\phi_b|}}
 \end{equation}
@@ -540,22 +546,25 @@ adding and removing $2|\phi_b|$ we can write that expression as
 \begin{equation}
 V_{gs}=V_t+(V_s-2|\phi_b|)m\ \ \ \ \ \ \ \rightarrow \ \ \ \ \ V_{s}=2|\phi_b|+\frac{V_{gs}-V_t}{m}
 \end{equation}
-The physical meaning of this can be explained considering a system like in fiure\\
+Remember that we are assuming $V_{gs}<V_t$ , so the second term, in $V_s$ expression, is negative: we can not use this relation if $V_{gs}<V_t$ , where we know that $V_{s}$ increases logarithmically (see $V_s(V_{gs})$ dependance in MOS chapter).
+The physical meaning of this can be explained considering a system like in figure where we apply a steady state voltage $V_t$ (that gives us a $V_s=2|\phi_b|$) and a signal $\delta V$ that has to be splitted between the two capacitnces:\\
 
 \centering
 \includegraphics[width=0.2\textwidth]{subth2.png}\\
 \raggedright
 
-where we can say that $V_s=2|\phi_b|+\delta V \frac{C_{ox}}{C_{ox}+C_{dep}}=2|\phi_b|+\frac{\delta V}{m}$.\\
+we can say that $V_s=2|\phi_b|+\delta V \frac{C_{ox}}{C_{ox}+C_{dep}}=2|\phi_b|+\frac{\delta V}{m}$ that is the same result as before.\\
 Turning back the the expression for the current we can write it in this way now
 \begin{equation}
 I_{ds}=\mu_nC_{ox}(m-1)\frac{W}{L}(\frac{kT}{q})^2 e^{q(V_{gs}-V_t)/mkT}\left(1-e^{-qV_{ds}/kT}\right)
 \end{equation}
 That is the expression for the current in the subtheshold regime. If $V_{ds}$ is more than a few kT the last exponential can be neglected.\\
 
-\subsection{Current expression (short version)}
+%------------------------------------------------------------------------%
+\subsection{Current expression (physical explanation)}
 
-The current density $J_n$ is a pure diffusion process so we can say that $J_n=qD_n \frac{dn}{dy}$ and so
+We want now to investigate more on why the dependance is exponential with $V_{gs}$ and why $V_{ds}$ is almost negligible.\\
+The current density $J_n$ is a pure diffusion process (being the bands almost flat) so we can say that $J_n=qD_n \frac{dn}{dy}$ and so
 \begin{equation}
 I_{ds}=-W\int^{t_{inv}}_0qD_n \frac{dn}{dy}dx=WD_n \frac{d}{dy}\left(\int^{t_{inv}}_0 -qndx\right)=WD_n \frac{d}{dy}Q_{inv}
 \end{equation}
@@ -565,11 +574,14 @@ I_{ds}=-WD_n \frac{Q_{inv}(0)-Q_{inv}(L)}{L}
 \end{equation}
 where we remember that 
 \begin{equation}
-Q_{inv}(0)=\sqrt{\frac{\varepsilon_{Si}qN_a}{2V_s}}	\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q\frac{V_s}{kT}}
+Q_{inv}(0)=-\sqrt{\frac{\varepsilon_{Si}qN_a}{2V_s}}	\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q\frac{V_s}{kT}}
 \end{equation}
 \begin{equation}
-Q_{inv}(L)=Q_{inv}(0)e^{q \frac{V_s-V_{ds}}{kT}}
+Q_{inv}(L)=-\sqrt{\frac{\varepsilon_{Si}qN_a}{2V_s}}	\frac{kT}{q}\frac{n_i^2}{N_a^2}e^{q \frac{V_s-V_{ds}}{kT}}
 \end{equation}
+
+Notice that $Q_{inv}(y=0)>>Q_{inv}(y=L)$: if $V_{ds}$ is over a few kTs, the charge at the drain side is negligible with respect to the one at the source side.\\
+The exponential dependence on $V_{gs}$ comes instead from the charge at the source side: by increasing $V_{gs}$ we linearly increase $V_s$ (we're in depletion/weak inversion regime where we can say that $V_s$ is almost proportional to $V_{gs}$ and therefore exponentially increase the charge $Q_{inv}(y=0)$, hence the current.\\
 Since the change of charge is linear $E_{fn}$ must drop logaritmically.\\
 
 
