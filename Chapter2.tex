@@ -162,11 +162,11 @@ Bands are flat near the contact beacuse we suppose (1) quasi-neutral region unde
 \label{cont.eq}
 Now we want to know the quasi-Fermi level in the minority region.
 We know that at $x=x_n$ $n\simeq N_d$ and for the law of mass action generalized $p=\frac{n_i^2}{N_d}e^{\frac{E_{fn}-E_{fp}}{kT}}\simeq p_{n0}e^{\frac{qV}{kT}}$ and at $x=-x_p$ with the same passages we obtain $n\simeq n_{p0}e^{\frac{qV}{kT}}$. Now we can solve the continuity equation only in the quasi-neutral region. \\
-Beacuse the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ and $G-R=\frac{-\Delta n}{\tau_n}$ from this two in the coninuity equations under stationary condition we get
+Beacuse the bands are flat we have only diffusion so $J_n=qD_n \frac{dn}{dx}$ and $G-R=\frac{-\Delta n}{\tau_n}$ from this two in the coninuity equations under stationary conditions ($0=\frac{1}{q}\frac{\partial J_n}{\partial x}+G-R$) we get
 \begin{equation}
 \frac{d^2\Delta n}{dx^2}-\frac{\Delta n}{L_n^2}=0
 \end{equation} 
-where $L_n=\sqrt{D_n\tau_n}=$ diffusion length of electrons in the quasi neutral p-region. Introducing the system of coordinate like in figure (where $W_p$ is the end of the quasi-neutral p region and so of the device) we can solve this differential equation.
+where $L_n=\sqrt{D_n\tau_n}$ is the diffusion length of electrons in the quasi neutral p-region. Introducing the system of coordinate like in figure (where $W_p$ is the end of the quasi-neutral p region and so of the device) we can solve this differential equation.
 
 \begin{wrapfigure}{i}{0pt}
 \includegraphics[width=0.45\textwidth]{pn10.png}
@@ -237,7 +237,7 @@ Increasing the negative voltage applied we increase the depletion layer reducing
 
 \raggedleft
 \fbox{\begin{minipage}{40em}
-Looking at the two expressions of the current in wide and narrow base case we can notice that the $J_0$ stay constant changing the length of the device if we consider a wide base diode but if we consider a narrow base one $J_0$ will increase hyperbolically (as 1/x) reducing W.\\
+Looking at the two expressions of the current in wide and narrow base case we can notice that the $J_0$ stays constant changing the length of the device if we consider a wide base diode but if we consider a narrow base one $J_0$ will increase hyperbolically (as 1/x) reducing W.\\
 This is due to the fact that the current is purely diffusive and reducing the length means to increase the gradient of carriers and so the current. 
 \end{minipage}}
 \raggedright
@@ -306,7 +306,7 @@ G-R effects in modern integrated devices are secondary effects that takes place 
 
 \centering
 \fbox{\begin{minipage}{40em}
-Orders of magnitude for $J_0$ with $W=1\mu m$ in case of a wide base diod is $1 \ pA/cm^2$ for narrow base $1 \ nA/cm^2$
+Orders of magnitude for $J_0$ with $W=1\mu m$ in case of a wide base diod is $1 \ pA/cm^2$ ,for narrow base $1 \ nA/cm^2$
 \end{minipage}}
 \raggedright
 
@@ -441,7 +441,7 @@ For a narrow base diode
 \begin{equation}
 Q_{diff}=q\Delta n(0) \frac{W_p^2}{2W_p}\frac{D_n}{D_n}=J_nt_p
 \end{equation}
-where $t_p$ is defined as electron transit time through the quasi-neutral p region.\\
+where $t_p=\frac{W_p^2}{2D_n}$ is defined as electron transit time through the quasi-neutral p region.\\
 
 It's called like this beacuse from the current equation we can derive that $J_n=qD_n\Delta n(0)/W_p=q\Delta n(x) v_{diff}=q\Delta n(0)\frac{W_p-x}{W_p} v_{diff}$ from this we obtain $v_{diff}=\frac{D_n}{W_p-x}$ and from this integrating from 0 to $W_p$ in dx $\frac{1}{v_{diff}}$ we obtain exactly $t_p=\frac{W_p^2}{2D_n}$.\\
 \vspace{5mm}

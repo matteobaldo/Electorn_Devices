@@ -19,7 +19,7 @@ If we put the 2 materials toghether the distance between the difference $q\phi_m
 \centering
 \includegraphics[width=0.5\textwidth]{ms2.png}\\
 \raggedright
-  
+
 We can also draw a graph of the electric field where we can view the deplition layer and the built in potential as area.\\
 This device is an ideal unilateral $p^+-n$ junction; we have the depliton layer only in the n side. We can recove the expression from the diode   
 \begin{equation}
@@ -52,7 +52,7 @@ Metal-semiconductor junction is a majority carrier device we won't deal with min
 \includegraphics[width=0.45\textwidth]{shk.png}\\
 \raggedright
 
-We don't know the behaviour of $E_{fn}$ in the depletion layer but we know that in that zone we have the lower concetration of electrons so it can't be flat. Under stationary condition we can say that $ J_n=qn\mu_nF+qD_n \frac{dn}{dx}=$ constant and, as boundary condition, that $n(W_d)=N_d$ $n(0)=N_ce^{\frac{q\phi_{bn}}{kT}}$. F is given $-\frac{qN_d}{\varepsilon_{si}}(W_d-x)$ the only parameter we don't know is n and $\frac{dn}{dx}$ so solving the continuity equation for electrons with this boundary conditions we can get that
+We don't know the behaviour of $E_{fn}$ in the depletion layer but we know that in that zone we have the lower concetration of electrons so it can't be flat. Under stationary condition we can say that $ J_n=qn\mu_nF+qD_n \frac{dn}{dx}=$ constant and, as boundary condition, that $n(W_d)=N_d$ $n(0)=N_ce^{\frac{-q\phi_{bn}}{kT}}$. F is given $-\frac{qN_d}{\varepsilon_{si}}(W_d-x)$ the only parameter we don't know is n and $\frac{dn}{dx}$ so solving the continuity equation for electrons with this boundary conditions we can get that
 \begin{equation}
 J=J_0(e^{\frac{qV}{kT}}-1)
 \end{equation}
@@ -115,7 +115,7 @@ So finally the total current throught the device will be
 \begin{equation}
 J=A^*T^2e^{\frac{-q\phi_{bn}}{kT}}(e^{\frac{qV}{kT}}-1)=J_{0,th}(e^{\frac{qV}{kT}}-1)
 \end{equation}
-$\phi_{bn}$ it's a crucial parameter for current flow in metal semiconductor junction. We have a $J_{0,th}\simeq10^5 A/cm^2$ orders of magnitude higher with respect to the pn junction, a turn on voltage of 0.3-0.4 V and also a greater reverse bias current due to higher $J_0$.\\
+$\phi_{bn}$ it's a crucial parameter for current flow in metal semiconductor junction. We have a $J_{0,th}\simeq10^5 A/cm^2$ orders of magnitude higher with respect to the pn junction\footnote{that was 1pA for wide base and 1nA for narrow base}, a turn on voltage of 0.3-0.4 V and also a greater reverse bias current due to higher $J_0$.\\
 This model is valid for high mobility semiconductors.\\
 %------------------------------------------------------------------------%
 \subsection{Universal model}
@@ -174,16 +174,18 @@ Multipling for -q we can obtain the energy
 E_0(x)=E_0(+\infty)-\frac{q^2}{16 \pi \varepsilon_0 x}
 \end{equation}
 and so the profile in green in the graph above.\\
+\vspace{5mm}
+If we consider that in the vacuum there is a costant electric field (and so $E_0(x)=E_0(0)-q|F|x$) like in figure beacuse the sistem is linear we obtain that
 
 \centering
 \includegraphics[width=0.35\textwidth]{deltaphibn.png}\\
 \raggedright
 
-If we consider that in the vacuum there is a costant electric field (and so $E_0(x)=E_0(0)-q|F|x$) like in figure beacuse the sistem is linear we obtain that
+
 \begin{equation}
 E_0(x)=E_0(0)-q|F|x-\frac{q^2}{16 \pi \varepsilon_0 x}
 \end{equation}
-and the behaviour in green in figure. We have change of the peak and so of the barrier that block our electrons. The $\Delta$ of the barrier is called Schottky barrier lowering.\\
+and the behaviour in green. We have change of the peak and so of the barrier that block our electrons. The $\Delta$ of the barrier is called Schottky barrier lowering.\\
 We can calculate the new peak deriving by dx the $E_0(x)$ function finding the $x_{max}$ obtaining the energy at that point 
 \begin{equation}
 E_0(x_{max})=E_0(0)-\sqrt{\frac{q^3|F|}{4\pi \varepsilon_0}}
@@ -288,11 +290,6 @@ The plot of $E_c(0)-\log(N_{is})$ make a transition between $10^{12}-10^{13}$ as
 \centering
 \includegraphics[width=0.35\textwidth]{is03.png}\\
 \raggedright
-
-\section{Considerations}
-
-\subsection{M-S junction but with $\phi_m>E_{f}$}
-Why this structure is futile, what are the critical points?\\
 
 
 

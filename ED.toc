@@ -35,8 +35,6 @@
 \contentsline {section}{\numberline {3.2}Ohmic contact}{35}{section.3.2}
 \contentsline {section}{\numberline {3.3}Interface states}{36}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Limit cases}{37}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Considerations}{38}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}M-S junction but with $\phi _m>E_{f}$}{38}{subsection.3.4.1}
 \contentsline {chapter}{\numberline {4}MOS capacitor}{39}{chapter.4}
 \contentsline {section}{\numberline {4.1}Working regimes}{39}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Flat band regime}{40}{subsection.4.1.1}
