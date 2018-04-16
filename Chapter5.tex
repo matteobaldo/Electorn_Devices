@@ -947,6 +947,8 @@ So the rules for constant fields scaling are
   \item Voltages ($V_{gs},V_{ds},V_{bs}$)   $\rightarrow \cdot 1/k$
   \item Doping concentrations ($N_a,N_d$)   $\rightarrow \cdot k$
 \end{itemize}
+We're increasing also $N_d$ to reduce parasitic source/drain resistance that otherwise will limit the device operation.\\
+
 
 \subsubsection{Device parameters changes}
 Electric field remains constant as the carriers velocity.\\
@@ -955,7 +957,7 @@ Taking into account the drain current in parabolic regime $I_{ds}=\mu_nC_{ox}\fr
 \begin{equation}
 V_t=V_{fb}+2|\phi_b|+\frac{\sqrt{2\varepsilon_{si}qN_a2|\phi_b|}}{C_{ox}} \ \ \ \ \ \ \ \ \ \ C_{ox}\rightarrow \cdot k \ \ \ \ \ \ \ \ \ \ \ N_a \rightarrow \cdot k
 \end{equation}
-but $2|\phi_b|$ does not scale by a factor k we have a logaritmic dependance on the doping concentration ($2|\phi_b|=kT/q\ln(N_a/n_i)$). We are not free to modify as we want $V_t$ that is related with the energy gap and on $2|\phi_b|$. To overcome this we have to use non-costant doping concentrations.\\
+but $2|\phi_b|$ does not scale by a factor k we have a logaritmic dependance on the doping concentration ($2|\phi_b|=2kT/q\ln(N_a/n_i)$). We are not free to modify as we want $V_t$ that is related with the energy gap and on $2|\phi_b|$. To overcome this we have to use non-costant doping concentrations.\\
 The width of the depletion layer $W_d=\sqrt{\frac{2\varepsilon_{si}}{q}\frac{1}{N_a}2|\phi_b|}$ do not scale with k but less for it's dependance with $2|\phi_b|$. So scaling the device with this set of rules we are slowly moving to the short channel regime according to the formula 
 \begin{equation}
 L>2(W_d^{max}+3t_{ox})
@@ -1025,7 +1027,7 @@ We know the formula for the STS that can be written as
 \begin{equation}
 STS=60 \frac{mV}{dec} \cdot m =60 \frac{mV}{dec} \cdot (1+\frac{C_{dep}}{C_{ox}})
 \end{equation}
-We want a low STS and so an $m\simeq 1$. Taking as upper limit $STS<85 \frac{mV}{dec}$ we get $m<1.4$ data from which we can elaborate the folloing formula 
+We want a low STS and so a $m\simeq 1$. Taking as upper limit $STS<85 \frac{mV}{dec}$ we get $m<1.4$ data from which we can elaborate the folloing formula 
 \begin{equation}
 m=1+\frac{C_{dep}}{C_{ox}}=1+\frac{\varepsilon_{Si}t_{ox}}{\varepsilon_{ox}W_d^{max}}\ \ \ \ \rightarrow \ \ \ \ \ t_{ox}<0.13W_d^{max}
 \end{equation} 
@@ -1050,10 +1052,10 @@ We can study this 3 constraint on $t_{ox}$ in a graph $t_{ox}-W_d^{max}$\\
 \raggedright
 
 To satisfy the 3 requirements we have to stay in the triangle area and so we have a minimum and a maximum value for $t_{ox}$. In particular $t_{ox}^{max}\simeq \frac{L}{20}$; scaling L we have also to scale the oxide thickness increasing the leakage current through the gate.\\
-
-\vspace{5mm}
 Of course in the graph $t_{ox}^{max}>t_{ox}^{min}$ that means $V_{dd}<\frac{LF_{ox}^{max}}{20}$ but reducing the supply voltage we have also to reduce $V_t$ and doing so we increase the off-state current and power dissipation
 From a requirement on off-power dissipation we can get the $I_{off}=I_{ds}^{V_{ds}=V_{dd} \ V_{gs}=0}$ and from sub-th current get the $V_t$ we want. We have to take the worst case so the one at high temperature and then come back to the RT. Also we can't increase too much $V_t$ or the on-state current will be too low. Typical requirement is to have $V_t \le \frac{V_{dd}}{4}$\\
+
+\vspace{5mm}
 
 These constraint are why we came to "strange" structure like the finfet in figue \\
 
