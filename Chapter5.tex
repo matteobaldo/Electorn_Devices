@@ -226,7 +226,7 @@ we have a parabolic behaviour of the current. If $V_{ds}$ is small we can neglec
 \vspace{3mm}
 \centering
 \fbox{\begin{minipage}{40em}
-The current deviates from the linear behavior, increasing less than linearly and reaching an horizontal tangent point (the stepness of the curve represets the channel resistance, flatter is higher the resistance) : this is due to $V_{DS}$ being large, which determines a non negligible reduction of the inversion charge, which triggers an increase of the electric field to maintain the current constant; however, since the charge is decreasing, we are increasing the channel resistance, which is not constant anymore.
+The current deviates from the linear behavior, increasing less than linearly and reaching an horizontal tangent point (the stepness of the curve represets the channel resistance, flatter is higher the resistance) : this is due to $V_{DS}$ being large, which determines a non negligible reduction of the inversion charge, which triggers an increase of the electric field to maintain the current constant(differential form of the current to see this); however, since the charge is decreasing, we are increasing the channel resistance, which is not constant anymore.
 \end{minipage}}
 \raggedright
 \vspace{3mm}
@@ -240,7 +240,7 @@ We can call the current and voltage of the vertex of the parabola saturation's o
 \begin{equation}
 V_{ds}^{sat}=\frac{V_{gs}-V_t}{m}\ \ \ \ \ \ \ \ I_{ds}^{sat}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{gs}-V_t)^2}{2m}=\mu_nC_{ox}\frac{W}{L}\frac{(V_{ds}^{sat})^2}{2m}
 \end{equation}
-Increasing $V_{ds}$ we increase the electric field and decrease the charge (so we get a more resistive channel). At $V_{ds}^{sat}$ the charge at the drain is 
+Increasing $V_{ds}$ we increase the electric field and decrease the charge (so we get a more resistive channel). At $V_{ds}^{sat}$ the charge at the drain side ,following the formula for the inversion charge for the parabolic regime, is 
 \begin{equation}
 Q_{inv}(y=L)=-C_{ox}(V_{gs}-V_t-m \frac{V_{gs}-V_t}{m})=0
 \end{equation}
@@ -586,7 +586,7 @@ Since the change of charge is linear $E_{fn}$ must drop logaritmically.\\
 
 
 %------------------------------------------------------------------------%
-\subsection{Transcaracteristics}
+\subsection{Logarithmic transcaracteristics }
 %------------------------------------------------------------------------%
 
 \begin{wrapfigure}{i}{0pt}
@@ -905,7 +905,11 @@ so we are reaching the saturation regime before than a long channel device and w
 \raggedright
 
 If we consider the inversion charge at the drain interface at $V_{ds}^{sat}$ in a short channel device isn't zero we have still strong inversion. Before reaching pinch-off point at the drain we reach the saturation velocity; this 2 processes can lead our transistor in saturation region.\\
-Ideally with shorter L we expect a steeper parabola in the transcaracteristic but we get considering the velocity saturation we get a high error. In an extreme case with $L\rightarrow 0$ $I_{ds}^{sat}\simeq WC_{ox}(V_{gs}-V_t)v_d^{sat}$ we get a linear dependance with $V_{gs}$ and we get a lower sensitivity of the current to gate changes.\\
+Ideally with shorter L we expect a steeper parabola in the transcaracteristic but we get considering the velocity saturation we get a high error. In an extreme case with $L\rightarrow 0$ we reach velocity saturation also at the source side so\footnote{taking again the differential form of the current from whitch we started}
+\begin{equation}
+I_{ds}^{sat}\simeq WC_{ox}(V_{gs}-V_t)v_d^{sat}
+\end{equation}
+ we get a linear dependance with $V_{gs}$ and so a lower sensitivity of the current to gate changes.\\
 
 \centering
 \includegraphics[width=0.75\textwidth]{shorta.png}\\
